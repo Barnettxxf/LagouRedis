@@ -1,0 +1,101 @@
+2018-03-21 22:25:21 [scrapy.utils.log] INFO: Scrapy 1.5.0 started (bot: LagouRedis)
+2018-03-21 22:25:21 [scrapy.utils.log] INFO: Versions: lxml 4.1.1.0, libxml2 2.9.7, cssselect 1.0.3, parsel 1.4.0, w3lib 1.19.0, Twisted 17.9.0, Python 3.6.3 |Anaconda custom (64-bit)| (default, Oct 13 2017, 12:02:49) - [GCC 7.2.0], pyOpenSSL 17.5.0 (OpenSSL 1.1.0g  2 Nov 2017), cryptography 2.1.4, Platform Linux-4.13.0-37-generic-x86_64-with-debian-stretch-sid
+2018-03-21 22:25:21 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'LagouRedis', 'DUPEFILTER_CLASS': 'scrapy_redis.dupefilter.RFPDupeFilter', 'LOG_FILE': 'lagou_temp.log', 'NEWSPIDER_MODULE': 'LagouRedis.spiders', 'SCHEDULER': 'scrapy_redis.scheduler.Scheduler', 'SPIDER_MODULES': ['LagouRedis.spiders']}
+2018-03-21 22:25:21 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2018-03-21 22:25:21 [lagou_temp] INFO: Reading start URLs from redis key 'lagou_temp:start_url' (batch size: 16, encoding: utf-8
+2018-03-21 22:25:21 [py.warnings] WARNING: /home/barnett/anaconda3/lib/python3.6/site-packages/scrapy/utils/deprecate.py:156: ScrapyDeprecationWarning: `scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware` class is deprecated, use `scrapy.downloadermiddlewares.useragent.UserAgentMiddleware` instead
+  ScrapyDeprecationWarning)
+
+2018-03-21 22:25:21 [py.warnings] WARNING: /home/barnett/anaconda3/lib/python3.6/site-packages/scrapy/utils/deprecate.py:156: ScrapyDeprecationWarning: `scrapy.contrib.downloadermiddleware.cookies.CookiesMiddleware` class is deprecated, use `scrapy.downloadermiddlewares.cookies.CookiesMiddleware` instead
+  ScrapyDeprecationWarning)
+
+2018-03-21 22:25:21 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'LagouRedis.middlewares.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'LagouRedis.middlewares.LagouCookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-03-21 22:25:21 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-03-21 22:25:21 [scrapy.middleware] INFO: Enabled item pipelines:
+['scrapy_redis.pipelines.RedisPipeline']
+2018-03-21 22:25:21 [scrapy.core.engine] INFO: Spider opened
+2018-03-21 22:25:22 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-03-21 22:25:22 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2018-03-21 22:25:49 [scrapy.crawler] INFO: Received SIG_SETMASK, shutting down gracefully. Send again to force 
+2018-03-21 22:25:49 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2018-03-21 22:25:49 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'finish_reason': 'shutdown',
+ 'finish_time': datetime.datetime(2018, 3, 21, 14, 25, 49, 10974),
+ 'log_count/DEBUG': 1,
+ 'log_count/INFO': 9,
+ 'log_count/WARNING': 2,
+ 'memusage/max': 821743616,
+ 'memusage/startup': 821743616,
+ 'start_time': datetime.datetime(2018, 3, 21, 14, 25, 22, 20835)}
+2018-03-21 22:25:49 [scrapy.core.engine] INFO: Spider closed (shutdown)
+2018-03-21 22:25:54 [scrapy.utils.log] INFO: Scrapy 1.5.0 started (bot: LagouRedis)
+2018-03-21 22:25:54 [scrapy.utils.log] INFO: Versions: lxml 4.1.1.0, libxml2 2.9.7, cssselect 1.0.3, parsel 1.4.0, w3lib 1.19.0, Twisted 17.9.0, Python 3.6.3 |Anaconda custom (64-bit)| (default, Oct 13 2017, 12:02:49) - [GCC 7.2.0], pyOpenSSL 17.5.0 (OpenSSL 1.1.0g  2 Nov 2017), cryptography 2.1.4, Platform Linux-4.13.0-37-generic-x86_64-with-debian-stretch-sid
+2018-03-21 22:25:54 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'LagouRedis', 'DUPEFILTER_CLASS': 'scrapy_redis.dupefilter.RFPDupeFilter', 'LOG_FILE': 'lagou_temp.log', 'NEWSPIDER_MODULE': 'LagouRedis.spiders', 'SCHEDULER': 'scrapy_redis.scheduler.Scheduler', 'SPIDER_MODULES': ['LagouRedis.spiders']}
+2018-03-21 22:25:55 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2018-03-21 22:25:55 [lagou_temp] INFO: Reading start URLs from redis key 'lagou_temp:start_url' (batch size: 16, encoding: utf-8
+2018-03-21 22:25:55 [py.warnings] WARNING: /home/barnett/anaconda3/lib/python3.6/site-packages/scrapy/utils/deprecate.py:156: ScrapyDeprecationWarning: `scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware` class is deprecated, use `scrapy.downloadermiddlewares.useragent.UserAgentMiddleware` instead
+  ScrapyDeprecationWarning)
+
+2018-03-21 22:25:55 [py.warnings] WARNING: /home/barnett/anaconda3/lib/python3.6/site-packages/scrapy/utils/deprecate.py:156: ScrapyDeprecationWarning: `scrapy.contrib.downloadermiddleware.cookies.CookiesMiddleware` class is deprecated, use `scrapy.downloadermiddlewares.cookies.CookiesMiddleware` instead
+  ScrapyDeprecationWarning)
+
+2018-03-21 22:25:55 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'LagouRedis.middlewares.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'LagouRedis.middlewares.LagouCookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-03-21 22:25:55 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-03-21 22:25:55 [scrapy.middleware] INFO: Enabled item pipelines:
+['scrapy_redis.pipelines.RedisPipeline']
+2018-03-21 22:25:55 [scrapy.core.engine] INFO: Spider opened
+2018-03-21 22:25:55 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-03-21 22:25:55 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2018-03-21 22:26:00 [lagou_temp] DEBUG: Read 1 requests from 'lagou_temp:start_url'
+2018-03-21 22:26:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com> (referer: None)
+2018-03-21 22:26:02 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=220.112.15.27> from <GET https://www.lagou.com/zhaopin/qukuailian/>
+2018-03-21 22:26:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/zhaopin/Java/> (referer: https://www.lagou.com)
+2018-03-21 22:26:02 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=220.112.15.27> from <GET https://www.lagou.com/zhaopin/ceshi/>
+2018-03-21 22:26:02 [scrapy_redis.dupefilter] DEBUG: Filtered duplicate request <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=220.112.15.27> - no more duplicates will be shown (see DUPEFILTER_DEBUG to show all duplicates)
+2018-03-21 22:26:02 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=220.112.15.27> from <GET https://www.lagou.com/zhaopin/CTO/>
+2018-03-21 22:26:02 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=220.112.15.27> from <GET https://www.lagou.com/zhaopin/html51/>
+2018-03-21 22:26:02 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=220.112.15.27> from <GET https://www.lagou.com/zhaopin/jiagoushi/>
+2018-03-21 22:26:02 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=220.112.15.27> from <GET https://www.lagou.com/zhaopin/jiqixuexi/>
+2018-03-21 22:26:02 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=220.112.15.27> from <GET https://www.lagou.com/zhaopin/shujuwajue/>
+2018-03-21 22:26:02 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=220.112.15.27> from <GET https://www.lagou.com/zhaopin/shenduxuexi/>
+2018-03-21 22:26:25 [scrapy.crawler] INFO: Received SIG_SETMASK, shutting down gracefully. Send again to force 

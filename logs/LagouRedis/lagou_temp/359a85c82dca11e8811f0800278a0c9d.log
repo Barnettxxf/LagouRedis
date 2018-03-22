@@ -1,0 +1,1464 @@
+2018-03-22 20:11:55 [scrapy.utils.log] INFO: Scrapy 1.5.0 started (bot: LagouRedis)
+2018-03-22 20:11:55 [scrapy.utils.log] INFO: Versions: lxml 4.1.1.0, libxml2 2.9.7, cssselect 1.0.3, parsel 1.4.0, w3lib 1.19.0, Twisted 17.9.0, Python 3.6.3 |Anaconda custom (64-bit)| (default, Oct 13 2017, 12:02:49) - [GCC 7.2.0], pyOpenSSL 17.5.0 (OpenSSL 1.1.0g  2 Nov 2017), cryptography 2.1.4, Platform Linux-4.13.0-37-generic-x86_64-with-debian-stretch-sid
+2018-03-22 20:11:55 [scrapy.crawler] INFO: Overridden settings: {'AUTOTHROTTLE_DEBUG': True, 'AUTOTHROTTLE_ENABLED': True, 'BOT_NAME': 'LagouRedis', 'DOWNLOAD_DELAY': 5, 'DUPEFILTER_CLASS': 'scrapy_redis.dupefilter.RFPDupeFilter', 'LOG_FILE': 'logs/LagouRedis/lagou_temp/359a85c82dca11e8811f0800278a0c9d.log', 'NEWSPIDER_MODULE': 'LagouRedis.spiders', 'SCHEDULER': 'scrapy_redis.scheduler.Scheduler', 'SPIDER_MODULES': ['LagouRedis.spiders']}
+2018-03-22 20:11:55 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2018-03-22 20:11:55 [lagou_temp] INFO: Reading start URLs from redis key 'lagou_temp:start_url' (batch size: 16, encoding: utf-8
+2018-03-22 20:11:55 [py.warnings] WARNING: /home/barnett/anaconda3/lib/python3.6/site-packages/scrapy/utils/deprecate.py:156: ScrapyDeprecationWarning: `scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware` class is deprecated, use `scrapy.downloadermiddlewares.useragent.UserAgentMiddleware` instead
+  ScrapyDeprecationWarning)
+
+2018-03-22 20:11:55 [py.warnings] WARNING: /home/barnett/anaconda3/lib/python3.6/site-packages/scrapy/utils/deprecate.py:156: ScrapyDeprecationWarning: `scrapy.contrib.downloadermiddleware.cookies.CookiesMiddleware` class is deprecated, use `scrapy.downloadermiddlewares.cookies.CookiesMiddleware` instead
+  ScrapyDeprecationWarning)
+
+2018-03-22 20:11:55 [py.warnings] WARNING: /home/barnett/anaconda3/lib/python3.6/site-packages/scrapy/utils/deprecate.py:156: ScrapyDeprecationWarning: `scrapy.contrib.downloadermiddleware.httpproxy.HttpProxyMiddleware` class is deprecated, use `scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware` instead
+  ScrapyDeprecationWarning)
+
+2018-03-22 20:11:55 [py.warnings] WARNING: /home/barnett/anaconda3/lib/python3.6/site-packages/scrapy/utils/deprecate.py:156: ScrapyDeprecationWarning: `scrapy.contrib.downloadermiddleware.retry.RetryMiddleware` class is deprecated, use `scrapy.downloadermiddlewares.retry.RetryMiddleware` instead
+  ScrapyDeprecationWarning)
+
+2018-03-22 20:11:56 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'LagouRedis.middlewares.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'LagouRedis.middlewares.LagouCookiesMiddleware',
+ 'LagouRedis.middlewares.RandomProxyMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-03-22 20:11:56 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-03-22 20:11:56 [scrapy.middleware] INFO: Enabled item pipelines:
+['LagouRedis.pipelines.MysqlTwistedPipline']
+2018-03-22 20:11:56 [scrapy.core.engine] INFO: Spider opened
+2018-03-22 20:11:56 [lagou_temp] DEBUG: Resuming crawl (5684 requests scheduled)
+2018-03-22 20:11:56 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-03-22 20:11:56 [lagou_temp] INFO: Spider opened: lagou_temp
+2018-03-22 20:11:56 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2018-03-22 20:12:03 [scrapy.extensions.throttle] INFO: slot: www.lagou.com | conc: 2 | delay: 5000 ms (+0) | latency:  182 ms | size:  1393 bytes
+2018-03-22 20:12:03 [scrapy.core.engine] DEBUG: Crawled (403) <GET https://www.lagou.com/jobs/4207173.html> (referer: https://www.lagou.com/zhaopin/touzizhuli/3/)
+2018-03-22 20:12:03 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.lagou.com/jobs/4207173.html>: HTTP status code is not handled or not allowed
+2018-03-22 20:12:17 [scrapy.extensions.throttle] INFO: slot: www.lagou.com | conc: 3 | delay: 5000 ms (+0) | latency: 4407 ms | size: 14700 bytes
+2018-03-22 20:12:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/jobs/4223713.html> (referer: https://www.lagou.com/zhaopin/jiesuan/14/)
+2018-03-22 20:12:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/jobs/4223713.html>
+{'jobacquire': '1、财务、金融等相关专业，本科及以上学历；2、两年以上金融机构或类金融机构清结算或资金管理工作经验；3、熟悉多个渠道或机构资金清结算方式；4、具备金融管理知识，较强逻辑思维能力、执行能力；5、有较好的沟通协调及团队合作精神、诚实可靠、工作认真、责任心强。',
+ 'jobadvantage': '业务发展快,全五险一金,福利好,发展空间大',
+ 'jobcompanyname': '闪银奇异财务部招聘',
+ 'jobid': '4223713',
+ 'jobname': '资金结算主管',
+ 'jobreposibilit': '1.\xa0制定和修改公司清结算、付款管理制度和业务操作流程；2.\xa0'
+                   '出具及跟踪每日资金预测，与业务部门沟通预测及实际收付款差异；分析资金使用情况，提出资金使用及管理建议；3.\xa0'
+                   '负责每日审核付款申请；合理安排、调配各个支付渠道资金，及时协调各个资金渠道收付款中出现的问题，落实结算资金的支付情况；4.\xa0'
+                   '银行账户及支付渠道管理，协调账户开立相关事宜；5.\xa0结算及支付相关系统开发的需求管理及进度把控；6.\xa0'
+                   '协调处理银行借款等债权类融资相关事宜。',
+ 'jobsite': '北京',
+ 'update_time': '2018-03-22 20:12:17'}
+2018-03-22 20:12:17 [scrapy_redis.dupefilter] DEBUG: Filtered duplicate request <GET https://www.lagou.com/jobs/4223713.html#uploadFile> - no more duplicates will be shown (see DUPEFILTER_DEBUG to show all duplicates)
+2018-03-22 20:12:19 [scrapy.extensions.throttle] INFO: slot: www.lagou.com | conc: 3 | delay: 5000 ms (+0) | latency:  405 ms | size:  1393 bytes
+2018-03-22 20:12:19 [scrapy.core.engine] DEBUG: Crawled (403) <GET https://www.lagou.com/jobs/3549957.html> (referer: https://www.lagou.com/zhaopin/zidonghua/7/)
+2018-03-22 20:12:19 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.lagou.com/jobs/3549957.html>: HTTP status code is not handled or not allowed
+2018-03-22 20:12:29 [scrapy.extensions.throttle] INFO: slot: www.lagou.com | conc: 3 | delay:33217 ms (+28217) | latency:33217 ms | size: 16642 bytes
+2018-03-22 20:12:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/jobs/3911681.html> (referer: https://www.lagou.com/zhaopin/jiagoushi/7/)
+2018-03-22 20:12:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/jobs/3911681.html>
+{'jobacquire': '1、全日制本科学历，计算机相关专业优先；2、至少2年以上丰富的后台系统架构经验，处理过每天千万级别及以上的访问量，有第一手的开发和解决瓶颈的实践经验；3、精通常用Java开源框架，如：spring/ibatis；4、精通或熟悉常用数据库Mysql/Oracle/SqlServer的布署，SQL语法以及相关的性能优化；5、对于大数据收集分析以及智能推荐/千万级别网站并发处理/系统安全支付/智能分词搜索/分布式计算，至少有2项有实际生产环境实践经验；6、熟悉tomcat，jetty，jboss等web应用服务器的配置和部署，具有自动化布署经验；7、对面向对象、UML，常用设计模式有相当程度的了解，可以做Code '
+               'Review。',
+ 'jobadvantage': '五险一金,带薪年假,节日福利,技术大牛',
+ 'jobcompanyname': '悟空找房研发中心招聘',
+ 'jobid': '3911681',
+ 'jobname': '架构师',
+ 'jobreposibilit': '1、参与公司中后期整体需求调研，主导公司系统设计，具有相当的前瞻性；2、负责公司核心业务架构设计、技术架构选型、数据结构设计、对外接口设计，并可以承担系统核心框架的研发工作；3、负责核心技术问题的攻关，系统优化，协助解决项目开发过程中的技术难题；4、了解业界发展、互联网相关新技术及趋势，规划公司未来技术架构方向；',
+ 'jobsite': '上海',
+ 'update_time': '2018-03-22 20:12:29'}
+2018-03-22 20:12:56 [scrapy.extensions.logstats] INFO: Crawled 4 pages (at 4 pages/min), scraped 2 items (at 2 items/min)
+2018-03-22 20:13:07 [scrapy.extensions.throttle] INFO: slot: www.lagou.com | conc: 3 | delay:17025 ms (-16191) | latency:  834 ms | size: 16069 bytes
+2018-03-22 20:13:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/jobs/3642318.html> (referer: https://www.lagou.com/zhaopin/zidonghua/7/)
+2018-03-22 20:13:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/jobs/3642318.html>
+{'jobacquire': '3.有web开发经验的优先 '
+               '，计算机、通信及电子信息相关专业，统招本科学历，一年以上工作经验；岗位职责：1.测试数据统计分析系统。2.android自动化测试工具开发。包括测试用例的开发，apk测试工具的开发；3.持续集成系统搭建和应用问题分析解决。',
+ 'jobadvantage': '五险一金,带薪年假,弹性工时',
+ 'jobcompanyname': '武汉佰钧成技术有限公司软件测试招聘',
+ 'jobid': '3642318',
+ 'jobname': '自动化测试开发',
+ 'jobreposibilit': '3.有web开发经验的优先 '
+                   '，计算机、通信及电子信息相关专业，统招本科学历，一年以上工作经验；岗位职责：1.测试数据统计分析系统。2.android自动化测试工具开发。包括测试用例的开发，apk测试工具的开发；',
+ 'jobsite': '武汉',
+ 'update_time': '2018-03-22 20:13:07'}
+2018-03-22 20:13:53 [scrapy.extensions.throttle] INFO: slot: www.lagou.com | conc: 4 | delay:10246 ms (-6779) | latency: 3467 ms | size: 15185 bytes
+2018-03-22 20:13:53 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/jobs/4294160.html> (referer: https://www.lagou.com/zhaopin/Node.js/17/)
+2018-03-22 20:13:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/jobs/4294160.html>
+{'jobacquire': '在咱这，你需要完成这样的事儿：1、熟练掌握并能快速搭建和部署Node.js后端的开发和运行环境；2、深刻理解需求，并进行分析合理拆解，确定数据存储方案和开发实施方案；3、合理安排工作顺序、时间，完成后端代码开发；4、配合前端进行页面及接口调试，配合完成整体功能展现；5、及时了解最新的Node.js支持包，熟悉适用的支持包并应用到日常开发中提升效率；6、不断研究Node.js相关技术及其升级内容，能够指导和安排后端程序员的工作。咱这需要这样的你：1、计算机或相关专业且有1年以上Node.js开发经验；2、熟练运用Javascript、Node.js开发，深刻理解异步处理优缺点及开发技巧；3、精通MySQL等数据库，对分布式缓存系统Redis有丰富的实践经验；4、了解Linux操作系统、掌握Linux基本操作命令；5、具备良好的分析、解决问题能力，及良好的沟通协作意识；6、具有高执行力和团队合作意识。7、有Docker使用经验，Shell '
+               '开发经验或OAuth2开发经验者优先考虑。8、有参与开源项目者或有独立完成的个人项目者优先考虑。',
+ 'jobadvantage': '五险一金,年底双薪,带薪年假,节日福利',
+ 'jobcompanyname': '金十数据技术部招聘',
+ 'jobid': '4294160',
+ 'jobname': 'Node.js后端开发工程师',
+ 'jobreposibilit': '1、我们有带有篮球、羽毛球，秋千的私家大花园，拿着笔记本、户外办公好惬意；2、每年都会有一至两次公司全体的境内/境外游；3、节节有福利，奖品时常发，五险，13+薪；4、美国假期+中国假期我们都放，好任性；5、每月、每周公司聚餐、骑行、KTV、活动多多；6、公司有自己的健身室、洗浴间，甚至还有双人大床房；7、扁平化管理，无等级划分，面对大Boss你也可以“口无遮拦“，畅所欲言！8、办公地点临近市中，东西南北都畅通。',
+ 'jobsite': '广州',
+ 'update_time': '2018-03-22 20:13:53'}
+2018-03-22 20:13:56 [scrapy.extensions.logstats] INFO: Crawled 6 pages (at 2 pages/min), scraped 4 items (at 2 items/min)
+2018-03-22 20:14:09 [scrapy.extensions.throttle] INFO: slot: www.lagou.com | conc: 4 | delay: 7166 ms (-3080) | latency: 4085 ms | size: 15087 bytes
+2018-03-22 20:14:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/jobs/4271513.html> (referer: https://www.lagou.com/zhaopin/Node.js/17/)
+2018-03-22 20:14:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/jobs/4271513.html>
+{'jobacquire': '1、统招本科及以上学历，计算机相关专业（985/211院校优先）；2、2年或以上 Nodejs 开发工作经验，优秀的 '
+               'Javascript 基本功。3、熟悉 Git / Github，通信协议 TCP/HTTP 及 RESTful '
+               '标准。4、熟悉主流测试方法、工具，并不断结合前沿技术提升整体测试效率和研发质量。5、熟悉敏捷开发工具及开发流程。6、有 '
+               'MySQL、 Redis 或 MongoDB 等相关数据库使用经验。7、有 Express、Koa、ES6 '
+               '等使用经验。8、有 Docker、Kubernetes、AWS 或 GCP 云计算经验者优先。9、有 CI / CD '
+               '自动化测试经验优先。10、具备英语听读写能力，CET4或以上。',
+ 'jobadvantage': '全球項目,高薪资,高福利,國際團隊',
+ 'jobcompanyname': 'AfterShip研發中心招聘',
+ 'jobid': '4271513',
+ 'jobname': 'Node.js 高级后台工程师',
+ 'jobreposibilit': "最新技术,国际团队,全球项目,三年盈利if (your.passions.include('coding')) "
+                   "{switch(your.role) {case 'coder':case 'geek':case "
+                   "'nerd':case 'gatekeeper_of_gatekeepers':case "
+                   "'red_or_blue_pill':console.log('来加入我们 AfterShip "
+                   "=]');break;default:}}AfterShip.stacks = ['React.js', "
+                   "'k8s', 'ipa', 'Service Worker', 'Node.js', 'AWS', 'GCP', "
+                   "'Serverless', 'NoSQL'];岗位职责：1、负责编写产品服务端 API，实现产品功能。2、负责服务端 "
+                   'API 之 SLA , 代码维护、秩代更新等工作。3、负责制定技术标准，编写相关的技术及 API '
+                   '文档。4、负责编制单元测试，提高系统覆盖率，敢于对产品质量负责。5、负责制定技术标准及研究新技术，有效地提高工作效率。6、负责系统关键模块的技术攻关，协助解决项目中的难题。',
+ 'jobsite': '深圳',
+ 'update_time': '2018-03-22 20:14:09'}
+2018-03-22 20:14:13 [scrapy.extensions.throttle] INFO: slot: www.lagou.com | conc: 4 | delay: 5000 ms (-2166) | latency: 1347 ms | size: 15191 bytes
+2018-03-22 20:14:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/jobs/4305286.html> (referer: https://www.lagou.com/zhaopin/touzizhuli/3/)
+2018-03-22 20:14:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/jobs/4305286.html>
+{'jobacquire': '1.学习能力和适应能力强，适应互联网行业的快速发展，具备在高强压力下出色完成任务的能力3、目标导向，具备较强的人际沟通能力及逻辑思维能力，善于换位思考，高效整合内外部资源促成销售业绩4、富有激情和创新理念，追求个人职业发展和公司利益的双赢5、积极乐观，有强烈的成功欲望，诚实可靠，以公司利益为重【福利晋升】1、薪资结构：无责任底薪5500-10000+高额提成+丰厚奖金（优秀员工奖、团队奖、月度奖，季度奖，年终奖、PK奖，额外奖励…….）。2、试用期就开始缴纳五险一金，另外，公司还为员工额外购买了商业保险！3、业绩突出者奖励“带家属、带奖金豪华国外旅游”！4、每月员工生日party，生日礼物，下午茶零食、户外拓展，聚餐、唱K；员工书友会、篮球协会、演艺协会、公益俱乐部，17个俱乐部满足每个员工不同的兴趣爱好！5、带薪年假5+N，带薪病假3天，做五休二，享有国家法定节假日！6、晋升快（一季度一次评选）：a、员工-见习主管-主管-经理-总监、b、员工-助理分析师-专业分析师；7、每个季度有优秀员工评选！享受奖章、荣誉，公费培训，晋升机会！年度优秀员工国外游机会！8、公司都提供专业、系统的岗前培训（培训期间依然享受补贴），以及在职提升培训。',
+ 'jobadvantage': '带薪年假,五险一金',
+ 'jobcompanyname': '口袋理财商务部招聘',
+ 'jobid': '4305286',
+ 'jobname': '证券经纪人/投资顾问',
+ 'jobreposibilit': '1、通过拜访证券营业部，寻找销售机会并完成销售业绩2、执行公司的证券商户拓展策略，维护合作营业部关系3、与公司各部门配合，及时处理商户的反馈、投诉和建议，提高顾客满意度',
+ 'jobsite': '上海',
+ 'update_time': '2018-03-22 20:14:13'}
+2018-03-22 20:14:19 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://www.lagou.com/jobs/4021347.html> (failed 1 times): TCP connection timed out: 110: Connection timed out.
+2018-03-22 20:14:22 [scrapy.extensions.throttle] INFO: slot: www.lagou.com | conc: 3 | delay: 5000 ms (+0) | latency:  582 ms | size: 15249 bytes
+2018-03-22 20:14:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/jobs/4161682.html> (referer: https://www.lagou.com/zhaopin/yunwei/18/)
+2018-03-22 20:14:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/jobs/4161682.html>
+{'jobacquire': 'Responsibilities:Write scripts for automatic deployment.Setup '
+               'Jenkins pipeline job.Trouble shooting/fix deployment '
+               'problems.Work with development and infrastructure team for '
+               'supporting Aspira products release.Integrate automated builds '
+               'and build artifacts into test environments and code analysis '
+               'tools.Design and keep improving efficient development.Manage '
+               'and support development tools Jira/Gitlab/Jenkins.Manage and '
+               'support internal tools Salesforce etc.Support other migration '
+               'projects.Qualifications:Linux/Unix/Windows experience are '
+               'required.Experience on Devops and related tools such as: '
+               'Jenkins/Jira/Gitlab/Sonar/Nexus/Ansible/Docker/VMware.Skilled '
+               'in Ruby/Python.Knowledge on ant/maven/msbuild.Knowledge on the '
+               'software development cycle, understanding the release '
+               'processes for Integration, QA, Stage and Production.Good '
+               'read/written English.Good verbal English expression is a '
+               'plus.ASPIRA Perks & BenefitsGreat Working Environment“5+1” '
+               'Endowment Insurance; Medical Insurance; Unemployment '
+               'Insurance; Work-related Injury Insurance; Childbirth '
+               'Insurance; and Housing Accumulation FundsCommercial Medical '
+               'Insurance in addition to the government’s required Medical '
+               'Insurance (with one family member covered as well)15 Days PTO '
+               '(Paid Time Off) per year to start in addition to all the '
+               'public holidaysFlexible Working Schedule (projects '
+               'based)ASPIRA is an equal opportunity employer.\xa0 Qualified '
+               'applicants will receive consideration for employment without '
+               'regard to race, color, religion, sex, national origin, sexual '
+               'orientation, gender identity, disability or protected veteran '
+               'status.',
+ 'jobadvantage': '外企文化,弹性工作,英语氛围,技术达人',
+ 'jobcompanyname': '艾斯普运维部门招聘',
+ 'jobid': '4161682',
+ 'jobname': '运维工程师',
+ 'jobreposibilit': 'Responsibilities:Write scripts for automatic '
+                   'deployment.Setup Jenkins pipeline job.Trouble shooting/fix '
+                   'deployment problems.Work with development and '
+                   'infrastructure team for supporting Aspira products '
+                   'release.Integrate automated builds and build artifacts '
+                   'into test environments and code analysis tools.Design and '
+                   'keep improving efficient development.Manage and support '
+                   'development tools Jira/Gitlab/Jenkins.Manage and support '
+                   'internal tools Salesforce etc.Support other migration '
+                   'projects.Qualifications:Linux/Unix/Windows experience are '
+                   'required.Experience on Devops and related tools such as: '
+                   'Jenkins/Jira/Gitlab/Sonar/Nexus/Ansible/Docker/VMware.Skilled '
+                   'in Ruby/Python.Knowledge on ant/maven/msbuild.Knowledge on '
+                   'the software development cycle, understanding the release '
+                   'processes for Integration, QA, Stage and Production.Good '
+                   'read/written English.Good verbal English expression is a '
+                   'plus.ASPIRA Perks & BenefitsGreat Working Environment“5+1” '
+                   'Endowment Insurance; Medical Insurance; Unemployment '
+                   'Insurance; Work-related Injury Insurance; Childbirth '
+                   'Insurance; and Housing Accumulation FundsCommercial '
+                   'Medical Insurance in addition to the government’s required '
+                   'Medical Insurance (with one family member covered as '
+                   'well)15 Days PTO (Paid Time Off) per year to start in '
+                   'addition to all the public holidaysFlexible Working '
+                   'Schedule (projects based)',
+ 'jobsite': '西安',
+ 'update_time': '2018-03-22 20:14:22'}
+2018-03-22 20:14:28 [scrapy.extensions.throttle] INFO: slot: www.lagou.com | conc: 3 | delay: 5000 ms (+0) | latency:  282 ms | size:   242 bytes
+2018-03-22 20:14:28 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=124.193.37.5> from <GET https://www.lagou.com/zhaopin/yunwei/16/>
+2018-03-22 20:14:34 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://www.lagou.com/jobs/4253316.html> (failed 1 times): TCP connection timed out: 110: Connection timed out.
+2018-03-22 20:14:43 [scrapy.extensions.throttle] INFO: slot: www.lagou.com | conc: 3 | delay: 5000 ms (+0) | latency: 1290 ms | size: 19079 bytes
+2018-03-22 20:14:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/zhaopin/jiesuan/12/> (referer: https://www.lagou.com/zhaopin/jiesuan/14/)
+2018-03-22 20:14:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/jiesuan/12/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验1-3年',
+ 'category': 'jiesuan',
+ 'company': '携程',
+ 'companyid': '6636',
+ 'labels': '支付,银行,财务,会计,资产',
+ 'positionid': '4141045',
+ 'positionname': '结算专员',
+ 'publish_time': '2018-03-11',
+ 'salary': '7k-10k',
+ 'update_time': '2018-03-22 20:14:44'}
+2018-03-22 20:14:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/jiesuan/12/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验1-3年',
+ 'category': 'jiesuan',
+ 'company': '美团点评',
+ 'companyid': '50702',
+ 'labels': '支付',
+ 'positionid': '3041413',
+ 'positionname': '账务清结算方向产品经理',
+ 'publish_time': '2018-03-20 20:14:44',
+ 'salary': '20k-30k',
+ 'update_time': '2018-03-22 20:14:44'}
+2018-03-22 20:14:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/jiesuan/12/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验5-10年',
+ 'category': 'jiesuan',
+ 'company': '河狸家',
+ 'companyid': '135258',
+ 'labels': '产品设计',
+ 'positionid': '4087998',
+ 'positionname': '产品经理（结算）J10098',
+ 'publish_time': '2018-03-19 20:14:44',
+ 'salary': '15k-30k',
+ 'update_time': '2018-03-22 20:14:44'}
+2018-03-22 20:14:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/jiesuan/12/>
+{'acquire_edu_bg': '大专',
+ 'acquire_year': '经验1-3年',
+ 'category': 'jiesuan',
+ 'company': '有利网',
+ 'companyid': '1992',
+ 'labels': '金融,支付,银行',
+ 'positionid': '3900744',
+ 'positionname': '产品经理（结算中心）',
+ 'publish_time': '11:52发布',
+ 'salary': '12k-24k',
+ 'update_time': '2018-03-22 20:14:44'}
+2018-03-22 20:14:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/jiesuan/12/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验1年以下',
+ 'category': 'jiesuan',
+ 'company': 'ATA',
+ 'companyid': '143390',
+ 'labels': '销售支持',
+ 'positionid': '4258875',
+ 'positionname': '商务结算',
+ 'publish_time': '11:49发布',
+ 'salary': '4k-5k',
+ 'update_time': '2018-03-22 20:14:44'}
+2018-03-22 20:14:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/jiesuan/12/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验不限',
+ 'category': 'jiesuan',
+ 'company': '浙江聚有财',
+ 'companyid': '43906',
+ 'labels': '金融,财务',
+ 'positionid': '1883772',
+ 'positionname': '资金结算专员',
+ 'publish_time': '2018-03-20 20:14:44',
+ 'salary': '4k-6k',
+ 'update_time': '2018-03-22 20:14:44'}
+2018-03-22 20:14:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/jiesuan/12/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验1-3年',
+ 'category': 'jiesuan',
+ 'company': '汽车之家',
+ 'companyid': '8103',
+ 'labels': '支付,产品设计',
+ 'positionid': '4079050',
+ 'positionname': '结算平台产品经理',
+ 'publish_time': '2018-03-21 20:14:44',
+ 'salary': '15k-25k',
+ 'update_time': '2018-03-22 20:14:44'}
+2018-03-22 20:14:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/jiesuan/12/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验3-5年',
+ 'category': 'jiesuan',
+ 'company': '快捷通',
+ 'companyid': '96968',
+ 'labels': '年底双薪,午餐补助,定期体检,绩效奖金',
+ 'positionid': '4201438',
+ 'positionname': '资金结算专员',
+ 'publish_time': '2018-03-21 20:14:44',
+ 'salary': '6k-10k',
+ 'update_time': '2018-03-22 20:14:44'}
+2018-03-22 20:14:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/jiesuan/12/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验1-3年',
+ 'category': 'jiesuan',
+ 'company': '网易',
+ 'companyid': '329',
+ 'labels': '金融,支付,银行,助理,顾问,清算',
+ 'positionid': '4025700',
+ 'positionname': '清结算专员(lsht)',
+ 'publish_time': '2018-03-12',
+ 'salary': '8k-15k',
+ 'update_time': '2018-03-22 20:14:44'}
+2018-03-22 20:14:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/jiesuan/12/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验1-3年',
+ 'category': 'jiesuan',
+ 'company': '包银消费金融',
+ 'companyid': '165980',
+ 'labels': '金融,支付,银行,融资',
+ 'positionid': '3864848',
+ 'positionname': '资金清结算',
+ 'publish_time': '2018-03-05',
+ 'salary': '5k-10k',
+ 'update_time': '2018-03-22 20:14:44'}
+2018-03-22 20:14:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/jiesuan/12/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验3-5年',
+ 'category': 'jiesuan',
+ 'company': '宜信',
+ 'companyid': '3786',
+ 'labels': '金融,支付,高级,产品设计',
+ 'positionid': '3990496',
+ 'positionname': '产品经理（清结算）',
+ 'publish_time': '2018-03-16',
+ 'salary': '20k-30k',
+ 'update_time': '2018-03-22 20:14:44'}
+2018-03-22 20:14:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/jiesuan/12/>
+{'acquire_edu_bg': '大专',
+ 'acquire_year': '经验1-3年',
+ 'category': 'jiesuan',
+ 'company': '玖富集团',
+ 'companyid': '136978',
+ 'labels': '金融,电商,运营,数据分析',
+ 'positionid': '3680876',
+ 'positionname': '电商结算专员',
+ 'publish_time': '2018-03-21 20:14:44',
+ 'salary': '6k-8k',
+ 'update_time': '2018-03-22 20:14:44'}
+2018-03-22 20:14:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/jiesuan/12/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验1-3年',
+ 'category': 'jiesuan',
+ 'company': '象宿网络',
+ 'companyid': '166210',
+ 'labels': '运营',
+ 'positionid': '4126098',
+ 'positionname': '财务结算专员',
+ 'publish_time': '2018-03-20 20:14:44',
+ 'salary': '3k-6k',
+ 'update_time': '2018-03-22 20:14:44'}
+2018-03-22 20:14:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/jiesuan/12/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验3-5年',
+ 'category': 'jiesuan',
+ 'company': '随行付支付有限公司',
+ 'companyid': '11739',
+ 'labels': '支付',
+ 'positionid': '1561931',
+ 'positionname': '高级产品经理（结算）',
+ 'publish_time': '2018-03-19 20:14:44',
+ 'salary': '20k-25k',
+ 'update_time': '2018-03-22 20:14:44'}
+2018-03-22 20:14:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/jiesuan/12/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验5-10年',
+ 'category': 'jiesuan',
+ 'company': '京东商城',
+ 'companyid': '139755',
+ 'labels': '视频,项目管理,运营,审核,流程管理',
+ 'positionid': '4162323',
+ 'positionname': '结算管理岗',
+ 'publish_time': '2018-03-07',
+ 'salary': '12k-20k',
+ 'update_time': '2018-03-22 20:14:44'}
+2018-03-22 20:14:52 [scrapy.extensions.throttle] INFO: slot: www.lagou.com | conc: 3 | delay: 5000 ms (+0) | latency: 3948 ms | size: 19079 bytes
+2018-03-22 20:14:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/zhaopin/jiagoushi/9/> (referer: https://www.lagou.com/zhaopin/jiagoushi/7/)
+2018-03-22 20:14:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/jiagoushi/9/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验3-5年',
+ 'category': 'jiagoushi',
+ 'company': '美团点评',
+ 'companyid': '50702',
+ 'labels': 'Java,redis',
+ 'positionid': '4036891',
+ 'positionname': '资深架构师',
+ 'publish_time': '2018-03-07',
+ 'salary': '35k-45k',
+ 'update_time': '2018-03-22 20:14:52'}
+2018-03-22 20:14:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/jiagoushi/9/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验5-10年',
+ 'category': 'jiagoushi',
+ 'company': '孔夫子旧书网',
+ 'companyid': '3234',
+ 'labels': '信息安全,系统架构,redis',
+ 'positionid': '3154330',
+ 'positionname': '架构师',
+ 'publish_time': '13:34发布',
+ 'salary': '50k-100k',
+ 'update_time': '2018-03-22 20:14:52'}
+2018-03-22 20:14:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/jiagoushi/9/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验5-10年',
+ 'category': 'jiagoushi',
+ 'company': '盒子科技',
+ 'companyid': '267',
+ 'labels': '支付,专家,资深,高级,Java',
+ 'positionid': '3926167',
+ 'positionname': '架构师',
+ 'publish_time': '2018-03-21 20:14:52',
+ 'salary': '25k-35k',
+ 'update_time': '2018-03-22 20:14:52'}
+2018-03-22 20:14:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/jiagoushi/9/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验5-10年',
+ 'category': 'jiagoushi',
+ 'company': '开始吧',
+ 'companyid': '44123',
+ 'labels': '信息安全,移动端,Java',
+ 'positionid': '3683674',
+ 'positionname': 'APP架构师',
+ 'publish_time': '10:58发布',
+ 'salary': '20k-35k',
+ 'update_time': '2018-03-22 20:14:52'}
+2018-03-22 20:14:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/jiagoushi/9/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验3-5年',
+ 'category': 'jiagoushi',
+ 'company': '滴滴出行',
+ 'companyid': '2474',
+ 'labels': '广告营销,后端开发,Java,VR',
+ 'positionid': '4065780',
+ 'positionname': '资深增长引擎工程师/架构师',
+ 'publish_time': '10:27发布',
+ 'salary': '20k-40k',
+ 'update_time': '2018-03-22 20:14:52'}
+2018-03-22 20:14:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/jiagoushi/9/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验不限',
+ 'category': 'jiagoushi',
+ 'company': '平安科技',
+ 'companyid': '24748',
+ 'labels': '云计算,saas,OpenStack',
+ 'positionid': '4280805',
+ 'positionname': '云架构师（上海）',
+ 'publish_time': '2018-03-21 20:14:52',
+ 'salary': '15k-30k',
+ 'update_time': '2018-03-22 20:14:52'}
+2018-03-22 20:14:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/jiagoushi/9/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验不限',
+ 'category': 'jiagoushi',
+ 'company': '互动大师iH5.cn',
+ 'companyid': '22637',
+ 'labels': '信息安全,资深,后端开发,redis',
+ 'positionid': '4303047',
+ 'positionname': 'Go语言后台高级工程师/架构师',
+ 'publish_time': '2018-03-21 20:14:52',
+ 'salary': '20k-40k',
+ 'update_time': '2018-03-22 20:14:52'}
+2018-03-22 20:14:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/jiagoushi/9/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验5-10年',
+ 'category': 'jiagoushi',
+ 'company': '星河互联集团',
+ 'companyid': '116752',
+ 'labels': '教育,Java,系统架构',
+ 'positionid': '4263416',
+ 'positionname': '架构师',
+ 'publish_time': '2018-03-20 20:14:52',
+ 'salary': '20k-40k',
+ 'update_time': '2018-03-22 20:14:52'}
+2018-03-22 20:14:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/jiagoushi/9/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验5-10年',
+ 'category': 'jiagoushi',
+ 'company': '中地控股',
+ 'companyid': '83712',
+ 'labels': '移动互联网,大数据,Java,系统架构',
+ 'positionid': '3661608',
+ 'positionname': '架构师',
+ 'publish_time': '2018-03-19 20:14:52',
+ 'salary': '10k-20k',
+ 'update_time': '2018-03-22 20:14:52'}
+2018-03-22 20:14:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/jiagoushi/9/>
+{'acquire_edu_bg': '大专',
+ 'acquire_year': '经验5-10年',
+ 'category': 'jiagoushi',
+ 'company': '飞贷金融科技',
+ 'companyid': '111065',
+ 'labels': '金融',
+ 'positionid': '2732196',
+ 'positionname': '架构师',
+ 'publish_time': '17:26发布',
+ 'salary': '25k-30k',
+ 'update_time': '2018-03-22 20:14:52'}
+2018-03-22 20:14:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/jiagoushi/9/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验5-10年',
+ 'category': 'jiagoushi',
+ 'company': '理房通',
+ 'companyid': '266081',
+ 'labels': '支付,信息安全,大数据,Java,系统架构',
+ 'positionid': '4219445',
+ 'positionname': '架构师',
+ 'publish_time': '16:17发布',
+ 'salary': '25k-50k',
+ 'update_time': '2018-03-22 20:14:52'}
+2018-03-22 20:14:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/jiagoushi/9/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验5-10年',
+ 'category': 'jiagoushi',
+ 'company': '上海你我贷互联网金融信息服务',
+ 'companyid': '26962',
+ 'labels': '金融,高级,大数据,分布式,系统架构',
+ 'positionid': '3388284',
+ 'positionname': '架构师',
+ 'publish_time': '09:41发布',
+ 'salary': '30k-50k',
+ 'update_time': '2018-03-22 20:14:52'}
+2018-03-22 20:14:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/jiagoushi/9/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验3-5年',
+ 'category': 'jiagoushi',
+ 'company': '小红书',
+ 'companyid': '6542',
+ 'labels': '后端开发,大数据,hadoop',
+ 'positionid': '4303048',
+ 'positionname': '实时计算数据工程师/架构师',
+ 'publish_time': '2018-03-21 20:14:52',
+ 'salary': '25k-50k',
+ 'update_time': '2018-03-22 20:14:52'}
+2018-03-22 20:14:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/jiagoushi/9/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验5-10年',
+ 'category': 'jiagoushi',
+ 'company': '她社区',
+ 'companyid': '19921',
+ 'labels': '资深,大数据,平台/后台,分布式',
+ 'positionid': '4294497',
+ 'positionname': 'JAVA高级工程师/架构师',
+ 'publish_time': '17:17发布',
+ 'salary': '20k-30k',
+ 'update_time': '2018-03-22 20:14:52'}
+2018-03-22 20:14:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/jiagoushi/9/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验5-10年',
+ 'category': 'jiagoushi',
+ 'company': '启明星',
+ 'companyid': '66099',
+ 'labels': '电商,资深,系统架构,SOA',
+ 'positionid': '3337516',
+ 'positionname': 'MSTD010D-JAVA架构师',
+ 'publish_time': '2018-03-21 20:14:52',
+ 'salary': '25k-35k',
+ 'update_time': '2018-03-22 20:14:52'}
+2018-03-22 20:14:54 [scrapy.extensions.throttle] INFO: slot: www.lagou.com | conc: 3 | delay: 5000 ms (+0) | latency: 1272 ms | size:  1393 bytes
+2018-03-22 20:14:54 [scrapy.core.engine] DEBUG: Crawled (403) <GET https://www.lagou.com/jobs/3636416.html> (referer: https://www.lagou.com/zhaopin/wenancehua/3/)
+2018-03-22 20:14:54 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.lagou.com/jobs/3636416.html>: HTTP status code is not handled or not allowed
+2018-03-22 20:14:56 [scrapy.extensions.logstats] INFO: Crawled 12 pages (at 6 pages/min), scraped 37 items (at 33 items/min)
+2018-03-22 20:15:03 [scrapy.extensions.throttle] INFO: slot: www.lagou.com | conc: 4 | delay: 5000 ms (+0) | latency: 1389 ms | size: 16797 bytes
+2018-03-22 20:15:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/jobs/3836936.html> (referer: https://www.lagou.com/zhaopin/youxiceshi/3/)
+2018-03-22 20:15:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/jobs/3836936.html>
+{'jobacquire': '人才是公司最宝贵的财富。我们重视每一位成员的发展和成长，不仅为成员提供舒适的工作环境，事业发展的机会，而且关注每一位成员的身心健康，为此我们提供以下福利：餐饮：公司为每位员工提供精美的早餐和加班餐，定期更换菜品，让你足不出户享受美食；休闲时间：每天提供1小时的游戏体验时间，定期组织专场体验和游戏比赛，更有精美奖品哦；五险一金：这是最基本的咯，不用说了，我们还为每位员工提供了商业保险哦；带薪假期：各项带薪假期齐全，年假,工龄假,婚假，产假，陪产假等等这些神马都有；年度旅游：我们每年定期组织员工国内外旅游，大家在工作之余享受大自然；年度体检：每年组织健康体检；在岗培训：定期为员工提供在岗培训，提升专业技能和个人竞争力；运动俱乐部：羽毛球、游泳、足球、乒乓球、篮球、瑜伽、狼人杀等俱乐部。只要好玩、有趣，禅游俱乐部等你来建；活动基金：部门活动基金，想旅游、想聚餐，随性随心……其他：此外还有节日礼物，结婚礼金，新生儿礼物，员工子女生日礼物，下午茶等等。我们倡导劳逸结合，开心工作，健康生活，实现工作生活的平衡。为了共同的梦想，加入我们吧！',
+ 'jobadvantage': '五险一金,双休,包早餐,加班晚餐',
+ 'jobcompanyname': '禅游研发部招聘',
+ 'jobid': '3836936',
+ 'jobname': '游戏测试',
+ 'jobreposibilit': '1、根据产品需求编写游戏测试用例，并执行功能性测试，输出测试报告；2、独立负责项目测试，制定测试计划；3、与项目相关人员就项目进度和问题进行沟通；4、推动问题的合理解决，保证项目进度和产品质量；5、项目测试流程流程规范的推进及优化。职位要求：1、热爱游戏，对游戏有极大的热情，对游戏及游戏测试有自己的见解；2、2年以上工作经验，有完整游戏项目测试经验；3、具备较强的逻辑分析能力和沟通能力，能与研发团队有良好沟通；4、能自行合理安排测试内容并有效的在节点时间内完成测试工作；',
+ 'jobsite': '深圳',
+ 'update_time': '2018-03-22 20:15:03'}
+2018-03-22 20:15:10 [scrapy.extensions.throttle] INFO: slot: www.lagou.com | conc: 4 | delay: 5000 ms (+0) | latency: 2077 ms | size: 14377 bytes
+2018-03-22 20:15:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/jobs/4155101.html> (referer: https://www.lagou.com/zhaopin/youxicehua/3/)
+2018-03-22 20:15:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/jobs/4155101.html>
+{'jobacquire': '1、根据游戏设计概念构建游戏中的关卡系统.2、构建基础游戏关卡概念设计图；与场景设计美术紧密协作完成关卡模型；使用关卡编辑器实现关卡设计概念中各种细节；对关卡进行测试、修整和完善；职位要求：1、对游戏有强烈爱好，熟悉消除类、休闲类游戏中经典作品的关卡设计，能够将游戏设计概念转化为可执行的关卡设计；2、有严谨而深入细节的逻辑思维能力，具备良好的分析和汇总能力；3、思维活跃，具有创新能力；4、良好的沟通能力和团队合作精神，能承受一定的工作压力。',
+ 'jobadvantage': '平台大，待遇优',
+ 'jobcompanyname': '天脉招聘',
+ 'jobid': '4155101',
+ 'jobname': '游戏策划',
+ 'jobreposibilit': '1、根据游戏设计概念构建游戏中的关卡系统.2、构建基础游戏关卡概念设计图；与场景设计美术紧密协作完成关卡模型；使用关卡编辑器实现关卡设计概念中各种细节；对关卡进行测试、修整和完善；职位要求：1、对游戏有强烈爱好，熟悉消除类、休闲类游戏中经典作品的关卡设计，能够将游戏设计概念转化为可执行的关卡设计；2、有严谨而深入细节的逻辑思维能力，具备良好的分析和汇总能力；3、思维活跃，具有创新能力；',
+ 'jobsite': '北京',
+ 'update_time': '2018-03-22 20:15:10'}
+2018-03-22 20:15:16 [scrapy.extensions.throttle] INFO: slot: www.lagou.com | conc: 4 | delay: 5000 ms (+0) | latency:  523 ms | size: 14508 bytes
+2018-03-22 20:15:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/jobs/4227688.html> (referer: https://www.lagou.com/zhaopin/youxiceshi/3/)
+2018-03-22 20:15:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/jobs/4227688.html>
+{'jobacquire': '1、大专以上学历，计算机相关专业优先，熟悉计算机办公软件、数据库、测试理论相关知识；2、对网络游戏概念有一定了解(游戏创意\\物理实现机制\\网络通讯协议等)；3、资深网络游戏玩家，对游戏系统有深入细致的了解（如幻兽系统、战斗力系统、军团系统、跨服系统等）；4、善于寻找游戏bug和提交游戏建议；5、熟悉测试基础理论和方法；6、对应聘的游戏项目有一定了解并且熟悉其它同类型网络游戏，能够分析竞品功能。',
+ 'jobadvantage': '学习,晋升',
+ 'jobcompanyname': '网龙网络有限公司测试部门招聘',
+ 'jobid': '4227688',
+ 'jobname': '游戏测试工程师',
+ 'jobreposibilit': '2.根据设计目的和测试需求，提交项目建议；3.根据测试结果和测试发现的BUG，提交测试用例缺陷；',
+ 'jobsite': '福州',
+ 'update_time': '2018-03-22 20:15:16'}
+2018-03-22 20:15:23 [scrapy.extensions.throttle] INFO: slot: www.lagou.com | conc: 4 | delay: 5000 ms (+0) | latency:  598 ms | size: 14768 bytes
+2018-03-22 20:15:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/zhaopin/jingyigongchengshi/> (referer: https://www.lagou.com)
+2018-03-22 20:15:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/jingyigongchengshi/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验1-3年',
+ 'category': 'jingyigongchengshi',
+ 'company': '精益汇智',
+ 'companyid': '266433',
+ 'labels': '软件开发,大数据',
+ 'positionid': '4274797',
+ 'positionname': 'Java软件工程师',
+ 'publish_time': '2018-03-21 20:15:23',
+ 'salary': '8k-16k',
+ 'update_time': '2018-03-22 20:15:23'}
+2018-03-22 20:15:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/jingyigongchengshi/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验3-5年',
+ 'category': 'jingyigongchengshi',
+ 'company': '精益汇智',
+ 'companyid': '266433',
+ 'labels': '智能硬件,软件开发,系统架构,系统分析',
+ 'positionid': '4274813',
+ 'positionname': 'Java高级软件工程师',
+ 'publish_time': '2018-03-21 20:15:23',
+ 'salary': '15k-30k',
+ 'update_time': '2018-03-22 20:15:23'}
+2018-03-22 20:15:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/jingyigongchengshi/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验3-5年',
+ 'category': 'jingyigongchengshi',
+ 'company': '精益汇智',
+ 'companyid': '266433',
+ 'labels': '资深,高级,项目管理,mes,ERP,项目实施',
+ 'positionid': '4067840',
+ 'positionname': '项目经理',
+ 'publish_time': '2018-03-21 20:15:23',
+ 'salary': '10k-20k',
+ 'update_time': '2018-03-22 20:15:23'}
+2018-03-22 20:15:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/jingyigongchengshi/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验1-3年',
+ 'category': 'jingyigongchengshi',
+ 'company': '精益汇智',
+ 'companyid': '266433',
+ 'labels': '项目管理,专员,助理,mes,ERP',
+ 'positionid': '4068017',
+ 'positionname': '产品管理',
+ 'publish_time': '2018-03-21 20:15:23',
+ 'salary': '10k-15k',
+ 'update_time': '2018-03-22 20:15:23'}
+2018-03-22 20:15:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/jingyigongchengshi/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验1-3年',
+ 'category': 'jingyigongchengshi',
+ 'company': '精益汇智',
+ 'companyid': '266433',
+ 'labels': 'web前端,Java,系统架构,系统分析',
+ 'positionid': '4274726',
+ 'positionname': 'Web Developer',
+ 'publish_time': '2018-03-21 20:15:23',
+ 'salary': '9k-18k',
+ 'update_time': '2018-03-22 20:15:23'}
+2018-03-22 20:15:29 [scrapy.extensions.throttle] INFO: slot: www.lagou.com | conc: 4 | delay: 5000 ms (+0) | latency:  179 ms | size:  1393 bytes
+2018-03-22 20:15:29 [scrapy.core.engine] DEBUG: Crawled (403) <GET https://www.lagou.com/zhaopin/xitonggongchengshi/> (referer: https://www.lagou.com)
+2018-03-22 20:15:29 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.lagou.com/zhaopin/xitonggongchengshi/>: HTTP status code is not handled or not allowed
+2018-03-22 20:15:32 [scrapy.extensions.throttle] INFO: slot: www.lagou.com | conc: 4 | delay: 5000 ms (+0) | latency:   57 ms | size:   242 bytes
+2018-03-22 20:15:32 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=124.193.37.5> from <GET https://www.lagou.com/jobs/3973500.html>
+2018-03-22 20:15:39 [scrapy.extensions.throttle] INFO: slot: www.lagou.com | conc: 4 | delay: 5000 ms (+0) | latency:  714 ms | size: 19186 bytes
+2018-03-22 20:15:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/zhaopin/gongguan/13/> (referer: https://www.lagou.com/zhaopin/gongguan/11/)
+2018-03-22 20:15:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/gongguan/13/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验5-10年',
+ 'category': 'gongguan',
+ 'company': '骆驼服饰',
+ 'companyid': '22069',
+ 'labels': '新媒体,策划,媒介,新闻',
+ 'positionid': '4262287',
+ 'positionname': '公关主管/经理',
+ 'publish_time': '2018-03-14',
+ 'salary': '10k-20k',
+ 'update_time': '2018-03-22 20:15:39'}
+2018-03-22 20:15:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/gongguan/13/>
+{'acquire_edu_bg': '大专',
+ 'acquire_year': '经验1-3年',
+ 'category': 'gongguan',
+ 'company': 'Forte',
+ 'companyid': '274012',
+ 'labels': '活动,市场拓展,策划,公共关系,企业',
+ 'positionid': '3964299',
+ 'positionname': '招商及公关',
+ 'publish_time': '2018-03-20 20:15:39',
+ 'salary': '4k-6k',
+ 'update_time': '2018-03-22 20:15:39'}
+2018-03-22 20:15:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/gongguan/13/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验不限',
+ 'category': 'gongguan',
+ 'company': '新数',
+ 'companyid': '47386',
+ 'labels': '媒体,实习生,文案,编辑,新闻',
+ 'positionid': '4283779',
+ 'positionname': '公关专员（应届毕业/实习）',
+ 'publish_time': '2018-03-19 20:15:39',
+ 'salary': '5k-6k',
+ 'update_time': '2018-03-22 20:15:39'}
+2018-03-22 20:15:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/gongguan/13/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验3-5年',
+ 'category': 'gongguan',
+ 'company': '什么值得买',
+ 'companyid': '7535',
+ 'labels': '技能培训,带薪年假,各种主题趴,海量产品体验',
+ 'positionid': '4059429',
+ 'positionname': '公关经理',
+ 'publish_time': '2018-03-20 20:15:39',
+ 'salary': '12k-20k',
+ 'update_time': '2018-03-22 20:15:39'}
+2018-03-22 20:15:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/gongguan/13/>
+{'acquire_edu_bg': '不限',
+ 'acquire_year': '经验3-5年',
+ 'category': 'gongguan',
+ 'company': '丁香园',
+ 'companyid': '26248',
+ 'labels': '品牌',
+ 'positionid': '3601156',
+ 'positionname': '公关经理',
+ 'publish_time': '2018-03-12',
+ 'salary': '10k-20k',
+ 'update_time': '2018-03-22 20:15:39'}
+2018-03-22 20:15:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/gongguan/13/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验5-10年',
+ 'category': 'gongguan',
+ 'company': '陆金所',
+ 'companyid': '51662',
+ 'labels': '金融,媒体,广告,品牌,财经,新闻',
+ 'positionid': '4033158',
+ 'positionname': '海外公关岗J10732',
+ 'publish_time': '2018-03-20 20:15:39',
+ 'salary': '12k-21k',
+ 'update_time': '2018-03-22 20:15:39'}
+2018-03-22 20:15:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/gongguan/13/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验1-3年',
+ 'category': 'gongguan',
+ 'company': '清科集团',
+ 'companyid': '72257',
+ 'labels': '金融,媒体,策划,公共关系',
+ 'positionid': '4270163',
+ 'positionname': '公关专员/主管 品牌公关部',
+ 'publish_time': '2018-03-20 20:15:39',
+ 'salary': '7k-12k',
+ 'update_time': '2018-03-22 20:15:39'}
+2018-03-22 20:15:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/gongguan/13/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验1-3年',
+ 'category': 'gongguan',
+ 'company': '人人网',
+ 'companyid': '5142',
+ 'labels': '汽车,新媒体,社会化营销',
+ 'positionid': '4261696',
+ 'positionname': '公关主管',
+ 'publish_time': '2018-03-16',
+ 'salary': '8k-15k',
+ 'update_time': '2018-03-22 20:15:39'}
+2018-03-22 20:15:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/gongguan/13/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验3-5年',
+ 'category': 'gongguan',
+ 'company': 'Makeblock',
+ 'companyid': '17617',
+ 'labels': '媒介,新媒体,新闻',
+ 'positionid': '4306996',
+ 'positionname': '高级公关专员',
+ 'publish_time': '13:43发布',
+ 'salary': '10k-20k',
+ 'update_time': '2018-03-22 20:15:39'}
+2018-03-22 20:15:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/gongguan/13/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验1-3年',
+ 'category': 'gongguan',
+ 'company': '博雅天下',
+ 'companyid': '197754',
+ 'labels': '媒体,社交,策划,推广',
+ 'positionid': '3318915',
+ 'positionname': '公关经理',
+ 'publish_time': '2018-02-24',
+ 'salary': '8k-15k',
+ 'update_time': '2018-03-22 20:15:39'}
+2018-03-22 20:15:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/gongguan/13/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验5-10年',
+ 'category': 'gongguan',
+ 'company': '新浪网',
+ 'companyid': '25592',
+ 'labels': '新媒体,策划,新闻',
+ 'positionid': '3471739',
+ 'positionname': '公关经理',
+ 'publish_time': '14:06发布',
+ 'salary': '15k-30k',
+ 'update_time': '2018-03-22 20:15:39'}
+2018-03-22 20:15:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/gongguan/13/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验3-5年',
+ 'category': 'gongguan',
+ 'company': '我来贷WeLab',
+ 'companyid': '15265',
+ 'labels': '金融,电商,新媒体,财经,新闻',
+ 'positionid': '2988909',
+ 'positionname': '公关主管/经理',
+ 'publish_time': '10:42发布',
+ 'salary': '10k-20k',
+ 'update_time': '2018-03-22 20:15:39'}
+2018-03-22 20:15:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/gongguan/13/>
+{'acquire_edu_bg': '大专',
+ 'acquire_year': '经验3-5年',
+ 'category': 'gongguan',
+ 'company': '上海拿米金服',
+ 'companyid': '113723',
+ 'labels': '金融,广告营销,新媒体,新闻',
+ 'positionid': '4134562',
+ 'positionname': '公关主管',
+ 'publish_time': '2018-03-21 20:15:39',
+ 'salary': '10k-15k',
+ 'update_time': '2018-03-22 20:15:39'}
+2018-03-22 20:15:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/gongguan/13/>
+{'acquire_edu_bg': '不限',
+ 'acquire_year': '经验不限',
+ 'category': 'gongguan',
+ 'company': '个推',
+ 'companyid': '13163',
+ 'labels': '移动互联网,广告营销,公共关系',
+ 'positionid': '2443083',
+ 'positionname': '品牌公关',
+ 'publish_time': '2018-03-16',
+ 'salary': '10k-15k',
+ 'update_time': '2018-03-22 20:15:39'}
+2018-03-22 20:15:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/gongguan/13/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验5-10年',
+ 'category': 'gongguan',
+ 'company': 'Rokid',
+ 'companyid': '171980',
+ 'labels': '媒介,策划,新媒体,公共关系',
+ 'positionid': '3063322',
+ 'positionname': '公关经理',
+ 'publish_time': '2018-03-14',
+ 'salary': '15k-30k',
+ 'update_time': '2018-03-22 20:15:39'}
+2018-03-22 20:15:43 [scrapy.extensions.throttle] INFO: slot: www.lagou.com | conc: 4 | delay: 5000 ms (+0) | latency:  830 ms | size: 19383 bytes
+2018-03-22 20:15:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/zhaopin/gongguan/28/> (referer: https://www.lagou.com/zhaopin/gongguan/30/)
+2018-03-22 20:15:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/gongguan/28/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验3-5年',
+ 'category': 'gongguan',
+ 'company': '拼多多',
+ 'companyid': '107784',
+ 'labels': '电商,新媒体,公共关系',
+ 'positionid': '4177964',
+ 'positionname': '公关经理',
+ 'publish_time': '10:05发布',
+ 'salary': '15k-30k',
+ 'update_time': '2018-03-22 20:15:44'}
+2018-03-22 20:15:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/gongguan/28/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验5-10年',
+ 'category': 'gongguan',
+ 'company': '美团点评',
+ 'companyid': '50702',
+ 'labels': '金融,媒体,策略,财经',
+ 'positionid': '3730688',
+ 'positionname': '高级公关经理（消费金融）',
+ 'publish_time': '2018-03-16',
+ 'salary': '20k-30k',
+ 'update_time': '2018-03-22 20:15:44'}
+2018-03-22 20:15:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/gongguan/28/>
+{'acquire_edu_bg': '大专',
+ 'acquire_year': '经验1-3年',
+ 'category': 'gongguan',
+ 'company': '传智播客',
+ 'companyid': '22462',
+ 'labels': '广告营销,体育运动,传媒,运营,新媒体',
+ 'positionid': '4293151',
+ 'positionname': '媒介公关J10378',
+ 'publish_time': '2018-03-20 20:15:44',
+ 'salary': '8k-15k',
+ 'update_time': '2018-03-22 20:15:44'}
+2018-03-22 20:15:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/gongguan/28/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验1-3年',
+ 'category': 'gongguan',
+ 'company': '以梦为马制作',
+ 'companyid': '323827',
+ 'labels': '主管,媒介,推广,新媒体,策划',
+ 'positionid': '4132073',
+ 'positionname': '公关',
+ 'publish_time': '2018-02-23',
+ 'salary': '9k-16k',
+ 'update_time': '2018-03-22 20:15:44'}
+2018-03-22 20:15:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/gongguan/28/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验1-3年',
+ 'category': 'gongguan',
+ 'company': '湖北云天下教育科技有限公司',
+ 'companyid': '38388',
+ 'labels': '新媒体,策划',
+ 'positionid': '4252669',
+ 'positionname': '品牌公关专员',
+ 'publish_time': '2018-03-21 20:15:44',
+ 'salary': '4k-6k',
+ 'update_time': '2018-03-22 20:15:44'}
+2018-03-22 20:15:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/gongguan/28/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验3-5年',
+ 'category': 'gongguan',
+ 'company': '众安保险',
+ 'companyid': '29824',
+ 'labels': '金融,媒体,策划,公共关系',
+ 'positionid': '3706772',
+ 'positionname': '市场公关',
+ 'publish_time': '2018-03-02',
+ 'salary': '15k-25k',
+ 'update_time': '2018-03-22 20:15:44'}
+2018-03-22 20:15:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/gongguan/28/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验不限',
+ 'category': 'gongguan',
+ 'company': '贝贝网',
+ 'companyid': '26564',
+ 'labels': '策划',
+ 'positionid': '3845898',
+ 'positionname': '高级公关专员',
+ 'publish_time': '2018-02-27',
+ 'salary': '8k-10k',
+ 'update_time': '2018-03-22 20:15:44'}
+2018-03-22 20:15:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/gongguan/28/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验1-3年',
+ 'category': 'gongguan',
+ 'company': '全民直播',
+ 'companyid': '110473',
+ 'labels': '年底双薪,带薪年假,午餐补助,定期体检',
+ 'positionid': '4298005',
+ 'positionname': '政府事务（政府公关）',
+ 'publish_time': '2018-03-21 20:15:44',
+ 'salary': '10k-15k',
+ 'update_time': '2018-03-22 20:15:44'}
+2018-03-22 20:15:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/gongguan/28/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验3-5年',
+ 'category': 'gongguan',
+ 'company': '美图公司',
+ 'companyid': '23291',
+ 'labels': '节日礼物,与大牛共事,福利健全,五险一金',
+ 'positionid': '3991715',
+ 'positionname': '资深公关专员—杭州',
+ 'publish_time': '2018-03-19 20:15:44',
+ 'salary': '10k-20k',
+ 'update_time': '2018-03-22 20:15:44'}
+2018-03-22 20:15:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/gongguan/28/>
+{'acquire_edu_bg': '不限',
+ 'acquire_year': '经验1-3年',
+ 'category': 'gongguan',
+ 'company': '海风教育',
+ 'companyid': '101972',
+ 'labels': '教育,实习生,策划,新媒体',
+ 'positionid': '4181460',
+ 'positionname': '公关专员/公关主管/PR',
+ 'publish_time': '2018-03-01',
+ 'salary': '5k-10k',
+ 'update_time': '2018-03-22 20:15:44'}
+2018-03-22 20:15:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/gongguan/28/>
+{'acquire_edu_bg': '不限',
+ 'acquire_year': '经验1-3年',
+ 'category': 'gongguan',
+ 'company': '上海元聚',
+ 'companyid': '232421',
+ 'labels': '移动互联网,媒体,媒介,企业公关',
+ 'positionid': '4129849',
+ 'positionname': '媒体公关主管/经理',
+ 'publish_time': '09:22发布',
+ 'salary': '10k-15k',
+ 'update_time': '2018-03-22 20:15:44'}
+2018-03-22 20:15:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/gongguan/28/>
+{'acquire_edu_bg': '不限',
+ 'acquire_year': '经验1-3年',
+ 'category': 'gongguan',
+ 'company': '上海晨通影视公司',
+ 'companyid': '310138',
+ 'labels': '销售',
+ 'positionid': '4101800',
+ 'positionname': '公关总监',
+ 'publish_time': '2018-03-21 20:15:44',
+ 'salary': '20k-40k',
+ 'update_time': '2018-03-22 20:15:44'}
+2018-03-22 20:15:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/gongguan/28/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验3-5年',
+ 'category': 'gongguan',
+ 'company': '小米',
+ 'companyid': '520',
+ 'labels': '广告营销,新媒体,策划',
+ 'positionid': '4162436',
+ 'positionname': '公关经理',
+ 'publish_time': '2018-03-19 20:15:44',
+ 'salary': '15k-25k',
+ 'update_time': '2018-03-22 20:15:44'}
+2018-03-22 20:15:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/gongguan/28/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验1-3年',
+ 'category': 'gongguan',
+ 'company': '招商银行信用卡中心',
+ 'companyid': '6796',
+ 'labels': '媒体,新媒体,媒介,记者,新闻',
+ 'positionid': '3696755',
+ 'positionname': '公关传播岗',
+ 'publish_time': '2018-03-21 20:15:44',
+ 'salary': '25k-40k',
+ 'update_time': '2018-03-22 20:15:44'}
+2018-03-22 20:15:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/gongguan/28/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验5-10年',
+ 'category': 'gongguan',
+ 'company': '新东方教育行业研究院',
+ 'companyid': '18165',
+ 'labels': '教育,媒体,硬件制造,公共关系',
+ 'positionid': '4078015',
+ 'positionname': '高级公关经理',
+ 'publish_time': '2018-03-20 20:15:44',
+ 'salary': '15k-25k',
+ 'update_time': '2018-03-22 20:15:44'}
+2018-03-22 20:15:56 [scrapy.extensions.logstats] INFO: Crawled 19 pages (at 7 pages/min), scraped 75 items (at 38 items/min)
+2018-03-22 20:15:58 [scrapy.extensions.throttle] INFO: slot: www.lagou.com | conc: 5 | delay: 5000 ms (+0) | latency: 1536 ms | size: 19429 bytes
+2018-03-22 20:15:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/zhaopin/xiaoshou/28/> (referer: https://www.lagou.com/zhaopin/xiaoshou/30/)
+2018-03-22 20:15:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/xiaoshou/28/>
+{'acquire_edu_bg': '大专',
+ 'acquire_year': '经验不限',
+ 'category': 'xiaoshou',
+ 'company': '北京麦田',
+ 'companyid': '46348',
+ 'labels': '年底双薪,节日礼物,技能培训,年度旅游',
+ 'positionid': '4143800',
+ 'positionname': '销售代表',
+ 'publish_time': '2018-03-21 20:15:58',
+ 'salary': '5k-8k',
+ 'update_time': '2018-03-22 20:15:58'}
+2018-03-22 20:15:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/xiaoshou/28/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验不限',
+ 'category': 'xiaoshou',
+ 'company': '丽兹行',
+ 'companyid': '124195',
+ 'labels': '金融,渠道,客户代表,业务分析,售前',
+ 'positionid': '3451441',
+ 'positionname': '销售顾问',
+ 'publish_time': '10:09发布',
+ 'salary': '8k-10k',
+ 'update_time': '2018-03-22 20:15:58'}
+2018-03-22 20:15:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/xiaoshou/28/>
+{'acquire_edu_bg': '大专',
+ 'acquire_year': '经验不限',
+ 'category': 'xiaoshou',
+ 'company': '骏嘉财通',
+ 'companyid': '149034',
+ 'labels': '金融,旅游',
+ 'positionid': '4215421',
+ 'positionname': '销售（发展好）',
+ 'publish_time': '2018-03-21 20:15:58',
+ 'salary': '4k-8k',
+ 'update_time': '2018-03-22 20:15:58'}
+2018-03-22 20:15:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/xiaoshou/28/>
+{'acquire_edu_bg': '大专',
+ 'acquire_year': '经验不限',
+ 'category': 'xiaoshou',
+ 'company': '再惠网络',
+ 'companyid': '86312',
+ 'labels': '移动互联网,本地生活',
+ 'positionid': '3327774',
+ 'positionname': '销售顾问',
+ 'publish_time': '10:26发布',
+ 'salary': '10k-15k',
+ 'update_time': '2018-03-22 20:15:58'}
+2018-03-22 20:15:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/xiaoshou/28/>
+{'acquire_edu_bg': '大专',
+ 'acquire_year': '经验1-3年',
+ 'category': 'xiaoshou',
+ 'company': '四川汽车票务网',
+ 'companyid': '33798',
+ 'labels': '系统集成,商务',
+ 'positionid': '4150188',
+ 'positionname': '销售经理',
+ 'publish_time': '2018-03-21 20:15:58',
+ 'salary': '5k-10k',
+ 'update_time': '2018-03-22 20:15:58'}
+2018-03-22 20:15:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/xiaoshou/28/>
+{'acquire_edu_bg': '大专',
+ 'acquire_year': '经验1-3年',
+ 'category': 'xiaoshou',
+ 'company': '圣保罗地板',
+ 'companyid': '348237',
+ 'labels': '经理,代理商,终端,促销',
+ 'positionid': '4300863',
+ 'positionname': '销售',
+ 'publish_time': '2018-03-21 20:15:58',
+ 'salary': '3k-6k',
+ 'update_time': '2018-03-22 20:15:58'}
+2018-03-22 20:15:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/xiaoshou/28/>
+{'acquire_edu_bg': '大专',
+ 'acquire_year': '经验1年以下',
+ 'category': 'xiaoshou',
+ 'company': '诚信互通',
+ 'companyid': '98070',
+ 'labels': '电话,客户代表,市场拓展',
+ 'positionid': '4294289',
+ 'positionname': '销售顾问',
+ 'publish_time': '2018-03-21 20:15:58',
+ 'salary': '6k-12k',
+ 'update_time': '2018-03-22 20:15:58'}
+2018-03-22 20:15:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/xiaoshou/28/>
+{'acquire_edu_bg': '大专',
+ 'acquire_year': '经验不限',
+ 'category': 'xiaoshou',
+ 'company': '坤泽教育',
+ 'companyid': '176215',
+ 'labels': '教育,电话,在线,客户代表,顾问',
+ 'positionid': '4229793',
+ 'positionname': '销售代表',
+ 'publish_time': '2018-03-21 20:15:58',
+ 'salary': '8k-10k',
+ 'update_time': '2018-03-22 20:15:58'}
+2018-03-22 20:15:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/xiaoshou/28/>
+{'acquire_edu_bg': '不限',
+ 'acquire_year': '经验不限',
+ 'category': 'xiaoshou',
+ 'company': '快批KP',
+ 'companyid': '67777',
+ 'labels': '地推,客户代表,市场营销,终端',
+ 'positionid': '4277993',
+ 'positionname': '销售代表/销售经理',
+ 'publish_time': '2018-03-21 20:15:58',
+ 'salary': '4k-8k',
+ 'update_time': '2018-03-22 20:15:58'}
+2018-03-22 20:15:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/xiaoshou/28/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验1-3年',
+ 'category': 'xiaoshou',
+ 'company': '盟拓软件（苏州）有限公司',
+ 'companyid': '9363',
+ 'labels': '年终分红,年底双薪,五险一金,带薪年假',
+ 'positionid': '4299424',
+ 'positionname': '销售助理',
+ 'publish_time': '2018-03-21 20:15:58',
+ 'salary': '5k-10k',
+ 'update_time': '2018-03-22 20:15:58'}
+2018-03-22 20:15:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/xiaoshou/28/>
+{'acquire_edu_bg': '大专',
+ 'acquire_year': '经验不限',
+ 'category': 'xiaoshou',
+ 'company': '欣欣旅游',
+ 'companyid': '22812',
+ 'labels': '旅游,顾问,运营',
+ 'positionid': '4112735',
+ 'positionname': '销售专员',
+ 'publish_time': '2018-03-19 20:15:58',
+ 'salary': '8k-16k',
+ 'update_time': '2018-03-22 20:15:58'}
+2018-03-22 20:15:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/xiaoshou/28/>
+{'acquire_edu_bg': '不限',
+ 'acquire_year': '经验不限',
+ 'category': 'xiaoshou',
+ 'company': '丽的货架',
+ 'companyid': '216833',
+ 'labels': '年底双薪,带薪年假,通讯津贴,绩效奖金',
+ 'positionid': '4264390',
+ 'positionname': '销售经理',
+ 'publish_time': '2018-03-19 20:15:58',
+ 'salary': '5K-10K',
+ 'update_time': '2018-03-22 20:15:58'}
+2018-03-22 20:15:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/xiaoshou/28/>
+{'acquire_edu_bg': '大专',
+ 'acquire_year': '经验1-3年',
+ 'category': 'xiaoshou',
+ 'company': '泛微',
+ 'companyid': '24995',
+ 'labels': '技术支持,CRM,售后',
+ 'positionid': '3458087',
+ 'positionname': '软件销售',
+ 'publish_time': '2018-03-09',
+ 'salary': '4k-8k',
+ 'update_time': '2018-03-22 20:15:58'}
+2018-03-22 20:15:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/xiaoshou/28/>
+{'acquire_edu_bg': '不限',
+ 'acquire_year': '经验1年以下',
+ 'category': 'xiaoshou',
+ 'company': '小站教育',
+ 'companyid': '67235',
+ 'labels': '教育,渠道,电话,在线,娱乐',
+ 'positionid': '3832602',
+ 'positionname': '销售主管',
+ 'publish_time': '18:36发布',
+ 'salary': '10k-15k',
+ 'update_time': '2018-03-22 20:15:58'}
+2018-03-22 20:15:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/xiaoshou/28/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验1-3年',
+ 'category': 'xiaoshou',
+ 'company': '英迈思',
+ 'companyid': '21101',
+ 'labels': '电商,游戏,运营,策划,企业',
+ 'positionid': '3337141',
+ 'positionname': '销售代表',
+ 'publish_time': '18:09发布',
+ 'salary': '5k-7k',
+ 'update_time': '2018-03-22 20:15:58'}
+2018-03-22 20:16:02 [scrapy.extensions.throttle] INFO: slot: www.lagou.com | conc: 5 | delay: 5000 ms (+0) | latency:  561 ms | size: 14466 bytes
+2018-03-22 20:16:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/zhaopin/qiyeruanjianqita/> (referer: https://www.lagou.com)
+2018-03-22 20:16:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/qiyeruanjianqita/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验3-5年',
+ 'category': 'qiyeruanjianqita',
+ 'company': '指掌易',
+ 'companyid': '7001',
+ 'labels': '绩效奖金,专项奖金,定期体检,弹性工作',
+ 'positionid': '2856938',
+ 'positionname': '企业软件产品经理',
+ 'publish_time': '10:13发布',
+ 'salary': '15k-20k',
+ 'update_time': '2018-03-22 20:16:02'}
+2018-03-22 20:16:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/qiyeruanjianqita/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验3-5年',
+ 'category': 'qiyeruanjianqita',
+ 'company': '联想集团',
+ 'companyid': '1650',
+ 'labels': 'Java,SQL,oracle,Unix,技术支持',
+ 'positionid': '3720609',
+ 'positionname': '企业软件高级实施工程师',
+ 'publish_time': '10:58发布',
+ 'salary': '25k-40k',
+ 'update_time': '2018-03-22 20:16:02'}
+2018-03-22 20:16:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/qiyeruanjianqita/>
+{'acquire_edu_bg': '大专',
+ 'acquire_year': '经验3-5年',
+ 'category': 'qiyeruanjianqita',
+ 'company': '北森云计算',
+ 'companyid': '47323',
+ 'labels': 'C#/.NET',
+ 'positionid': '2744832',
+ 'positionname': '.net开发工程师（企业软件）',
+ 'publish_time': '2018-03-21 20:16:02',
+ 'salary': '13k-25k',
+ 'update_time': '2018-03-22 20:16:02'}
+2018-03-22 20:16:16 [scrapy.extensions.throttle] INFO: slot: www.lagou.com | conc: 6 | delay: 5000 ms (+0) | latency: 1093 ms | size: 16066 bytes
+2018-03-22 20:16:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/jobs/4065780.html> (referer: https://www.lagou.com/zhaopin/jiagoushi/9/)
+2018-03-22 20:16:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/jobs/4065780.html>
+{'jobacquire': '1.\xa0\xa0本科以上学历2.\xa0\xa0对于高并发，高可用有着丰富经验3.\xa0\xa0'
+               '加分项：参与过广告引擎、搜索、排序的研发4.\xa0\xa0加分项：对于增长黑客感兴趣',
+ 'jobadvantage': '高平台,待遇好,弹性工作',
+ 'jobcompanyname': '滴滴出行平台技术部招聘',
+ 'jobid': '4065780',
+ 'jobname': '资深增长引擎工程师/架构师',
+ 'jobreposibilit': '1.\xa0负责滴滴三大引擎之一的增长引擎的设计，研发及优化；2.\xa0处理各种高并发场景3.\xa0'
+                   '实现和优化增长引擎中召回、排序、预算控制等模块',
+ 'jobsite': '北京海淀区',
+ 'update_time': '2018-03-22 20:16:16'}
+2018-03-22 20:16:28 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://www.lagou.com/zhaopin/renshiHR/28/> (failed 1 times): Could not open CONNECT tunnel with proxy 111.155.116.227:8123 [{'status': 504, 'reason': b'Host www.lagou.com lookup faile'}]
+2018-03-22 20:16:30 [scrapy.extensions.throttle] INFO: slot: www.lagou.com | conc: 6 | delay: 9151 ms (+4151) | latency: 9151 ms | size:  1393 bytes
+2018-03-22 20:16:30 [scrapy.core.engine] DEBUG: Crawled (403) <GET https://www.lagou.com/jobs/4036891.html> (referer: https://www.lagou.com/zhaopin/jiagoushi/9/)
+2018-03-22 20:16:30 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.lagou.com/jobs/4036891.html>: HTTP status code is not handled or not allowed
+2018-03-22 20:16:33 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://www.lagou.com/jobs/4281539.html> (failed 1 times): User timeout caused connection failure: Getting https://www.lagou.com/jobs/4281539.html took longer than 180.0 seconds..
+2018-03-22 20:16:37 [scrapy.extensions.throttle] INFO: slot: www.lagou.com | conc: 5 | delay: 5000 ms (-4151) | latency:  737 ms | size: 14272 bytes
+2018-03-22 20:16:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/jobs/4242261.html> (referer: https://www.lagou.com/zhaopin/dailishangxiaoshou/)
+2018-03-22 20:16:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/jobs/4242261.html>
+{'jobacquire': '底薪+代理商销售提成（上不封顶），只要你够拼，月入十万指日可待！',
+ 'jobadvantage': '五险一金,高提成,高弹性,带薪休假',
+ 'jobcompanyname': '西典销售部招聘',
+ 'jobid': '4242261',
+ 'jobname': '代理商销售',
+ 'jobreposibilit': '2.招募公司产品代理商，完成公司KPI3.维系代理商关系，拓展代理商网络技能要求：1.有成功销售经验和业绩，有执行力，抗压能力强2.熟悉短视频平台（如快手，抖音等）优先',
+ 'jobsite': '杭州',
+ 'update_time': '2018-03-22 20:16:37'}
+2018-03-22 20:16:45 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://www.lagou.com/zhaopin/Node.js/19/> (failed 1 times): TCP connection timed out: 110: Connection timed out.
+2018-03-22 20:16:50 [scrapy.extensions.throttle] INFO: slot: www.lagou.com | conc: 4 | delay: 5000 ms (+0) | latency:  182 ms | size:  1393 bytes
+2018-03-22 20:16:50 [scrapy.core.engine] DEBUG: Crawled (403) <GET https://www.lagou.com/jobs/2681007.html> (referer: https://www.lagou.com/zhaopin/shishigongchengshi/)
+2018-03-22 20:16:50 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.lagou.com/jobs/2681007.html>: HTTP status code is not handled or not allowed
+2018-03-22 20:16:56 [scrapy.extensions.logstats] INFO: Crawled 25 pages (at 6 pages/min), scraped 95 items (at 20 items/min)
+2018-03-22 20:17:07 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://www.lagou.com/jobs/3173583.html> (failed 1 times): TCP connection timed out: 110: Connection timed out.
+2018-03-22 20:17:10 [scrapy.extensions.throttle] INFO: slot: www.lagou.com | conc: 5 | delay: 5000 ms (+0) | latency: 1227 ms | size: 14695 bytes
+2018-03-22 20:17:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/jobs/4242875.html> (referer: https://www.lagou.com/zhaopin/shishigongchengshi/)
+2018-03-22 20:17:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/jobs/4242875.html>
+{'jobacquire': '有 Docker 的相关经验有Java、PHP、Python等任一种开发经验技术知识面广泛',
+ 'jobadvantage': '云计算,前景好',
+ 'jobcompanyname': '时速云研发部招聘',
+ 'jobid': '4242875',
+ 'jobname': '实施工程师',
+ 'jobreposibilit': '1.负责时速云私有云产品的实施工作（部署安装调试、咨询解答、产品培训、现场技术指导、故障分析和排除等。）2.完成面向客户的技术交流、方案编写，并能与客户就相关问题进行直接深入沟通；3.了解客户业务需求，提供解决方案及技术建议方案；协助售前团队一起给客户完成 '
+                   'PoC '
+                   '测试和测试报告。4.为客户提供容器云计算相关的指导和培训，帮助客户解决技术问题，帮客户做业务的容器化改造和最佳实践。岗位要求：1.丰富的 '
+                   'Linux 经验，熟悉 Shell 和各种 Linux 工具，能动手调试和解决 Linux '
+                   '中遇到的各种问题。2.熟悉网络。',
+ 'jobsite': '广州',
+ 'update_time': '2018-03-22 20:17:10'}
+2018-03-22 20:17:16 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://www.lagou.com/jobs/4001654.html> (failed 1 times): Could not open CONNECT tunnel with proxy 111.155.116.227:8123 [{'status': 504, 'reason': b'Host www.lagou.com lookup faile'}]
+2018-03-22 20:17:17 [scrapy.extensions.throttle] INFO: slot: www.lagou.com | conc: 4 | delay:60000 ms (+55000) | latency:68414 ms | size: 14265 bytes
+2018-03-22 20:17:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/jobs/4162323.html> (referer: https://www.lagou.com/zhaopin/jiesuan/12/)
+2018-03-22 20:17:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/jobs/4162323.html>
+{'jobacquire': '1、结算部各项流程制定、发布，操作手册撰写及视频输出培训 ；2、结算部内定期培训；3、对于流程实施效果监控及改善 '
+               '；4、知识库建立 ；5、监控区域处理客诉异常及商家结算体验提升管理；6、特殊及大项目商家结算流程制定 '
+               '；7、特殊报价审批机制建立及流程制定。',
+ 'jobadvantage': '大平台,优秀团队,免费班车,餐补',
+ 'jobcompanyname': '京东商城京东物流招聘',
+ 'jobid': '4162323',
+ 'jobname': '结算管理岗',
+ 'jobreposibilit': '1、结算部各项流程制定、发布，操作手册撰写及视频输出培训 ；2、结算部内定期培训；3、对于流程实施效果监控及改善 '
+                   '；4、知识库建立 ；5、监控区域处理客诉异常及商家结算体验提升管理；6、特殊及大项目商家结算流程制定 ；',
+ 'jobsite': '北京',
+ 'update_time': '2018-03-22 20:17:17'}
+2018-03-22 20:17:17 [scrapy.extensions.throttle] INFO: slot: www.lagou.com | conc: 3 | delay:31026 ms (-28973) | latency: 2053 ms | size: 54750 bytes
+2018-03-22 20:17:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/jobs/4270163.html> (referer: https://www.lagou.com/zhaopin/gongguan/13/)
+2018-03-22 20:17:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/jobs/4270163.html>
+{'jobacquire': '1、本科以上学历，2年以上品牌/公关/市场工作经验，金融/创投行业工作经验者优先；2、具备较强的品牌推广及新闻传播意识，具备良好的文字功底和文案撰写能力；3、有较强的组织策划能力和沟通能力，责任心强；4、有良好的团队合作精神和团队协调能力。',
+ 'jobadvantage': '六险一金 带薪年假 带薪病假 员工旅游',
+ 'jobcompanyname': '清科集团招聘',
+ 'jobid': '4270163',
+ 'jobname': '公关专员/主管 品牌公关部',
+ 'jobreposibilit': '1、负责集团品牌信息建设与维护，品牌推广渠道的拓展与维护；2、负责高管对外形象管理，负责集团内部品牌传播策划、执行；3、负责集团日常新闻稿件撰写和发布，负责媒体采访安排；4、 '
+                   '负责媒体关系拓展并维护，特别是新媒体渠道的开发和运用；5、 '
+                   '负责舆情管理与传播效果监测、评估工作及相关文档的归类、分析；6.、负责集团业务部门产品与服务类的对外传播策划、执行；7、 '
+                   '完成上级安排的其他任务。',
+ 'jobsite': '北京朝阳区',
+ 'update_time': '2018-03-22 20:17:17'}
+2018-03-22 20:17:55 [scrapy.extensions.throttle] INFO: slot: www.lagou.com | conc: 3 | delay:15899 ms (-15127) | latency:  772 ms | size: 14446 bytes
+2018-03-22 20:17:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/jobs/4177964.html> (referer: https://www.lagou.com/zhaopin/gongguan/28/)
+2018-03-22 20:17:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/jobs/4177964.html>
+{'jobacquire': '1、本科及以上学历，公共关系、市场营销、中文、新闻等相关专业2、3年以上工作经验，有出色的组织能力及流畅的沟通与谈判能力3、能独立拟定方案，有一定的媒体资源及渠道，有良好的公关意识4、有很好的合作精神，学习能力强，经常有新点子5、有互联网电商或者媒体工作经验的优先考虑',
+ 'jobadvantage': '公司发展快,个人成长大,福利待遇好',
+ 'jobcompanyname': '拼多多公关部招聘',
+ 'jobid': '4177964',
+ 'jobname': '公关经理',
+ 'jobreposibilit': '1、出色的文字功底，能独立撰写公司级新闻的能力，对互联网新闻有一定的敏感性',
+ 'jobsite': '上海',
+ 'update_time': '2018-03-22 20:17:55'}
+2018-03-22 20:17:56 [scrapy.extensions.logstats] INFO: Crawled 29 pages (at 4 pages/min), scraped 99 items (at 4 items/min)
+2018-03-22 20:18:21 [scrapy.extensions.throttle] INFO: slot: www.lagou.com | conc: 3 | delay:15899 ms (+0) | latency:  774 ms | size:  1393 bytes
+2018-03-22 20:18:21 [scrapy.core.engine] DEBUG: Crawled (403) <GET https://www.lagou.com/jobs/4300863.html> (referer: https://www.lagou.com/zhaopin/xiaoshou/28/)
+2018-03-22 20:18:21 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.lagou.com/jobs/4300863.html>: HTTP status code is not handled or not allowed
+2018-03-22 20:18:41 [scrapy.extensions.throttle] INFO: slot: www.lagou.com | conc: 3 | delay:15899 ms (+0) | latency:  318 ms | size:   242 bytes
+2018-03-22 20:18:41 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=124.193.37.5> from <GET https://www.lagou.com/jobs/3451441.html>
+2018-03-22 20:18:56 [scrapy.extensions.logstats] INFO: Crawled 30 pages (at 1 pages/min), scraped 99 items (at 0 items/min)
+2018-03-22 20:19:12 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://www.lagou.com/jobs/4214467.html> (failed 1 times): TCP connection timed out: 110: Connection timed out.
+2018-03-22 20:19:28 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://www.lagou.com/jobs/3741603.html> (failed 1 times): User timeout caused connection failure: Getting https://www.lagou.com/jobs/3741603.html took longer than 180.0 seconds..
+2018-03-22 20:19:36 [scrapy.extensions.throttle] INFO: slot: www.lagou.com | conc: 3 | delay: 8243 ms (-7656) | latency:  586 ms | size: 14510 bytes
+2018-03-22 20:19:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/jobs/4306996.html> (referer: https://www.lagou.com/zhaopin/gongguan/13/)
+2018-03-22 20:19:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/jobs/4306996.html>
+{'jobacquire': '1. 3年以上媒体公关工作经验，有编辑/记者的从业经验，具有广泛的媒体资源加分；2. '
+               '优秀的语言表达能力和文案能力，较强的组织协调能力，思维敏捷，善于创新，有团队精神。3. '
+               '团队是国际化的团队，英文听说读写能力强加分。',
+ 'jobadvantage': '扁平架构,三餐免费,创意平台',
+ 'jobcompanyname': 'Makeblock市场招聘',
+ 'jobid': '4306996',
+ 'jobname': '高级公关专员',
+ 'jobreposibilit': '1. 组织新闻内容，撰写媒体稿件，建立新闻稿件发布、传播、监控、评估等体系；2. '
+                   '维护公司媒体资源及关系网络，与各界媒体保持良好关系；3. 更新及管理品牌介绍、管理层简介等公关宣传材料；',
+ 'jobsite': '深圳',
+ 'update_time': '2018-03-22 20:19:36'}
+2018-03-22 20:19:50 [scrapy.extensions.throttle] INFO: slot: www.lagou.com | conc: 3 | delay:47869 ms (+39626) | latency:47869 ms | size: 13899 bytes
+2018-03-22 20:19:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/jobs/4264390.html> (referer: https://www.lagou.com/zhaopin/xiaoshou/28/)
+2018-03-22 20:19:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/jobs/4264390.html>
+{'jobacquire': '1、年龄18-40周岁，身体健康；2、无须经验，有相关行业销售经验者优先（药店、母婴、便利店）3、具备较好的团队协作能力和较强的执行力；4、能够接受出差；5、认可货架行业及公司文化。',
+ 'jobadvantage': '""',
+ 'jobcompanyname': '丽的货架销售部招聘',
+ 'jobid': '4264390',
+ 'jobname': '销售经理',
+ 'jobreposibilit': '1、负责新客户的开发；2、负责市场客情维护；3、负责销售货款的回收；',
+ 'jobsite': '宁波',
+ 'update_time': '2018-03-22 20:19:50'}
+2018-03-22 20:19:56 [scrapy.extensions.logstats] INFO: Crawled 32 pages (at 2 pages/min), scraped 101 items (at 2 items/min)
+2018-03-22 20:20:56 [scrapy.extensions.logstats] INFO: Crawled 32 pages (at 0 pages/min), scraped 101 items (at 0 items/min)
+2018-03-22 20:21:01 [scrapy.extensions.throttle] INFO: slot: www.lagou.com | conc: 3 | delay:25144 ms (-22725) | latency: 2419 ms | size: 14596 bytes
+2018-03-22 20:21:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/jobs/4303038.html> (referer: https://www.lagou.com/zhaopin/suanfagongchengshi/)
+2018-03-22 20:21:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/jobs/4303038.html>
+{'jobacquire': '１、能运用数据挖掘各类算法自主构建相关的业务模型；２、对机器学习、概率统计，最优化等算法原理及其在互联网行业的应用有深入的理解和浓厚的兴趣；３、熟悉常用的机器学习算法如协同过滤、逻辑回归、聚类，神经网络、SVM、决策树等；４、熟悉Matlab编程，熟悉spss，hadoop等相关产品，熟练掌握至少一种以上编程语言，Scala、C/C++、Python；５、负责提供算法系统设计和算法模型代码工作；６、精通神经网络体系结构，如ConvNet，Reccurent网络等；７、精通深度学习框架，如CAFFEE，TORCH，TensorFlow；８、工作积极主动，有较好的沟通能力和团队合作精神；9、需要数学或计算机等相关专业，二年以上相关工作经验。',
+ 'jobadvantage': '交通便利,带薪年假,美女如云,环境轻松',
+ 'jobcompanyname': '迈迈车研发中心招聘',
+ 'jobid': '4303038',
+ 'jobname': '算法工程师',
+ 'jobreposibilit': '1、 二手车领域人工智能的应用研究与实施；',
+ 'jobsite': '上海',
+ 'update_time': '2018-03-22 20:21:01'}
+2018-03-22 20:21:25 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://www.lagou.com/jobs/4252669.html> (failed 1 times): TCP connection timed out: 110: Connection timed out.
+2018-03-22 20:21:56 [scrapy.extensions.logstats] INFO: Crawled 33 pages (at 1 pages/min), scraped 102 items (at 1 items/min)
+2018-03-22 20:21:58 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://www.lagou.com/jobs/4276814.html> (failed 1 times): TCP connection timed out: 110: Connection timed out.
+2018-03-22 20:22:01 [scrapy.extensions.throttle] INFO: slot: www.lagou.com | conc: 1 | delay:12837 ms (-12307) | latency:  529 ms | size: 15368 bytes
+2018-03-22 20:22:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/jobs/4229434.html> (referer: https://www.lagou.com/zhaopin/shishigongchengshi/)
+2018-03-22 20:22:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/jobs/4229434.html>
+{'jobacquire': '1、具有中间件调优（Websphere/Weblogic/Tomcat）、网络设备（网闸、防火墙）实际操作经验者优先考虑；2、有数据库相关资格证书者优先考虑。上述职位公司在提供具有竞争力薪资及人性化管理的同时，还将提供如下福利：1、在工作地缴纳的法定保险，试用期开始缴纳五险一金；2、提供各类带薪假，如年假、产假、陪产假、路程假、最高15天的婚假等；3、提供过节费、防暑降温费，每年为员工提供免费甲级医院体检；4、提供红白喜事礼金和慰问金，为员工解决户口、档案、党组织关系等问题；5、为员工生日准备贺卡、礼金及生日蛋糕，并组织小型庆祝会；6、整洁舒适的工作环境，为辛劳工作的小伙伴准备了休闲茶点和各类零食，不定期组织各类节日庆祝或娱乐休闲活动，丰富员工的业余生活；7、提供各类内外训等培训机会，新入职员工提供一对一导师制培养计划，为员工发展提供良好的发展空间和定制计划（公司将结合您意愿、能力及公司的发展制定适合您的职业发展规划）；8、每天7.3小时工作时间，5天工作制，公司关注员工健康，每周安排体育健身活动。',
+ 'jobadvantage': '五险一金,年终奖金,员工旅游,节日福利',
+ 'jobcompanyname': '畅享信息重庆招聘',
+ 'jobid': '4229434',
+ 'jobname': '实施工程师',
+ 'jobreposibilit': '1、参与项目实施，响应项目经理的任务调度，系统部署、系统运行维护；2、能跟公司内部、项目内部、用户、合作单位进行有效沟通；3、熟悉公司产品的相关知识；4、参与、负责接受公司产品的研发知识转移；5、参与、负责整理完善公司产品相关维护手册；6、参与现场项目环境的测试和用户培训、项目验收相关工作；7、履行部门的日常事务。岗位要求:1、专科学历（或同等学历水平）以上，计算机相关专业专业，一年以上工作经验；2、有较好的沟通协调能力和较强的工作责任感和抗压能力；3、熟练掌握常用办公软件；4、良好的沟通表达能力和团队协作意识。技术要求：1、熟悉J2EE整体技术架构；2、熟悉各种操作系统（Linux/AIX/Unix/WINDOWS）\xa0'
+                   '的操作及特性；3、熟悉数据库操作（Oracle/Sqlerver/Mysql）；',
+ 'jobsite': '重庆',
+ 'update_time': '2018-03-22 20:22:01'}
+2018-03-22 20:22:56 [scrapy.extensions.logstats] INFO: Crawled 34 pages (at 1 pages/min), scraped 103 items (at 1 items/min)
+2018-03-22 20:23:12 [scrapy.extensions.throttle] INFO: slot: www.lagou.com | conc: 3 | delay: 7385 ms (-5451) | latency: 1934 ms | size: 14546 bytes
+2018-03-22 20:23:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/jobs/4277993.html> (referer: https://www.lagou.com/zhaopin/xiaoshou/28/)
+2018-03-22 20:23:12 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/jobs/4277993.html>
+{'jobacquire': '1、大专及以上学历；2、有3年相关工作经验者优先；有一定团队管理经验3、反应敏捷、表达能力强，具有较强的沟通能力及交际技巧，具有亲和力；4、具备一定的市场分析及判断能力，良好的客户服务意识；5、有责任心，能承受较大的工作压力；6、有团队协作精神，善于挑战。',
+ 'jobadvantage': '高提成,补贴,福利齐全,互联网行业',
+ 'jobcompanyname': '快批KP市场部招聘',
+ 'jobid': '4277993',
+ 'jobname': '销售代表/销售经理',
+ 'jobreposibilit': '岗位职责：1、负责快批软件的销售及推广；2、根据市场营销计划，完成部门销售指标；3、开拓新市场,发展新客户,增加产品销售范围；4、负责辖区市场信息的收集及竞争对手的分析；5、负责销售区域内销售活动的策划和执行，完成销售任务；',
+ 'jobsite': '保定',
+ 'update_time': '2018-03-22 20:23:12'}
+2018-03-22 20:23:13 [scrapy.extensions.throttle] INFO: slot: www.lagou.com | conc: 2 | delay:35773 ms (+28388) | latency:35773 ms | size: 14824 bytes
+2018-03-22 20:23:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/jobs/4304102.html> (referer: https://www.lagou.com/zhaopin/houduankaifaqita/)
+2018-03-22 20:23:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/jobs/4304102.html>
+{'jobacquire': '1. 统招重点本科或以上学历，2年以上网站开发经验2. 熟练掌握 Python 语言及相关技术栈，对Web框架有一定经验3. '
+               '熟悉PostgreSQL、Redis、MongoDB等，具备数据库应用、设计能力4. '
+               '对分布式、微服务以及高性能Web有一定认识5. 具备较强的编程能力和良好的编码风格6. 具备较强的逻辑分析能力和学习能力7. '
+               '具备良好的人际沟通能力和团队协作意识我们对你的期望1. 对敏捷开发方式有深入理解，并能搭建环境，制造团队氛围2. '
+               '突出的学习能力和逻辑思维能力3. 优秀的沟通能力，善于和技术团队协作4. 对机器学习有一定兴趣和了解5. '
+               '在专业和个人爱好方面有一技之长6. 有初创公司小团队工作经验面试技能Checklist1. 技能、算法、写程序的能力2. '
+               '实际解决问题的能力3. 60%固定面试题与随机问题',
+ 'jobadvantage': '极客团队,算法加持,硅谷文化,百度阿里',
+ 'jobcompanyname': '星尘数据研发部招聘',
+ 'jobid': '4304102',
+ 'jobname': '后端开发工程师',
+ 'jobreposibilit': '- 根据产品需求制定技术方案，项目计划- 负责公司业务系统和基础服务研发，维护工作',
+ 'jobsite': '北京',
+ 'update_time': '2018-03-22 20:23:13'}
+2018-03-22 20:23:56 [scrapy.extensions.logstats] INFO: Crawled 36 pages (at 2 pages/min), scraped 105 items (at 2 items/min)
+2018-03-22 20:24:01 [scrapy.extensions.throttle] INFO: slot: www.lagou.com | conc: 2 | delay:18168 ms (-17605) | latency:  563 ms | size: 14766 bytes
+2018-03-22 20:24:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/jobs/4309864.html> (referer: https://www.lagou.com/zhaopin/shepingongchengshi/)
+2018-03-22 20:24:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/jobs/4309864.html>
+{'jobacquire': '',
+ 'jobadvantage': '射频',
+ 'jobcompanyname': '商米科技硬件中心招聘',
+ 'jobid': '4309864',
+ 'jobname': '资深射频工程师',
+ 'jobreposibilit': '1. 研究平台/新技术/新器件，参与项目平台选型，确定主要芯片规格；2. '
+                   '利用各种测试仪器来完成射频指标调试及测试；3. 在研发项目前期与结构人员一起完成堆叠以及天线评估工作；4. '
+                   '负责项目认证射频部门的跟进和支持；5. 跟进生产，能够及时对产线上的反馈信息做出反馈；6. '
+                   '负责项目射频问题的总结和文档系统建设7. 负责天线调试和跟踪。任职要求：1. '
+                   '大学本科（含）以上学历，通信工程/微波电磁场/电子信息等相关专业，英语CET-4 以上，3年及以上射频研发经验；2. '
+                   '掌握手机射频工作原理，熟悉协议规范，了解海外认证CE/GCF/FCC/PTCRB等测试项，了解认证流程；3. '
+                   '熟悉射频主要器件(Transceiver/PA/SAW/ASM)说明书;熟悉GPS/BT/Wi-Fi/FM等指标的调试和测试；4. '
+                   '掌握并运用PADS/Mentor/CAM350/Si8000等硬件设计工具；5. '
+                   '精通通信原理，对电磁场微波、天线等有一定了解，掌握手机射频部分工作原理；有手机高通平台开发经验者优先考虑。6. '
+                   '英文沟通良好',
+ 'jobsite': '上海',
+ 'update_time': '2018-03-22 20:24:01'}

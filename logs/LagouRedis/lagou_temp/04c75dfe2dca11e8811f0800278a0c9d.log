@@ -1,0 +1,67 @@
+2018-03-22 20:10:35 [scrapy.utils.log] INFO: Scrapy 1.5.0 started (bot: LagouRedis)
+2018-03-22 20:10:35 [scrapy.utils.log] INFO: Versions: lxml 4.1.1.0, libxml2 2.9.7, cssselect 1.0.3, parsel 1.4.0, w3lib 1.19.0, Twisted 17.9.0, Python 3.6.3 |Anaconda custom (64-bit)| (default, Oct 13 2017, 12:02:49) - [GCC 7.2.0], pyOpenSSL 17.5.0 (OpenSSL 1.1.0g  2 Nov 2017), cryptography 2.1.4, Platform Linux-4.13.0-37-generic-x86_64-with-debian-stretch-sid
+2018-03-22 20:10:35 [scrapy.crawler] INFO: Overridden settings: {'AUTOTHROTTLE_DEBUG': True, 'AUTOTHROTTLE_ENABLED': True, 'BOT_NAME': 'LagouRedis', 'DOWNLOAD_DELAY': 5, 'DUPEFILTER_CLASS': 'scrapy_redis.dupefilter.RFPDupeFilter', 'LOG_FILE': 'logs/LagouRedis/lagou_temp/04c75dfe2dca11e8811f0800278a0c9d.log', 'NEWSPIDER_MODULE': 'LagouRedis.spiders', 'SCHEDULER': 'scrapy_redis.scheduler.Scheduler', 'SPIDER_MODULES': ['LagouRedis.spiders']}
+2018-03-22 20:10:35 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2018-03-22 20:10:35 [lagou_temp] INFO: Reading start URLs from redis key 'lagou_temp:start_url' (batch size: 16, encoding: utf-8
+2018-03-22 20:10:35 [py.warnings] WARNING: /home/barnett/anaconda3/lib/python3.6/site-packages/scrapy/utils/deprecate.py:156: ScrapyDeprecationWarning: `scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware` class is deprecated, use `scrapy.downloadermiddlewares.useragent.UserAgentMiddleware` instead
+  ScrapyDeprecationWarning)
+
+2018-03-22 20:10:35 [py.warnings] WARNING: /home/barnett/anaconda3/lib/python3.6/site-packages/scrapy/utils/deprecate.py:156: ScrapyDeprecationWarning: `scrapy.contrib.downloadermiddleware.cookies.CookiesMiddleware` class is deprecated, use `scrapy.downloadermiddlewares.cookies.CookiesMiddleware` instead
+  ScrapyDeprecationWarning)
+
+2018-03-22 20:10:35 [py.warnings] WARNING: /home/barnett/anaconda3/lib/python3.6/site-packages/scrapy/utils/deprecate.py:156: ScrapyDeprecationWarning: `scrapy.contrib.downloadermiddleware.httpproxy.HttpProxyMiddleware` class is deprecated, use `scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware` instead
+  ScrapyDeprecationWarning)
+
+2018-03-22 20:10:35 [py.warnings] WARNING: /home/barnett/anaconda3/lib/python3.6/site-packages/scrapy/utils/deprecate.py:156: ScrapyDeprecationWarning: `scrapy.contrib.downloadermiddleware.retry.RetryMiddleware` class is deprecated, use `scrapy.downloadermiddlewares.retry.RetryMiddleware` instead
+  ScrapyDeprecationWarning)
+
+2018-03-22 20:10:36 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'LagouRedis.middlewares.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'LagouRedis.middlewares.LagouCookiesMiddleware',
+ 'LagouRedis.middlewares.RandomProxyMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-03-22 20:10:36 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-03-22 20:10:36 [twisted] CRITICAL: Unhandled error in Deferred:
+2018-03-22 20:10:36 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/scrapy/utils/misc.py", line 47, in load_object
+    obj = getattr(mod, name)
+AttributeError: module 'LagouRedis.middlewares' has no attribute 'MysqlTwistedPipline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/twisted/internet/defer.py", line 1386, in _inlineCallbacks
+    result = g.send(result)
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/scrapy/crawler.py", line 80, in crawl
+    self.engine = self._create_engine()
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/scrapy/crawler.py", line 105, in _create_engine
+    return ExecutionEngine(self, lambda _: self.stop())
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/scrapy/core/engine.py", line 70, in __init__
+    self.scraper = Scraper(crawler)
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/scrapy/core/scraper.py", line 71, in __init__
+    self.itemproc = itemproc_cls.from_crawler(crawler)
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/scrapy/middleware.py", line 58, in from_crawler
+    return cls.from_settings(crawler.settings, crawler)
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/scrapy/middleware.py", line 34, in from_settings
+    mwcls = load_object(clspath)
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/scrapy/utils/misc.py", line 49, in load_object
+    raise NameError("Module '%s' doesn't define any object named '%s'" % (module, name))
+NameError: Module 'LagouRedis.middlewares' doesn't define any object named 'MysqlTwistedPipline'

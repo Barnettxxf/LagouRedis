@@ -1,0 +1,22 @@
+1.INFO: Ignoring response <403 https://www.lagou.com/jobs/3603512.html>: HTTP status code is not handled or not allowed
+2.Traceback (most recent call last):
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/twisted/python/threadpool.py", line 250, in inContext
+    result = inContext.theWork()
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/twisted/python/threadpool.py", line 266, in <lambda>
+    inContext.theWork = lambda: context.call(ctx, func, *args, **kw)
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/twisted/python/context.py", line 122, in callWithContext
+    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/twisted/python/context.py", line 85, in callWithContext
+    return func(*args,**kw)
+--- <exception caught here> ---
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/twisted/enterprise/adbapi.py", line 474, in _runInteraction
+    conn.rollback()
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/twisted/enterprise/adbapi.py", line 52, in rollback
+    self._connection.rollback()
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/pymysql/connections.py", line 785, in rollback
+    self._execute_command(COMMAND.COM_QUERY, "ROLLBACK")
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in _execute_command
+    raise err.InterfaceError("(0, '')")
+pymysql.err.InterfaceError: (0, '')
+
+3.时间显示问题 （09:28发布）

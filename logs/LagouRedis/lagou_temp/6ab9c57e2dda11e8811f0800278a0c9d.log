@@ -1,0 +1,1600 @@
+2018-03-22 22:08:01 [scrapy.utils.log] INFO: Scrapy 1.5.0 started (bot: LagouRedis)
+2018-03-22 22:08:01 [scrapy.utils.log] INFO: Versions: lxml 4.1.1.0, libxml2 2.9.7, cssselect 1.0.3, parsel 1.4.0, w3lib 1.19.0, Twisted 17.9.0, Python 3.6.3 |Anaconda custom (64-bit)| (default, Oct 13 2017, 12:02:49) - [GCC 7.2.0], pyOpenSSL 17.5.0 (OpenSSL 1.1.0g  2 Nov 2017), cryptography 2.1.4, Platform Linux-4.13.0-37-generic-x86_64-with-debian-stretch-sid
+2018-03-22 22:08:01 [scrapy.crawler] INFO: Overridden settings: {'AUTOTHROTTLE_DEBUG': True, 'AUTOTHROTTLE_ENABLED': True, 'BOT_NAME': 'LagouRedis', 'DOWNLOAD_DELAY': 5, 'DUPEFILTER_CLASS': 'scrapy_redis.dupefilter.RFPDupeFilter', 'LOG_FILE': 'logs/LagouRedis/lagou_temp/6ab9c57e2dda11e8811f0800278a0c9d.log', 'NEWSPIDER_MODULE': 'LagouRedis.spiders', 'SCHEDULER': 'scrapy_redis.scheduler.Scheduler', 'SPIDER_MODULES': ['LagouRedis.spiders']}
+2018-03-22 22:08:01 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2018-03-22 22:08:01 [lagou_temp] INFO: Reading start URLs from redis key 'lagou_temp:start_url' (batch size: 16, encoding: utf-8
+2018-03-22 22:08:01 [py.warnings] WARNING: /home/barnett/anaconda3/lib/python3.6/site-packages/scrapy/utils/deprecate.py:156: ScrapyDeprecationWarning: `scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware` class is deprecated, use `scrapy.downloadermiddlewares.useragent.UserAgentMiddleware` instead
+  ScrapyDeprecationWarning)
+
+2018-03-22 22:08:01 [py.warnings] WARNING: /home/barnett/anaconda3/lib/python3.6/site-packages/scrapy/utils/deprecate.py:156: ScrapyDeprecationWarning: `scrapy.contrib.downloadermiddleware.cookies.CookiesMiddleware` class is deprecated, use `scrapy.downloadermiddlewares.cookies.CookiesMiddleware` instead
+  ScrapyDeprecationWarning)
+
+2018-03-22 22:08:01 [py.warnings] WARNING: /home/barnett/anaconda3/lib/python3.6/site-packages/scrapy/utils/deprecate.py:156: ScrapyDeprecationWarning: `scrapy.contrib.downloadermiddleware.httpproxy.HttpProxyMiddleware` class is deprecated, use `scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware` instead
+  ScrapyDeprecationWarning)
+
+2018-03-22 22:08:01 [py.warnings] WARNING: /home/barnett/anaconda3/lib/python3.6/site-packages/scrapy/utils/deprecate.py:156: ScrapyDeprecationWarning: `scrapy.contrib.downloadermiddleware.retry.RetryMiddleware` class is deprecated, use `scrapy.downloadermiddlewares.retry.RetryMiddleware` instead
+  ScrapyDeprecationWarning)
+
+2018-03-22 22:56:08 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'LagouRedis.middlewares.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'LagouRedis.middlewares.LagouCookiesMiddleware',
+ 'LagouRedis.middlewares.RandomProxyMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-03-22 22:56:08 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-03-22 22:56:08 [scrapy.middleware] INFO: Enabled item pipelines:
+['LagouRedis.pipelines.MysqlTwistedPipline']
+2018-03-22 22:56:08 [scrapy.core.engine] INFO: Spider opened
+2018-03-22 22:56:08 [lagou_temp] DEBUG: Resuming crawl (9965 requests scheduled)
+2018-03-22 22:56:08 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-03-22 22:56:08 [lagou_temp] INFO: Spider opened: lagou_temp
+2018-03-22 22:56:08 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2018-03-22 22:56:10 [scrapy.extensions.throttle] INFO: slot: www.lagou.com | conc: 1 | delay: 5000 ms (+0) | latency: 1418 ms | size: 15849 bytes
+2018-03-22 22:56:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/zhaopin/youxichangjing/5/> (referer: https://www.lagou.com/zhaopin/youxichangjing/)
+2018-03-22 22:56:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/youxichangjing/5/>
+{'acquire_edu_bg': '不限',
+ 'acquire_year': '经验1-3年',
+ 'category': 'youxichangjing',
+ 'company': '混核设计',
+ 'companyid': '238262',
+ 'labels': '美术,手绘,角色',
+ 'positionid': '4133027',
+ 'positionname': '高级游戏场景原画师',
+ 'publish_time': '2018-02-23',
+ 'salary': '6k-12k',
+ 'update_time': '2018-03-22 22:56:10'}
+2018-03-22 22:56:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/youxichangjing/5/>
+{'acquire_edu_bg': '不限',
+ 'acquire_year': '经验不限',
+ 'category': 'youxichangjing',
+ 'company': '混核设计',
+ 'companyid': '238262',
+ 'labels': '游戏,角色,角色原画',
+ 'positionid': '4132999',
+ 'positionname': '游戏场景原画师',
+ 'publish_time': '2018-02-23',
+ 'salary': '4k-8k',
+ 'update_time': '2018-03-22 22:56:10'}
+2018-03-22 22:56:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/youxichangjing/5/>
+{'acquire_edu_bg': '不限',
+ 'acquire_year': '经验不限',
+ 'category': 'youxichangjing',
+ 'company': '混核设计',
+ 'companyid': '238262',
+ 'labels': '角色,模型,手游',
+ 'positionid': '4133136',
+ 'positionname': '游戏场景3D建模师',
+ 'publish_time': '2018-02-23',
+ 'salary': '4k-8k',
+ 'update_time': '2018-03-22 22:56:10'}
+2018-03-22 22:56:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/youxichangjing/5/>
+{'acquire_edu_bg': '不限',
+ 'acquire_year': '经验不限',
+ 'category': 'youxichangjing',
+ 'company': '上海育界科技',
+ 'companyid': '244063',
+ 'labels': '实习生,原画,Q版,角色,游戏开发',
+ 'positionid': '4038672',
+ 'positionname': '招3D游戏场景光效设计师/房补',
+ 'publish_time': '2018-03-02',
+ 'salary': '4k-8k',
+ 'update_time': '2018-03-22 22:56:10'}
+2018-03-22 22:56:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/youxichangjing/5/>
+{'acquire_edu_bg': '不限',
+ 'acquire_year': '经验不限',
+ 'category': 'youxichangjing',
+ 'company': '上海育界科技',
+ 'companyid': '244063',
+ 'labels': 'VR,原画,美术,角色,U3D',
+ 'positionid': '4038851',
+ 'positionname': '3D游戏场景物品建模师6000招/双休',
+ 'publish_time': '2018-03-09',
+ 'salary': '6K-10K',
+ 'update_time': '2018-03-22 22:56:10'}
+2018-03-22 22:56:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/youxichangjing/5/>
+{'acquire_edu_bg': '不限',
+ 'acquire_year': '经验不限',
+ 'category': 'youxichangjing',
+ 'company': '上海育界科技',
+ 'companyid': '244063',
+ 'labels': 'VR,原画,美术,2D,U3D',
+ 'positionid': '4038882',
+ 'positionname': '5千招3D建模游戏场景设计/房补',
+ 'publish_time': '2018-03-02',
+ 'salary': '4k-8k',
+ 'update_time': '2018-03-22 22:56:10'}
+2018-03-22 22:56:10 [scrapy_redis.dupefilter] DEBUG: Filtered duplicate request <GET https://www.lagou.com/zhaopin/youxijiaose/> - no more duplicates will be shown (see DUPEFILTER_DEBUG to show all duplicates)
+2018-03-22 22:56:23 [scrapy.extensions.throttle] INFO: slot: www.lagou.com | conc: 2 | delay: 5000 ms (+0) | latency:  996 ms | size: 19306 bytes
+2018-03-22 22:56:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/zhaopin/wangyejiaohushejishi/> (referer: https://www.lagou.com)
+2018-03-22 22:56:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/wangyejiaohushejishi/>
+{'acquire_edu_bg': '大专',
+ 'acquire_year': '经验1-3年',
+ 'category': 'wangyejiaohushejishi',
+ 'company': '360shop',
+ 'companyid': '70567',
+ 'labels': 'UI',
+ 'positionid': '2261024',
+ 'positionname': '网页交互设计师',
+ 'publish_time': '2018-03-21 22:56:23',
+ 'salary': '6k-10k',
+ 'update_time': '2018-03-22 22:56:23'}
+2018-03-22 22:56:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/wangyejiaohushejishi/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验3-5年',
+ 'category': 'wangyejiaohushejishi',
+ 'company': '美的电商',
+ 'companyid': '40014',
+ 'labels': '旅游,电商,策划,平面广告',
+ 'positionid': '682175',
+ 'positionname': '网页设计师（主设计师）',
+ 'publish_time': '11:45发布',
+ 'salary': '10k-20k',
+ 'update_time': '2018-03-22 22:56:23'}
+2018-03-22 22:56:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/wangyejiaohushejishi/>
+{'acquire_edu_bg': '大专',
+ 'acquire_year': '经验1-3年',
+ 'category': 'wangyejiaohushejishi',
+ 'company': '岗岭集团（1药网）',
+ 'companyid': '15185',
+ 'labels': '视觉,平面',
+ 'positionid': '4298854',
+ 'positionname': '网页设计师',
+ 'publish_time': '2018-03-21 22:56:23',
+ 'salary': '8k-10k',
+ 'update_time': '2018-03-22 22:56:23'}
+2018-03-22 22:56:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/wangyejiaohushejishi/>
+{'acquire_edu_bg': '大专',
+ 'acquire_year': '经验1年以下',
+ 'category': 'wangyejiaohushejishi',
+ 'company': '广州玖维信息科技有限公司',
+ 'companyid': '257650',
+ 'labels': '旅游,游戏,专员,助理,实习生',
+ 'positionid': '4181390',
+ 'positionname': '网页设计师',
+ 'publish_time': '18:34发布',
+ 'salary': '3k-5k',
+ 'update_time': '2018-03-22 22:56:23'}
+2018-03-22 22:56:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/wangyejiaohushejishi/>
+{'acquire_edu_bg': '大专',
+ 'acquire_year': '经验1-3年',
+ 'category': 'wangyejiaohushejishi',
+ 'company': '云旅科技',
+ 'companyid': '172847',
+ 'labels': '旅游,电商,产品经理,用户体验',
+ 'positionid': '4269223',
+ 'positionname': '交互设计师/网页设计师（产品方向）',
+ 'publish_time': '17:49发布',
+ 'salary': '6k-10k',
+ 'update_time': '2018-03-22 22:56:23'}
+2018-03-22 22:56:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/wangyejiaohushejishi/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验3-5年',
+ 'category': 'wangyejiaohushejishi',
+ 'company': 'btops',
+ 'companyid': '104066',
+ 'labels': '游戏,手游,端游',
+ 'positionid': '3039626',
+ 'positionname': '网页设计师',
+ 'publish_time': '17:16发布',
+ 'salary': '6k-12k',
+ 'update_time': '2018-03-22 22:56:23'}
+2018-03-22 22:56:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/wangyejiaohushejishi/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验1-3年',
+ 'category': 'wangyejiaohushejishi',
+ 'company': '竞网智赢',
+ 'companyid': '61492',
+ 'labels': '节日礼物,技能培训,年度旅游,岗位晋升',
+ 'positionid': '2493404',
+ 'positionname': '网页设计师',
+ 'publish_time': '16:35发布',
+ 'salary': '5k-10k',
+ 'update_time': '2018-03-22 22:56:23'}
+2018-03-22 22:56:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/wangyejiaohushejishi/>
+{'acquire_edu_bg': '大专',
+ 'acquire_year': '经验3-5年',
+ 'category': 'wangyejiaohushejishi',
+ 'company': '广东酷乐',
+ 'companyid': '30088',
+ 'labels': 'UI,前端,web',
+ 'positionid': '4307624',
+ 'positionname': '网页设计师',
+ 'publish_time': '14:37发布',
+ 'salary': '5k-8k',
+ 'update_time': '2018-03-22 22:56:23'}
+2018-03-22 22:56:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/wangyejiaohushejishi/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验不限',
+ 'category': 'wangyejiaohushejishi',
+ 'company': '沃点网络科技',
+ 'companyid': '298212',
+ 'labels': '高级,专员,视觉,平面',
+ 'positionid': '4305125',
+ 'positionname': '网页设计',
+ 'publish_time': '10:31发布',
+ 'salary': '4K-6K',
+ 'update_time': '2018-03-22 22:56:23'}
+2018-03-22 22:56:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/wangyejiaohushejishi/>
+{'acquire_edu_bg': '大专',
+ 'acquire_year': '经验不限',
+ 'category': 'wangyejiaohushejishi',
+ 'company': '英迈思',
+ 'companyid': '21101',
+ 'labels': '广告营销,平面,美工',
+ 'positionid': '4308254',
+ 'positionname': '网页设计师助理',
+ 'publish_time': '15:17发布',
+ 'salary': '3k-5k',
+ 'update_time': '2018-03-22 22:56:23'}
+2018-03-22 22:56:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/wangyejiaohushejishi/>
+{'acquire_edu_bg': '大专',
+ 'acquire_year': '经验1-3年',
+ 'category': 'wangyejiaohushejishi',
+ 'company': '武汉无忧分发',
+ 'companyid': '208452',
+ 'labels': 'web,app,UI,UE,GUI',
+ 'positionid': '4311265',
+ 'positionname': '网页设计师',
+ 'publish_time': '21:31发布',
+ 'salary': '4k-8k',
+ 'update_time': '2018-03-22 22:56:23'}
+2018-03-22 22:56:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/wangyejiaohushejishi/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验3-5年',
+ 'category': 'wangyejiaohushejishi',
+ 'company': '小赢科技',
+ 'companyid': '24587',
+ 'labels': '金融,高级,web,UI,UED',
+ 'positionid': '4307940',
+ 'positionname': '资深网页设计师',
+ 'publish_time': '14:58发布',
+ 'salary': '13k-25k',
+ 'update_time': '2018-03-22 22:56:23'}
+2018-03-22 22:56:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/wangyejiaohushejishi/>
+{'acquire_edu_bg': '大专',
+ 'acquire_year': '经验1-3年',
+ 'category': 'wangyejiaohushejishi',
+ 'company': '哇咿网络',
+ 'companyid': '316486',
+ 'labels': '视频,平面,美工,flash',
+ 'positionid': '4305630',
+ 'positionname': '网页设计师',
+ 'publish_time': '11:03发布',
+ 'salary': '5k-7k',
+ 'update_time': '2018-03-22 22:56:23'}
+2018-03-22 22:56:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/wangyejiaohushejishi/>
+{'acquire_edu_bg': '大专',
+ 'acquire_year': '经验3-5年',
+ 'category': 'wangyejiaohushejishi',
+ 'company': '大金科技',
+ 'companyid': '211701',
+ 'labels': '高级,web,app,UE,交互',
+ 'positionid': '3996310',
+ 'positionname': 'UI/网页设计师',
+ 'publish_time': '2018-03-21 22:56:23',
+ 'salary': '11k-22k',
+ 'update_time': '2018-03-22 22:56:23'}
+2018-03-22 22:56:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/wangyejiaohushejishi/>
+{'acquire_edu_bg': '不限',
+ 'acquire_year': '经验3-5年',
+ 'category': 'wangyejiaohushejishi',
+ 'company': '来下科技',
+ 'companyid': '285768',
+ 'labels': '游戏,H5页面',
+ 'positionid': '4113713',
+ 'positionname': '网页设计师/平面设计师',
+ 'publish_time': '2018-03-21 22:56:23',
+ 'salary': '9k-15k',
+ 'update_time': '2018-03-22 22:56:23'}
+2018-03-22 22:56:30 [scrapy.extensions.throttle] INFO: slot: www.lagou.com | conc: 2 | delay: 5000 ms (+0) | latency: 1085 ms | size: 19113 bytes
+2018-03-22 22:56:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/zhaopin/youxijiemianshejishi/> (referer: https://www.lagou.com)
+2018-03-22 22:56:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/youxijiemianshejishi/>
+{'acquire_edu_bg': '大专',
+ 'acquire_year': '经验3-5年',
+ 'category': 'youxijiemianshejishi',
+ 'company': 'TCL互联网事业本部',
+ 'companyid': '114268',
+ 'labels': '游戏,UI,2D',
+ 'positionid': '4297673',
+ 'positionname': '游戏界面设计师',
+ 'publish_time': '2018-03-21 22:56:30',
+ 'salary': '10k-18k',
+ 'update_time': '2018-03-22 22:56:30'}
+2018-03-22 22:56:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/youxijiemianshejishi/>
+{'acquire_edu_bg': '大专',
+ 'acquire_year': '经验1-3年',
+ 'category': 'youxijiemianshejishi',
+ 'company': '互爱(北京)科技有限公司',
+ 'companyid': '13241',
+ 'labels': '游戏,专员,UI,交互,UE',
+ 'positionid': '4292959',
+ 'positionname': '游戏界面设计师',
+ 'publish_time': '10:06发布',
+ 'salary': '10k-20k',
+ 'update_time': '2018-03-22 22:56:30'}
+2018-03-22 22:56:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/youxijiemianshejishi/>
+{'acquire_edu_bg': '不限',
+ 'acquire_year': '经验1-3年',
+ 'category': 'youxijiemianshejishi',
+ 'company': '广州游爱',
+ 'companyid': '13553',
+ 'labels': '游戏',
+ 'positionid': '699418',
+ 'positionname': '游戏界面设计师',
+ 'publish_time': '16:02发布',
+ 'salary': '8k-15k',
+ 'update_time': '2018-03-22 22:56:30'}
+2018-03-22 22:56:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/youxijiemianshejishi/>
+{'acquire_edu_bg': '不限',
+ 'acquire_year': '经验3-5年',
+ 'category': 'youxijiemianshejishi',
+ 'company': '博乐科技',
+ 'companyid': '35939',
+ 'labels': '游戏,UI,flash,角色原画,画师',
+ 'positionid': '1849666',
+ 'positionname': '游戏界面设计师',
+ 'publish_time': '10:10发布',
+ 'salary': '12k-24k',
+ 'update_time': '2018-03-22 22:56:30'}
+2018-03-22 22:56:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/youxijiemianshejishi/>
+{'acquire_edu_bg': '不限',
+ 'acquire_year': '经验3-5年',
+ 'category': 'youxijiemianshejishi',
+ 'company': '宽待互联网',
+ 'companyid': '112917',
+ 'labels': '游戏,UI',
+ 'positionid': '1747568',
+ 'positionname': '游戏界面设计师',
+ 'publish_time': '14:10发布',
+ 'salary': '15k-20k',
+ 'update_time': '2018-03-22 22:56:30'}
+2018-03-22 22:56:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/youxijiemianshejishi/>
+{'acquire_edu_bg': '大专',
+ 'acquire_year': '经验5-10年',
+ 'category': 'youxijiemianshejishi',
+ 'company': '九龙云天',
+ 'companyid': '227325',
+ 'labels': 'UI,2D,Q版',
+ 'positionid': '3333901',
+ 'positionname': '游戏界面设计师',
+ 'publish_time': '2018-03-20 22:56:30',
+ 'salary': '7K-14K',
+ 'update_time': '2018-03-22 22:56:30'}
+2018-03-22 22:56:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/youxijiemianshejishi/>
+{'acquire_edu_bg': '大专',
+ 'acquire_year': '经验3-5年',
+ 'category': 'youxijiemianshejishi',
+ 'company': '大川',
+ 'companyid': '169529',
+ 'labels': '游戏,美术,2D,UI,3D,原画',
+ 'positionid': '3201019',
+ 'positionname': '游戏界面设计师',
+ 'publish_time': '2018-03-19 22:56:30',
+ 'salary': '8k-16k',
+ 'update_time': '2018-03-22 22:56:30'}
+2018-03-22 22:56:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/youxijiemianshejishi/>
+{'acquire_edu_bg': '不限',
+ 'acquire_year': '经验1-3年',
+ 'category': 'youxijiemianshejishi',
+ 'company': '深圳市游凰科技有限公司',
+ 'companyid': '253626',
+ 'labels': '移动互联网,游戏,广告营销,UI,交互,UED',
+ 'positionid': '3546049',
+ 'positionname': '游戏界面设计师',
+ 'publish_time': '09:38发布',
+ 'salary': '7k-12k',
+ 'update_time': '2018-03-22 22:56:30'}
+2018-03-22 22:56:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/youxijiemianshejishi/>
+{'acquire_edu_bg': '大专',
+ 'acquire_year': '经验3-5年',
+ 'category': 'youxijiemianshejishi',
+ 'company': '有信网络',
+ 'companyid': '14563',
+ 'labels': '游戏,视觉,UI,UE',
+ 'positionid': '3921164',
+ 'positionname': '游戏界面设计师',
+ 'publish_time': '11:49发布',
+ 'salary': '10k-20k',
+ 'update_time': '2018-03-22 22:56:30'}
+2018-03-22 22:56:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/youxijiemianshejishi/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验不限',
+ 'category': 'youxijiemianshejishi',
+ 'company': '编程猫',
+ 'companyid': '68524',
+ 'labels': '游戏,视觉,UI,UE',
+ 'positionid': '4023957',
+ 'positionname': '游戏界面设计师',
+ 'publish_time': '11:42发布',
+ 'salary': '8k-15k',
+ 'update_time': '2018-03-22 22:56:30'}
+2018-03-22 22:56:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/youxijiemianshejishi/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验5-10年',
+ 'category': 'youxijiemianshejishi',
+ 'company': '竞技世界',
+ 'companyid': '4286',
+ 'labels': '游戏,资深,高级,游戏开发,UI,3D',
+ 'positionid': '2872376',
+ 'positionname': '游戏界面设计师',
+ 'publish_time': '09:59发布',
+ 'salary': '20k-30k',
+ 'update_time': '2018-03-22 22:56:30'}
+2018-03-22 22:56:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/youxijiemianshejishi/>
+{'acquire_edu_bg': '大专',
+ 'acquire_year': '经验1-3年',
+ 'category': 'youxijiemianshejishi',
+ 'company': '网易游戏',
+ 'companyid': '22790',
+ 'labels': '游戏,GUI,UI,3D,2D',
+ 'positionid': '3668021',
+ 'positionname': '游戏界面设计师',
+ 'publish_time': '2018-03-11',
+ 'salary': '10k-15k',
+ 'update_time': '2018-03-22 22:56:30'}
+2018-03-22 22:56:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/youxijiemianshejishi/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验3-5年',
+ 'category': 'youxijiemianshejishi',
+ 'company': '91Act',
+ 'companyid': '123505',
+ 'labels': '游戏,广告营销,视觉,平面,美工,原画',
+ 'positionid': '4089086',
+ 'positionname': '游戏界面设计师',
+ 'publish_time': '2018-02-27',
+ 'salary': '10k-20k',
+ 'update_time': '2018-03-22 22:56:30'}
+2018-03-22 22:56:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/youxijiemianshejishi/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验5-10年',
+ 'category': 'youxijiemianshejishi',
+ 'company': '路通网络',
+ 'companyid': '8277',
+ 'labels': '原画,手绘,游戏开发,UI',
+ 'positionid': '3913292',
+ 'positionname': '高级游戏界面设计师',
+ 'publish_time': '09:08发布',
+ 'salary': '15k-20k',
+ 'update_time': '2018-03-22 22:56:30'}
+2018-03-22 22:56:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/youxijiemianshejishi/>
+{'acquire_edu_bg': '不限',
+ 'acquire_year': '经验1-3年',
+ 'category': 'youxijiemianshejishi',
+ 'company': '文脉互动',
+ 'companyid': '125525',
+ 'labels': '游戏,美术,2D,角色原画',
+ 'positionid': '3242026',
+ 'positionname': '游戏界面设计',
+ 'publish_time': '2018-03-21 22:56:30',
+ 'salary': '8k-16k',
+ 'update_time': '2018-03-22 22:56:30'}
+2018-03-22 22:56:36 [scrapy.extensions.throttle] INFO: slot: www.lagou.com | conc: 2 | delay: 5000 ms (+0) | latency:  155 ms | size:  1393 bytes
+2018-03-22 22:56:36 [scrapy.core.engine] DEBUG: Crawled (403) <GET https://www.lagou.com/jobs/3823431.html> (referer: https://www.lagou.com/zhaopin/MySQL/5/)
+2018-03-22 22:56:37 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.lagou.com/jobs/3823431.html>: HTTP status code is not handled or not allowed
+2018-03-22 22:56:43 [scrapy.extensions.throttle] INFO: slot: www.lagou.com | conc: 2 | delay: 5000 ms (+0) | latency:  997 ms | size: 16325 bytes
+2018-03-22 22:56:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/jobs/4048115.html> (referer: https://www.lagou.com/zhaopin/SQLServer/)
+2018-03-22 22:56:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/jobs/4048115.html>
+{'jobacquire': '1、大专及以上学历，计算机相关专业毕业 '
+               '；2、3年以上数据库开发经验（精通数据库存储引擎、查询引擎者可降低工作年限要求）；3、熟悉SQL '
+               'SERVER、MYSQL（优先）、ORACLE等至少一种关系型数据库的存储引擎；4、熟悉关系型数据库设计流程及规范、掌握一些常用设计技巧；5、精通SQL语句编写，并能进行SQL语句优化；6、具备较强的学习能力，高度的工作热情，良好的团队合作精神及沟通与理解能力。',
+ 'jobadvantage': '上市公司,发展前景大',
+ 'jobcompanyname': '顺网科技顺网科技招聘',
+ 'jobid': '4048115',
+ 'jobname': '数据库开发工程师（MySQL/SqlServer）',
+ 'jobreposibilit': '1、参与项目的需求和设计的讨论与分析，进行相应的数据库架构设计与数据库开发；2、负责生产数据库的日常维护、管理和优化工作；3、制定并执行生产数据库的容灾方案、监控方案、高可用方案等；',
+ 'jobsite': '杭州',
+ 'update_time': '2018-03-22 22:56:44'}
+2018-03-22 22:56:50 [scrapy.extensions.throttle] INFO: slot: www.lagou.com | conc: 2 | delay: 5000 ms (+0) | latency:  556 ms | size: 14521 bytes
+2018-03-22 22:56:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/jobs/4216428.html> (referer: https://www.lagou.com/zhaopin/SQLServer/)
+2018-03-22 22:56:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/jobs/4216428.html>
+{'jobacquire': '1. 精通MySQL数据库的架构原理，能熟练进行数据库的设计、开发和维护；2. '
+               '精通SQL，能够编写高效SQL语句及存储过程，有丰富的SQL优化经验；3. '
+               '熟悉MySQL数据库的高可用保障策略和实施方案；4. 熟悉数据库缓存系统及其相关设计和开发；5. '
+               '熟悉Linux操作系统；6. 工作认真负责，责任心强，主动性强；7. 良好的沟通能力和团队协作能力。',
+ 'jobadvantage': '福利好,薪资高,平台大,氛围好',
+ 'jobcompanyname': '名通科技大数据产品线招聘',
+ 'jobid': '4216428',
+ 'jobname': '数据库开发工程师（mysql/sqlserver）',
+ 'jobreposibilit': '1. 负责数据库设计与开发；2. 负责数据库部署和配置方案的制定；3. '
+                   '对各项目组的数据库开发进行优化分析，提出优化改进意见；4. '
+                   '定期对现场数据库进行性能检测、分析、调优、保障数据库系统高效安全及稳定运行；5. '
+                   '排查数据库故障，分析和解决疑难问题，提出预防方案；',
+ 'jobsite': '深圳',
+ 'update_time': '2018-03-22 22:56:50'}
+2018-03-22 22:57:05 [scrapy.extensions.throttle] INFO: slot: www.lagou.com | conc: 3 | delay: 5417 ms (+417) | latency: 5417 ms | size: 14729 bytes
+2018-03-22 22:57:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/jobs/4275170.html> (referer: https://www.lagou.com/zhaopin/xitongjicheng/7/)
+2018-03-22 22:57:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/jobs/4275170.html>
+{'jobacquire': '本科或以上学历，车辆工程、汽车电子、机电一体化、自动化等专业工作经验：6年以上ADAS相关汽车电子或系统集成设计经验，具备系统架构设计能力专业资格熟悉Vector、INCA、Simulink等汽车电子调试工具；熟悉转向系统、制动系统等执行部件的工作原理，ADAS开发需求原理和测试流程，良好的沟通与协调能力；熟悉被毫米波雷达、超声波雷达、摄像头等传感器功能、性能、标定、总线和诊断设计开发较强的归纳、统计、分析和判断力，文档规范编写能力',
+ 'jobadvantage': '无人驾驶,核心团队,整体薪酬,发展空间',
+ 'jobcompanyname': '小鹏汽车智能系统部招聘',
+ 'jobid': '4275170',
+ 'jobname': '自动驾驶系统集成高级工程师',
+ 'jobreposibilit': '2．ADAS相关传感器选型与性能规范，执行系统主动控制性能规范，供应商进度跟进3．相关技术资料，包括技术条件、功能规范、报价资料、DFMEA、设计任务书、设计总结、设计指南等的编制',
+ 'jobsite': '广州',
+ 'update_time': '2018-03-22 22:57:05'}
+2018-03-22 22:57:08 [scrapy.extensions.throttle] INFO: slot: www.lagou.com | conc: 3 | delay: 5000 ms (-417) | latency:  899 ms | size: 14771 bytes
+2018-03-22 22:57:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/jobs/4285753.html> (referer: https://www.lagou.com/zhaopin/gongnengceshi/7/)
+2018-03-22 22:57:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/jobs/4285753.html>
+{'jobacquire': '1、计算机或相关专业本科学历，良好的自我管理和学习能力；2、2年以上测试经验（1年以上互联网经验），有开发经验者优先；3、对测试有足够的激情;喜欢并善于从各种角度发现程序的缺陷；4、掌握各种软件测试技术、方法、如功能测试、性能测试、安全性、可靠性、界面等、掌握至少一种自动化测试工具；5、具备较强的bug定位能力; '
+               '具备较强bug的敏感度;具备随机问题重现的能力;6、具有良好的沟通协调和文档撰写能力；7、热爱测试工作，善于发现、分析和总结问题，责任心强，吃苦耐劳，具备较强的沟通能力，有抗压能力，能适应高强度的工作。8、从事过电商业务测试工作的优先考虑。',
+ 'jobadvantage': '双休,早九晚六,股票期权,节假日福利',
+ 'jobcompanyname': '阿么女鞋鞋仓事业部招聘',
+ 'jobid': '4285753',
+ 'jobname': '软件测试工程师（功能测试）',
+ 'jobreposibilit': '1、负责pc端、App、微信商城的功能测试；2、根据需求和原型规划用例，执行测试及Bug跟踪；3、负责搭建持续集成测试环境；4、根据项目测试计划制定测试用例并实施，编写测试报告等相关文档，保证网站和系统质量和进度；5、对互联网产品进行白盒测试、兼容性测试、容错性测试、运维测试以及性能测试等。',
+ 'jobsite': '成都',
+ 'update_time': '2018-03-22 22:57:08'}
+2018-03-22 22:57:08 [scrapy.extensions.logstats] INFO: Crawled 8 pages (at 8 pages/min), scraped 40 items (at 40 items/min)
+2018-03-22 22:57:21 [scrapy.extensions.throttle] INFO: slot: www.lagou.com | conc: 4 | delay: 9845 ms (+4845) | latency: 9845 ms | size: 14801 bytes
+2018-03-22 22:57:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/jobs/4307950.html> (referer: https://www.lagou.com/zhaopin/jishujingli/)
+2018-03-22 22:57:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/jobs/4307950.html>
+{'jobacquire': '二、技术要求1、5年以上PHP网页开发经验，同时掌握JAVA或其他语言者优先；2、精通MySQL数据库，具有MySQL优化和集群部署的能力，有多机房部署经验优先；3、熟悉NoSql应用与部署，熟悉redis集群及部署经验优先；4、熟悉Unix/Linux操作系统，熟悉Unix/Linux管理命令以及Shell脚本编程；5、熟悉Laravel/Lumen框架，熟悉vue/react前端框架优先；6、工作主动，认真负责，学习能力强，喜欢技术 '
+               '能承受较大工作压力；7、具备良好的团队合作精神，能融入多功能团队并与其他同事进行良好的沟通及合作。',
+ 'jobadvantage': '弹性上下班,团队氛围好,发展空间大,自我实现',
+ 'jobcompanyname': '康乐富技术部招聘',
+ 'jobid': '4307950',
+ 'jobname': '高级PHP后端开发工程师/技术经理',
+ 'jobreposibilit': '1、负责/参与技术架构设计、重构、优化，根据业务规划及技术规划制定应用架构方案；2、负责/参与平台系统的架构设计和系统设计、详细设计；3、主导/参与技术难题攻关，持续提升核心系统处理性能；4、核心功能的架构与代码模板编写，开发与维护系统公用核心模块；5、审核和评估相关方案与设计，以确保其符合架构规划，满足业务需求；6、分析系统瓶颈，解决各种疑难杂症，对系统进行性能调优；',
+ 'jobsite': '广州',
+ 'update_time': '2018-03-22 22:57:21'}
+2018-03-22 22:57:32 [scrapy.extensions.throttle] INFO: slot: www.lagou.com | conc: 4 | delay: 5708 ms (-4136) | latency: 1571 ms | size: 19199 bytes
+2018-03-22 22:57:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/zhaopin/kefuzongjian/28/> (referer: https://www.lagou.com/zhaopin/kefuzongjian/30/)
+2018-03-22 22:57:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/kefuzongjian/28/>
+{'acquire_edu_bg': '不限',
+ 'acquire_year': '经验不限',
+ 'category': 'kefuzongjian',
+ 'company': '小站教育',
+ 'companyid': '67235',
+ 'labels': '教育,客服,AE,翻译',
+ 'positionid': '4127567',
+ 'positionname': '客服专员',
+ 'publish_time': '18:40发布',
+ 'salary': '6k-8k',
+ 'update_time': '2018-03-22 22:57:32'}
+2018-03-22 22:57:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/kefuzongjian/28/>
+{'acquire_edu_bg': '大专',
+ 'acquire_year': '经验1年以下',
+ 'category': 'kefuzongjian',
+ 'company': '投之家',
+ 'companyid': '44248',
+ 'labels': '金融,信息安全,客服,理财,即时通讯',
+ 'positionid': '3321863',
+ 'positionname': '客服专员',
+ 'publish_time': '10:03发布',
+ 'salary': '3k-6k',
+ 'update_time': '2018-03-22 22:57:32'}
+2018-03-22 22:57:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/kefuzongjian/28/>
+{'acquire_edu_bg': '大专',
+ 'acquire_year': '经验1-3年',
+ 'category': 'kefuzongjian',
+ 'company': '飞救医疗科技（北京）有限公司',
+ 'companyid': '63720',
+ 'labels': '客服,医疗健康,AE,售后,投诉',
+ 'positionid': '4264595',
+ 'positionname': '客服代表',
+ 'publish_time': '2018-03-21 22:57:32',
+ 'salary': '3k-4k',
+ 'update_time': '2018-03-22 22:57:32'}
+2018-03-22 22:57:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/kefuzongjian/28/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验1-3年',
+ 'category': 'kefuzongjian',
+ 'company': '第一房贷',
+ 'companyid': '118717',
+ 'labels': '客服,高级,专员,运营,运维,CRM',
+ 'positionid': '4273071',
+ 'positionname': '客服',
+ 'publish_time': '2018-03-20 22:57:32',
+ 'salary': '6k-8k',
+ 'update_time': '2018-03-22 22:57:32'}
+2018-03-22 22:57:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/kefuzongjian/28/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验1-3年',
+ 'category': 'kefuzongjian',
+ 'company': '个推',
+ 'companyid': '13163',
+ 'labels': '客服,移动互联网,运营,市场',
+ 'positionid': '3774780',
+ 'positionname': '客服',
+ 'publish_time': '2018-03-16',
+ 'salary': '5k-8k',
+ 'update_time': '2018-03-22 22:57:32'}
+2018-03-22 22:57:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/kefuzongjian/28/>
+{'acquire_edu_bg': '大专',
+ 'acquire_year': '经验1-3年',
+ 'category': 'kefuzongjian',
+ 'company': '滴滴出行',
+ 'companyid': '2474',
+ 'labels': '客服,审核,投诉',
+ 'positionid': '4215635',
+ 'positionname': '客服专员（V2018030602）',
+ 'publish_time': '22:08发布',
+ 'salary': '3k-6k',
+ 'update_time': '2018-03-22 22:57:32'}
+2018-03-22 22:57:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/kefuzongjian/28/>
+{'acquire_edu_bg': '大专',
+ 'acquire_year': '经验不限',
+ 'category': 'kefuzongjian',
+ 'company': '玖富集团',
+ 'companyid': '136978',
+ 'labels': '客服,移动互联网,专员,AE,CDN',
+ 'positionid': '4280889',
+ 'positionname': '热线客服',
+ 'publish_time': '16:45发布',
+ 'salary': '4k-8k',
+ 'update_time': '2018-03-22 22:57:32'}
+2018-03-22 22:57:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/kefuzongjian/28/>
+{'acquire_edu_bg': '大专',
+ 'acquire_year': '经验1-3年',
+ 'category': 'kefuzongjian',
+ 'company': '长涛金融',
+ 'companyid': '104464',
+ 'labels': '金融,客服,信贷,CRM',
+ 'positionid': '2330587',
+ 'positionname': '客服专员',
+ 'publish_time': '14:14发布',
+ 'salary': '2k-4k',
+ 'update_time': '2018-03-22 22:57:32'}
+2018-03-22 22:57:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/kefuzongjian/28/>
+{'acquire_edu_bg': '不限',
+ 'acquire_year': '经验1-3年',
+ 'category': 'kefuzongjian',
+ 'company': '叮咚钱包',
+ 'companyid': '21089',
+ 'labels': '金融,客服,技术支持,售后,投诉',
+ 'positionid': '3753660',
+ 'positionname': '客服(厦门)',
+ 'publish_time': '10:30发布',
+ 'salary': '4k-6k',
+ 'update_time': '2018-03-22 22:57:32'}
+2018-03-22 22:57:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/kefuzongjian/28/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验不限',
+ 'category': 'kefuzongjian',
+ 'company': '丽兹行',
+ 'companyid': '124195',
+ 'labels': '电商,客服,淘宝,天猫,电话,在线',
+ 'positionid': '4264165',
+ 'positionname': '客服',
+ 'publish_time': '09:16发布',
+ 'salary': '10k-20k',
+ 'update_time': '2018-03-22 22:57:32'}
+2018-03-22 22:57:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/kefuzongjian/28/>
+{'acquire_edu_bg': '不限',
+ 'acquire_year': '经验不限',
+ 'category': 'kefuzongjian',
+ 'company': '上海谷近',
+ 'companyid': '347630',
+ 'labels': '客服,售后,投诉',
+ 'positionid': '4302171',
+ 'positionname': '客服专员',
+ 'publish_time': '2018-03-21 22:57:32',
+ 'salary': '4k-5k',
+ 'update_time': '2018-03-22 22:57:32'}
+2018-03-22 22:57:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/kefuzongjian/28/>
+{'acquire_edu_bg': '大专',
+ 'acquire_year': '经验3-5年',
+ 'category': 'kefuzongjian',
+ 'company': '果宝',
+ 'companyid': '202284',
+ 'labels': '客服,部门主管',
+ 'positionid': '4103482',
+ 'positionname': '客服主管',
+ 'publish_time': '2018-03-21 22:57:32',
+ 'salary': '10K-15K',
+ 'update_time': '2018-03-22 22:57:32'}
+2018-03-22 22:57:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/kefuzongjian/28/>
+{'acquire_edu_bg': '不限',
+ 'acquire_year': '经验不限',
+ 'category': 'kefuzongjian',
+ 'company': '珍爱网',
+ 'companyid': '6718',
+ 'labels': '金融,销售,运营,售前',
+ 'positionid': '4107278',
+ 'positionname': '客服助理',
+ 'publish_time': '2018-03-21 22:57:32',
+ 'salary': '5k-8k',
+ 'update_time': '2018-03-22 22:57:32'}
+2018-03-22 22:57:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/kefuzongjian/28/>
+{'acquire_edu_bg': '不限',
+ 'acquire_year': '经验不限',
+ 'category': 'kefuzongjian',
+ 'company': '来人到家',
+ 'companyid': '21946',
+ 'labels': '客服,电话,在线',
+ 'positionid': '2636922',
+ 'positionname': '400客服',
+ 'publish_time': '2018-03-20 22:57:32',
+ 'salary': '5k-8k',
+ 'update_time': '2018-03-22 22:57:32'}
+2018-03-22 22:57:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/kefuzongjian/28/>
+{'acquire_edu_bg': '大专',
+ 'acquire_year': '经验不限',
+ 'category': 'kefuzongjian',
+ 'company': '英迈思',
+ 'companyid': '21101',
+ 'labels': '客服',
+ 'positionid': '4172416',
+ 'positionname': '档案客服',
+ 'publish_time': '2018-03-15',
+ 'salary': '4k-5k',
+ 'update_time': '2018-03-22 22:57:32'}
+2018-03-22 22:57:48 [scrapy.extensions.throttle] INFO: slot: www.lagou.com | conc: 5 | delay: 5000 ms (-708) | latency:  356 ms | size: 19385 bytes
+2018-03-22 22:57:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/zhaopin/shujuyunying/13/> (referer: https://www.lagou.com/zhaopin/shujuyunying/11/)
+2018-03-22 22:57:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/shujuyunying/13/>
+{'acquire_edu_bg': '大专',
+ 'acquire_year': '经验1年以下',
+ 'category': 'shujuyunying',
+ 'company': 'Q房网',
+ 'companyid': '4900',
+ 'labels': '大数据,数据分析,数据管理',
+ 'positionid': '4220596',
+ 'positionname': '数据运营专员',
+ 'publish_time': '2018-03-21 22:57:48',
+ 'salary': '4k-7k',
+ 'update_time': '2018-03-22 22:57:48'}
+2018-03-22 22:57:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/shujuyunying/13/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验1-3年',
+ 'category': 'shujuyunying',
+ 'company': '航美在线',
+ 'companyid': '127378',
+ 'labels': '大数据,数据分析,数据管理',
+ 'positionid': '3194489',
+ 'positionname': '数据运营专员',
+ 'publish_time': '2018-03-16',
+ 'salary': '6k-10k',
+ 'update_time': '2018-03-22 22:57:48'}
+2018-03-22 22:57:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/shujuyunying/13/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验1-3年',
+ 'category': 'shujuyunying',
+ 'company': '酷划在线',
+ 'companyid': '10723',
+ 'labels': '高级,app,广告,SQL',
+ 'positionid': '3982657',
+ 'positionname': '数据运营专员/主管',
+ 'publish_time': '11:45发布',
+ 'salary': '8k-15k',
+ 'update_time': '2018-03-22 22:57:48'}
+2018-03-22 22:57:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/shujuyunying/13/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验1-3年',
+ 'category': 'shujuyunying',
+ 'company': '易联汇华',
+ 'companyid': '41996',
+ 'labels': 'CRM,ERP,数据管理',
+ 'positionid': '3535046',
+ 'positionname': '运营专员（数据运营）',
+ 'publish_time': '2018-03-14',
+ 'salary': '4k-8k',
+ 'update_time': '2018-03-22 22:57:48'}
+2018-03-22 22:57:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/shujuyunying/13/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验1-3年',
+ 'category': 'shujuyunying',
+ 'company': '资产360',
+ 'companyid': '48622',
+ 'labels': '渠道,数据分析,统计',
+ 'positionid': '3700469',
+ 'positionname': '数据运营专员',
+ 'publish_time': '2018-03-13',
+ 'salary': '6k-8k',
+ 'update_time': '2018-03-22 22:57:48'}
+2018-03-22 22:57:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/shujuyunying/13/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验1-3年',
+ 'category': 'shujuyunying',
+ 'company': '鸿亚博伦',
+ 'companyid': '218826',
+ 'labels': '教育,数据分析,用户研究',
+ 'positionid': '4252685',
+ 'positionname': '数据运营专员',
+ 'publish_time': '2018-03-13',
+ 'salary': '6k-9k',
+ 'update_time': '2018-03-22 22:57:48'}
+2018-03-22 22:57:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/shujuyunying/13/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验3-5年',
+ 'category': 'shujuyunying',
+ 'company': '今日头条',
+ 'companyid': '62',
+ 'labels': '审核',
+ 'positionid': '4198294',
+ 'positionname': '数据运营高级经理-国际化方向',
+ 'publish_time': '2018-03-11',
+ 'salary': '16k-20k',
+ 'update_time': '2018-03-22 22:57:48'}
+2018-03-22 22:57:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/shujuyunying/13/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验3-5年',
+ 'category': 'shujuyunying',
+ 'company': '盖威',
+ 'companyid': '3956',
+ 'labels': '金融,渠道,数据分析,SPSS',
+ 'positionid': '4167668',
+ 'positionname': '数据运营',
+ 'publish_time': '2018-02-28',
+ 'salary': '10k-20k',
+ 'update_time': '2018-03-22 22:57:48'}
+2018-03-22 22:57:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/shujuyunying/13/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验10年以上',
+ 'category': 'shujuyunying',
+ 'company': '同仁堂健康',
+ 'companyid': '49477',
+ 'labels': '信息安全,数据分析,数据挖掘',
+ 'positionid': '4167155',
+ 'positionname': '大数据运营专家',
+ 'publish_time': '2018-02-28',
+ 'salary': '30k-50k',
+ 'update_time': '2018-03-22 22:57:48'}
+2018-03-22 22:57:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/shujuyunying/13/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验5-10年',
+ 'category': 'shujuyunying',
+ 'company': '玖富集团',
+ 'companyid': '136978',
+ 'labels': '专员,数据分析,数据管理',
+ 'positionid': '4284794',
+ 'positionname': '用户数据运营',
+ 'publish_time': '16:45发布',
+ 'salary': '20k-40k',
+ 'update_time': '2018-03-22 22:57:48'}
+2018-03-22 22:57:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/shujuyunying/13/>
+{'acquire_edu_bg': '大专',
+ 'acquire_year': '经验1-3年',
+ 'category': 'shujuyunying',
+ 'company': '恒洁卫浴',
+ 'companyid': '164763',
+ 'labels': '电商,天猫,京东,数据管理',
+ 'positionid': '4293913',
+ 'positionname': '数据运营专员',
+ 'publish_time': '2018-03-20 22:57:48',
+ 'salary': '6k-8k',
+ 'update_time': '2018-03-22 22:57:48'}
+2018-03-22 22:57:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/shujuyunying/13/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验3-5年',
+ 'category': 'shujuyunying',
+ 'company': '易车公司',
+ 'companyid': '39952',
+ 'labels': '数据分析,大数据,策略',
+ 'positionid': '4031364',
+ 'positionname': 'JTZNYY-数据运营主管/经理',
+ 'publish_time': '22:35发布',
+ 'salary': '10k-20k',
+ 'update_time': '2018-03-22 22:57:48'}
+2018-03-22 22:57:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/shujuyunying/13/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验3-5年',
+ 'category': 'shujuyunying',
+ 'company': '荔枝',
+ 'companyid': '1531',
+ 'labels': '安全,渠道,内容,数据分析',
+ 'positionid': '3735687',
+ 'positionname': '数据运营经理',
+ 'publish_time': '10:00发布',
+ 'salary': '8k-16k',
+ 'update_time': '2018-03-22 22:57:48'}
+2018-03-22 22:57:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/shujuyunying/13/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验1-3年',
+ 'category': 'shujuyunying',
+ 'company': '杭州乐玑',
+ 'companyid': '243775',
+ 'labels': '大数据,数据分析,数据挖掘',
+ 'positionid': '4000083',
+ 'positionname': '数据运营',
+ 'publish_time': '2018-03-05',
+ 'salary': '6k-12k',
+ 'update_time': '2018-03-22 22:57:48'}
+2018-03-22 22:57:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/shujuyunying/13/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验1-3年',
+ 'category': 'shujuyunying',
+ 'company': '图普科技（深度学习图像识别云）',
+ 'companyid': '34420',
+ 'labels': '移动互联网,硬件制造,业务运营,产品经理',
+ 'positionid': '4047579',
+ 'positionname': '数据运营经理',
+ 'publish_time': '10:06发布',
+ 'salary': '8k-12k',
+ 'update_time': '2018-03-22 22:57:48'}
+2018-03-22 22:57:54 [scrapy.extensions.throttle] INFO: slot: www.lagou.com | conc: 5 | delay: 5000 ms (+0) | latency:  342 ms | size: 19386 bytes
+2018-03-22 22:57:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/zhaopin/wangluoanquan/9/> (referer: https://www.lagou.com/zhaopin/wangluoanquan/11/)
+2018-03-22 22:57:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/wangluoanquan/9/>
+{'acquire_edu_bg': '不限',
+ 'acquire_year': '经验不限',
+ 'category': 'wangluoanquan',
+ 'company': '360企业安全',
+ 'companyid': '148909',
+ 'labels': '安全,信息安全,web安全,测试',
+ 'positionid': '4153650',
+ 'positionname': '网络安全工程师（补天）',
+ 'publish_time': '2018-02-26',
+ 'salary': '15k-30k',
+ 'update_time': '2018-03-22 22:57:54'}
+2018-03-22 22:57:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/wangluoanquan/9/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验5-10年',
+ 'category': 'wangluoanquan',
+ 'company': '安恒信息',
+ 'companyid': '6462',
+ 'labels': '年终分红,股票期权,绩效奖金,五险一金',
+ 'positionid': '4239290',
+ 'positionname': '高级网络安全专家（安全态势感知方向）',
+ 'publish_time': '2018-03-21 22:57:54',
+ 'salary': '25k-40k',
+ 'update_time': '2018-03-22 22:57:54'}
+2018-03-22 22:57:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/wangluoanquan/9/>
+{'acquire_edu_bg': '大专',
+ 'acquire_year': '经验5-10年',
+ 'category': 'wangluoanquan',
+ 'company': '江苏兴力工程建设监理咨询有限公司',
+ 'companyid': '271472',
+ 'labels': '安全,信息安全,病毒分析,web安全,加密',
+ 'positionid': '4222067',
+ 'positionname': '信息/网络安全工程师（高级/资深）',
+ 'publish_time': '13:41发布',
+ 'salary': '18k-25k',
+ 'update_time': '2018-03-22 22:57:54'}
+2018-03-22 22:57:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/wangluoanquan/9/>
+{'acquire_edu_bg': '不限',
+ 'acquire_year': '经验5-10年',
+ 'category': 'wangluoanquan',
+ 'company': '星阵地',
+ 'companyid': '53160',
+ 'labels': '信息安全,高级,Java,架构',
+ 'positionid': '4126889',
+ 'positionname': '网络安全研发经理',
+ 'publish_time': '2018-03-19 22:57:54',
+ 'salary': '13k-26k',
+ 'update_time': '2018-03-22 22:57:54'}
+2018-03-22 22:57:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/wangluoanquan/9/>
+{'acquire_edu_bg': '大专',
+ 'acquire_year': '经验1-3年',
+ 'category': 'wangluoanquan',
+ 'company': '汇志凌云',
+ 'companyid': '275429',
+ 'labels': '信息安全,售后,技术支持',
+ 'positionid': '4204073',
+ 'positionname': '网络安全售前工程师',
+ 'publish_time': '17:35发布',
+ 'salary': '8k-10k',
+ 'update_time': '2018-03-22 22:57:55'}
+2018-03-22 22:57:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/wangluoanquan/9/>
+{'acquire_edu_bg': '大专',
+ 'acquire_year': '经验不限',
+ 'category': 'wangluoanquan',
+ 'company': '西安雅卓智能电子科技',
+ 'companyid': '309412',
+ 'labels': '安全,信息安全,中级,实习,密码技术',
+ 'positionid': '4005340',
+ 'positionname': '网络安全管理员',
+ 'publish_time': '2018-02-26',
+ 'salary': '3K-5K',
+ 'update_time': '2018-03-22 22:57:55'}
+2018-03-22 22:57:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/wangluoanquan/9/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验5-10年',
+ 'category': 'wangluoanquan',
+ 'company': '深圳博瑞得',
+ 'companyid': '130924',
+ 'labels': '信息安全,C/C++',
+ 'positionid': '4030449',
+ 'positionname': '网络安全高级研发工程师',
+ 'publish_time': '2018-03-19 22:57:55',
+ 'salary': '20k-35k',
+ 'update_time': '2018-03-22 22:57:55'}
+2018-03-22 22:57:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/wangluoanquan/9/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验3-5年',
+ 'category': 'wangluoanquan',
+ 'company': '卫达安全',
+ 'companyid': '141531',
+ 'labels': '信息安全',
+ 'positionid': '3820910',
+ 'positionname': '产品经理（网络安全公司）',
+ 'publish_time': '2018-03-19 22:57:55',
+ 'salary': '8k-15k',
+ 'update_time': '2018-03-22 22:57:55'}
+2018-03-22 22:57:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/wangluoanquan/9/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验1-3年',
+ 'category': 'wangluoanquan',
+ 'company': '国舜科技',
+ 'companyid': '70703',
+ 'labels': '信息安全,项目管理',
+ 'positionid': '3683212',
+ 'positionname': '网络安全项目经理',
+ 'publish_time': '2018-03-19 22:57:55',
+ 'salary': '12k-24k',
+ 'update_time': '2018-03-22 22:57:55'}
+2018-03-22 22:57:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/wangluoanquan/9/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验5-10年',
+ 'category': 'wangluoanquan',
+ 'company': '腾讯',
+ 'companyid': '451',
+ 'labels': '安全,信息安全',
+ 'positionid': '3413393',
+ 'positionname': 'MIG12-高级网络安全工程师（深圳）',
+ 'publish_time': '2018-03-19 22:57:55',
+ 'salary': '18k-36k',
+ 'update_time': '2018-03-22 22:57:55'}
+2018-03-22 22:57:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/wangluoanquan/9/>
+{'acquire_edu_bg': '大专',
+ 'acquire_year': '经验1-3年',
+ 'category': 'wangluoanquan',
+ 'company': '云维互联',
+ 'companyid': '337016',
+ 'labels': '信息安全,硬件制造,销售,Cisco',
+ 'positionid': '4270452',
+ 'positionname': '网络安全大客户经理',
+ 'publish_time': '2018-03-15',
+ 'salary': '6k-10k',
+ 'update_time': '2018-03-22 22:57:55'}
+2018-03-22 22:57:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/wangluoanquan/9/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验3-5年',
+ 'category': 'wangluoanquan',
+ 'company': '360',
+ 'companyid': '436',
+ 'labels': '安全,信息安全,教育,视频',
+ 'positionid': '4271302',
+ 'positionname': '网络安全培训讲师',
+ 'publish_time': '2018-03-19 22:57:55',
+ 'salary': '10k-20k',
+ 'update_time': '2018-03-22 22:57:55'}
+2018-03-22 22:57:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/wangluoanquan/9/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验5-10年',
+ 'category': 'wangluoanquan',
+ 'company': '中科网航',
+ 'companyid': '123672',
+ 'labels': '信息安全,linux,大数据',
+ 'positionid': '4240478',
+ 'positionname': '网络安全产品架构师',
+ 'publish_time': '2018-03-11',
+ 'salary': '20k-40k',
+ 'update_time': '2018-03-22 22:57:55'}
+2018-03-22 22:57:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/wangluoanquan/9/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验1-3年',
+ 'category': 'wangluoanquan',
+ 'company': '清创网御',
+ 'companyid': '278515',
+ 'labels': '信息安全,商业',
+ 'positionid': '3752859',
+ 'positionname': '网络安全售前工程师',
+ 'publish_time': '2018-02-23',
+ 'salary': '10k-15k',
+ 'update_time': '2018-03-22 22:57:55'}
+2018-03-22 22:57:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/wangluoanquan/9/>
+{'acquire_edu_bg': '大专',
+ 'acquire_year': '经验1-3年',
+ 'category': 'wangluoanquan',
+ 'company': '启明星辰',
+ 'companyid': '96943',
+ 'labels': '信息安全,自动化,系统集成,技术支持,运维',
+ 'positionid': '4170903',
+ 'positionname': '网络安全厂商实施工程师（上海）',
+ 'publish_time': '2018-02-28',
+ 'salary': '6k-8k',
+ 'update_time': '2018-03-22 22:57:55'}
+2018-03-22 22:58:02 [scrapy.extensions.throttle] INFO: slot: www.lagou.com | conc: 5 | delay: 5000 ms (+0) | latency:  460 ms | size: 19781 bytes
+2018-03-22 22:58:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/zhaopin/wuxianchanpinshejishi/> (referer: https://www.lagou.com)
+2018-03-22 22:58:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/wuxianchanpinshejishi/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验5-10年',
+ 'category': 'wuxianchanpinshejishi',
+ 'company': 'Sunvalley',
+ 'companyid': '28834',
+ 'labels': '绩效奖金,年终分红,股票期权,五险一金',
+ 'positionid': '4176298',
+ 'positionname': '产品经理（无线充）',
+ 'publish_time': '2018-03-21 22:58:02',
+ 'salary': '15k-25k',
+ 'update_time': '2018-03-22 22:58:02'}
+2018-03-22 22:58:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/wuxianchanpinshejishi/>
+{'acquire_edu_bg': '不限',
+ 'acquire_year': '经验3-5年',
+ 'category': 'wuxianchanpinshejishi',
+ 'company': '和讯网',
+ 'companyid': '17665',
+ 'labels': '带薪年假,管理规范,五险一金,节日福利',
+ 'positionid': '3939743',
+ 'positionname': '无线产品经理(000906)',
+ 'publish_time': '2018-03-21 22:58:02',
+ 'salary': '20k-25k',
+ 'update_time': '2018-03-22 22:58:02'}
+2018-03-22 22:58:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/wuxianchanpinshejishi/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验3-5年',
+ 'category': 'wuxianchanpinshejishi',
+ 'company': '北京瑞友',
+ 'companyid': '150030',
+ 'labels': '社交,软件开发,射频',
+ 'positionid': '3224113',
+ 'positionname': '无线设计工程师',
+ 'publish_time': '09:06发布',
+ 'salary': '10k-20k',
+ 'update_time': '2018-03-22 22:58:02'}
+2018-03-22 22:58:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/wuxianchanpinshejishi/>
+{'acquire_edu_bg': '大专',
+ 'acquire_year': '经验1-3年',
+ 'category': 'wuxianchanpinshejishi',
+ 'company': '上海睿宏科技',
+ 'companyid': '193516',
+ 'labels': '销售,企业级无线,无线营销,无线覆盖',
+ 'positionid': '3050870',
+ 'positionname': '渠道/分销代表 - 信锐无线产品',
+ 'publish_time': '2018-03-21 22:58:02',
+ 'salary': '5k-10k',
+ 'update_time': '2018-03-22 22:58:02'}
+2018-03-22 22:58:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/wuxianchanpinshejishi/>
+{'acquire_edu_bg': '大专',
+ 'acquire_year': '经验1-3年',
+ 'category': 'wuxianchanpinshejishi',
+ 'company': '顶标科技',
+ 'companyid': '330682',
+ 'labels': 'CAD',
+ 'positionid': '4182200',
+ 'positionname': '无线宏站设计师',
+ 'publish_time': '2018-03-16',
+ 'salary': '4k-8k',
+ 'update_time': '2018-03-22 22:58:02'}
+2018-03-22 22:58:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/wuxianchanpinshejishi/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验1-3年',
+ 'category': 'wuxianchanpinshejishi',
+ 'company': '悟空保',
+ 'companyid': '88268',
+ 'labels': '电商,社交,工具软件,用户研究',
+ 'positionid': '4047300',
+ 'positionname': '无线产品经理（用户体验方向）',
+ 'publish_time': '13:49发布',
+ 'salary': '15k-30k',
+ 'update_time': '2018-03-22 22:58:02'}
+2018-03-22 22:58:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/wuxianchanpinshejishi/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验3-5年',
+ 'category': 'wuxianchanpinshejishi',
+ 'company': '聚美优品',
+ 'companyid': '53',
+ 'labels': '技能培训,节日礼物,季度奖金,岗位晋升',
+ 'positionid': '1767811',
+ 'positionname': '产品经理（无线高级 ）',
+ 'publish_time': '2018-03-13',
+ 'salary': '20k-40k',
+ 'update_time': '2018-03-22 22:58:02'}
+2018-03-22 22:58:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/wuxianchanpinshejishi/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验不限',
+ 'category': 'wuxianchanpinshejishi',
+ 'company': '去哪儿网',
+ 'companyid': '1970',
+ 'labels': '旅游,电商,移动互联网,本地生活,高级',
+ 'positionid': '3335654',
+ 'positionname': '无线产品经理-旅游度假事业部',
+ 'publish_time': '2018-03-20 22:58:02',
+ 'salary': '15k-30k',
+ 'update_time': '2018-03-22 22:58:02'}
+2018-03-22 22:58:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/wuxianchanpinshejishi/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验3-5年',
+ 'category': 'wuxianchanpinshejishi',
+ 'company': '信锐技术',
+ 'companyid': '45943',
+ 'labels': '软件开发,产品经理,产品设计,市场需求分析,企业级wifi',
+ 'positionid': '4081904',
+ 'positionname': '企业级无线产品规划经理',
+ 'publish_time': '2018-03-20 22:58:02',
+ 'salary': '20k-40k',
+ 'update_time': '2018-03-22 22:58:02'}
+2018-03-22 22:58:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/wuxianchanpinshejishi/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验3-5年',
+ 'category': 'wuxianchanpinshejishi',
+ 'company': '科大讯飞',
+ 'companyid': '21980',
+ 'labels': '移动互联网,音乐,产品设计,用户研究',
+ 'positionid': '4115205',
+ 'positionname': '产品经理（无线音乐）—消费者BG',
+ 'publish_time': '2018-03-19 22:58:02',
+ 'salary': '15k-20k',
+ 'update_time': '2018-03-22 22:58:02'}
+2018-03-22 22:58:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/wuxianchanpinshejishi/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验3-5年',
+ 'category': 'wuxianchanpinshejishi',
+ 'company': '任你说',
+ 'companyid': '234053',
+ 'labels': '高级',
+ 'positionid': '4219888',
+ 'positionname': '产品经理（无线路由器/电力猫/）',
+ 'publish_time': '2018-03-07',
+ 'salary': '15K-25K',
+ 'update_time': '2018-03-22 22:58:02'}
+2018-03-22 22:58:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/wuxianchanpinshejishi/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验3-5年',
+ 'category': 'wuxianchanpinshejishi',
+ 'company': '马蜂窝',
+ 'companyid': '109',
+ 'labels': '弹性工作,扁平管理,氛围好,年度体检',
+ 'positionid': '2679451',
+ 'positionname': '无线产品经理（电商业务）',
+ 'publish_time': '2018-03-18',
+ 'salary': '15k-25k',
+ 'update_time': '2018-03-22 22:58:02'}
+2018-03-22 22:58:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/wuxianchanpinshejishi/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验3-5年',
+ 'category': 'wuxianchanpinshejishi',
+ 'company': 'SENSORO',
+ 'companyid': '216662',
+ 'labels': '智能硬件,UED',
+ 'positionid': '4193109',
+ 'positionname': '高级无线交互设计师',
+ 'publish_time': '2018-03-02',
+ 'salary': '20k-40k',
+ 'update_time': '2018-03-22 22:58:02'}
+2018-03-22 22:58:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/wuxianchanpinshejishi/>
+{'acquire_edu_bg': '不限',
+ 'acquire_year': '经验1-3年',
+ 'category': 'wuxianchanpinshejishi',
+ 'company': '吃喝惠州',
+ 'companyid': '34822',
+ 'labels': '五险齐全,节日礼物,绩效奖金,年度旅游',
+ 'positionid': '3067065',
+ 'positionname': '移动产品设计师（UI）',
+ 'publish_time': '2018-03-21 22:58:02',
+ 'salary': '5K-10K',
+ 'update_time': '2018-03-22 22:58:02'}
+2018-03-22 22:58:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/zhaopin/wuxianchanpinshejishi/>
+{'acquire_edu_bg': '本科',
+ 'acquire_year': '经验1-3年',
+ 'category': 'wuxianchanpinshejishi',
+ 'company': '边锋',
+ 'companyid': '593',
+ 'labels': '直播,专员,游戏开发,页游,手游,端游',
+ 'positionid': '3592693',
+ 'positionname': '运营策划（无线）-战旗',
+ 'publish_time': '2018-03-20 22:58:02',
+ 'salary': '6k-8k',
+ 'update_time': '2018-03-22 22:58:02'}
+2018-03-22 22:58:08 [scrapy.extensions.logstats] INFO: Crawled 13 pages (at 5 pages/min), scraped 101 items (at 61 items/min)
+2018-03-22 22:58:08 [scrapy.extensions.throttle] INFO: slot: www.lagou.com | conc: 5 | delay: 5000 ms (+0) | latency:  423 ms | size: 14546 bytes
+2018-03-22 22:58:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/jobs/4301100.html> (referer: https://www.lagou.com/zhaopin/zidonghuaceshi/3/)
+2018-03-22 22:58:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/jobs/4301100.html>
+{'jobacquire': '1. 1年以上自动化测试经验。2. 熟练掌握Fiddler, Jmeter, LoadRunner等工具的使用。3. '
+               '熟练掌握自动化测试理论，熟悉RobotFramework, Selenium等框架。4. 熟悉python开发。5. '
+               '熟练掌握Mysql等常用数据库操作。6. 具有电商系统测试经验者优先，有开发经验者优先。7. '
+               '有较强的自学能力，具备独立解决问题的能力。拥有良好的团队意识，责任心强，态度积极，善于沟通。',
+ 'jobadvantage': '产品线丰富 海量数据 高并发',
+ 'jobcompanyname': '海豚村招聘',
+ 'jobid': '4301100',
+ 'jobname': '自动化测试工程师',
+ 'jobreposibilit': '1.参与产品测试的全流程, '
+                   '参与需求分析，梳理需求，编写用例，用例执行，问题跟进。建立和维护完善的测试文档。2.跟踪bug，协助开发定位和解决bug，并能提出改进建议。3.搭建与维护测试环境，自动化脚本开发。维护自动化测试脚本与用例。4.保证被测系统质量，并通过测试流程和方法，努力提升测试质量和效率5.按时完成工作，并能及时对工作总结汇报与持续改进。',
+ 'jobsite': '深圳',
+ 'update_time': '2018-03-22 22:58:08'}
+2018-03-22 22:58:12 [scrapy.extensions.throttle] INFO: slot: www.lagou.com | conc: 5 | delay:55610 ms (+50610) | latency:55610 ms | size: 19287 bytes
+2018-03-22 22:58:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/zhaopin/chanpinzhuli/28/> (referer: https://www.lagou.com/zhaopin/chanpinzhuli/30/)
+2018-03-22 22:58:12 [scrapy.extensions.throttle] INFO: slot: www.lagou.com | conc: 4 | delay:28143 ms (-27466) | latency:  677 ms | size: 16439 bytes
+2018-03-22 22:58:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/jobs/2261024.html> (referer: https://www.lagou.com/zhaopin/wangyejiaohushejishi/)
+2018-03-22 22:58:13 [scrapy.crawler] INFO: Received SIGTERM, shutting down gracefully. Send again to force 
+2018-03-22 22:58:22 [scrapy.crawler] INFO: Received SIGTERM twice, forcing unclean shutdown
+2018-03-23 01:14:30 [twisted] CRITICAL: Unhandled Error
+Traceback (most recent call last):
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/scrapy/commands/crawl.py", line 58, in run
+    self.crawler_process.start()
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/scrapy/crawler.py", line 291, in start
+    reactor.run(installSignalHandlers=False)  # blocking call
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/twisted/internet/base.py", line 1243, in run
+    self.mainLoop()
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/twisted/internet/base.py", line 1252, in mainLoop
+    self.runUntilCurrent()
+--- <exception caught here> ---
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/twisted/internet/base.py", line 878, in runUntilCurrent
+    call.func(*call.args, **call.kw)
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/scrapy/utils/reactor.py", line 41, in __call__
+    return self._func(*self._a, **self._kw)
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/scrapy/core/engine.py", line 122, in _next_request
+    if not self._next_request_from_scheduler(spider):
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/scrapy/core/engine.py", line 149, in _next_request_from_scheduler
+    request = slot.scheduler.next_request()
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/scrapy_redis/scheduler.py", line 172, in next_request
+    request = self.queue.pop(block_pop_timeout)
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/scrapy_redis/queue.py", line 115, in pop
+    results, count = pipe.execute()
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/redis/client.py", line 2894, in execute
+    return execute(conn, stack, raise_on_error)
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/redis/client.py", line 2749, in _execute_transaction
+    connection.send_packed_command(all_cmds)
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/redis/connection.py", line 585, in send_packed_command
+    self.connect()
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/redis/connection.py", line 489, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 101 connecting to 101.132.73.130:6379. Network is unreachable.
+
+2018-03-23 01:14:30 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2018-03-23 01:14:31 [scrapy.extensions.logstats] INFO: Crawled 16 pages (at 3 pages/min), scraped 102 items (at 1 items/min)
+2018-03-23 01:14:31 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://www.lagou.com/zhaopin/yunyingjingli/30/> (failed 1 times): User timeout caused connection failure: Getting https://www.lagou.com/zhaopin/yunyingjingli/30/ took longer than 180.0 seconds..
+2018-03-23 01:14:31 [scrapy.core.engine] INFO: Error while handling downloader output
+Traceback (most recent call last):
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/twisted/internet/defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/twisted/python/failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/scrapy/core/downloader/middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/twisted/internet/defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/scrapy/core/downloader/handlers/http11.py", line 351, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.lagou.com/zhaopin/yunyingjingli/30/ took longer than 180.0 seconds..
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/redis/connection.py", line 484, in connect
+    sock = self._connect()
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/redis/connection.py", line 541, in _connect
+    raise err
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/redis/connection.py", line 529, in _connect
+    sock.connect(socket_address)
+OSError: [Errno 101] Network is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/redis/client.py", line 667, in execute_command
+    connection.send_command(*args)
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/redis/connection.py", line 610, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/redis/connection.py", line 585, in send_packed_command
+    self.connect()
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/redis/connection.py", line 489, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 101 connecting to 101.132.73.130:6379. Network is unreachable.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/redis/connection.py", line 484, in connect
+    sock = self._connect()
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/redis/connection.py", line 541, in _connect
+    raise err
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/redis/connection.py", line 529, in _connect
+    sock.connect(socket_address)
+OSError: [Errno 101] Network is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/twisted/internet/defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/scrapy/core/engine.py", line 171, in _handle_downloader_output
+    self.crawl(response, spider)
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/scrapy/core/engine.py", line 210, in crawl
+    self.schedule(request, spider)
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/scrapy/core/engine.py", line 216, in schedule
+    if not self.slot.scheduler.enqueue_request(request):
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/scrapy_redis/scheduler.py", line 167, in enqueue_request
+    self.queue.push(request)
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/scrapy_redis/queue.py", line 104, in push
+    self.server.execute_command('ZADD', self.key, score, data)
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/redis/client.py", line 673, in execute_command
+    connection.send_command(*args)
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/redis/connection.py", line 610, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/redis/connection.py", line 585, in send_packed_command
+    self.connect()
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/redis/connection.py", line 489, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 101 connecting to 101.132.73.130:6379. Network is unreachable.
+2018-03-23 01:14:31 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://www.lagou.com/jobs/4245267.html> (failed 1 times): User timeout caused connection failure: Getting https://www.lagou.com/jobs/4245267.html took longer than 180.0 seconds..
+2018-03-23 01:14:31 [scrapy.core.engine] INFO: Error while handling downloader output
+Traceback (most recent call last):
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/twisted/internet/defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/twisted/python/failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/scrapy/core/downloader/middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/twisted/internet/defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/scrapy/core/downloader/handlers/http11.py", line 351, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.lagou.com/jobs/4245267.html took longer than 180.0 seconds..
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/redis/connection.py", line 484, in connect
+    sock = self._connect()
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/redis/connection.py", line 541, in _connect
+    raise err
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/redis/connection.py", line 529, in _connect
+    sock.connect(socket_address)
+OSError: [Errno 101] Network is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/redis/client.py", line 667, in execute_command
+    connection.send_command(*args)
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/redis/connection.py", line 610, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/redis/connection.py", line 585, in send_packed_command
+    self.connect()
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/redis/connection.py", line 489, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 101 connecting to 101.132.73.130:6379. Network is unreachable.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/redis/connection.py", line 484, in connect
+    sock = self._connect()
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/redis/connection.py", line 541, in _connect
+    raise err
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/redis/connection.py", line 529, in _connect
+    sock.connect(socket_address)
+OSError: [Errno 101] Network is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/twisted/internet/defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/scrapy/core/engine.py", line 171, in _handle_downloader_output
+    self.crawl(response, spider)
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/scrapy/core/engine.py", line 210, in crawl
+    self.schedule(request, spider)
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/scrapy/core/engine.py", line 216, in schedule
+    if not self.slot.scheduler.enqueue_request(request):
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/scrapy_redis/scheduler.py", line 167, in enqueue_request
+    self.queue.push(request)
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/scrapy_redis/queue.py", line 104, in push
+    self.server.execute_command('ZADD', self.key, score, data)
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/redis/client.py", line 673, in execute_command
+    connection.send_command(*args)
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/redis/connection.py", line 610, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/redis/connection.py", line 585, in send_packed_command
+    self.connect()
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/redis/connection.py", line 489, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 101 connecting to 101.132.73.130:6379. Network is unreachable.
+2018-03-23 01:14:31 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://www.lagou.com/zhaopin/renliziyuan1/28/> (failed 1 times): User timeout caused connection failure: Getting https://www.lagou.com/zhaopin/renliziyuan1/28/ took longer than 180.0 seconds..
+2018-03-23 01:14:31 [scrapy.core.engine] INFO: Error while handling downloader output
+Traceback (most recent call last):
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/twisted/internet/defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/twisted/python/failure.py", line 408, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/scrapy/core/downloader/middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/twisted/internet/defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/scrapy/core/downloader/handlers/http11.py", line 351, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.lagou.com/zhaopin/renliziyuan1/28/ took longer than 180.0 seconds..
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/redis/connection.py", line 484, in connect
+    sock = self._connect()
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/redis/connection.py", line 541, in _connect
+    raise err
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/redis/connection.py", line 529, in _connect
+    sock.connect(socket_address)
+OSError: [Errno 101] Network is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/redis/client.py", line 667, in execute_command
+    connection.send_command(*args)
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/redis/connection.py", line 610, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/redis/connection.py", line 585, in send_packed_command
+    self.connect()
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/redis/connection.py", line 489, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 101 connecting to 101.132.73.130:6379. Network is unreachable.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/redis/connection.py", line 484, in connect
+    sock = self._connect()
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/redis/connection.py", line 541, in _connect
+    raise err
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/redis/connection.py", line 529, in _connect
+    sock.connect(socket_address)
+OSError: [Errno 101] Network is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/twisted/internet/defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/scrapy/core/engine.py", line 171, in _handle_downloader_output
+    self.crawl(response, spider)
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/scrapy/core/engine.py", line 210, in crawl
+    self.schedule(request, spider)
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/scrapy/core/engine.py", line 216, in schedule
+    if not self.slot.scheduler.enqueue_request(request):
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/scrapy_redis/scheduler.py", line 167, in enqueue_request
+    self.queue.push(request)
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/scrapy_redis/queue.py", line 104, in push
+    self.server.execute_command('ZADD', self.key, score, data)
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/redis/client.py", line 673, in execute_command
+    connection.send_command(*args)
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/redis/connection.py", line 610, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/redis/connection.py", line 585, in send_packed_command
+    self.connect()
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/redis/connection.py", line 489, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 101 connecting to 101.132.73.130:6379. Network is unreachable.
+2018-03-23 01:14:31 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.lagou.com/jobs/2679451.html>
+Traceback (most recent call last):
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/pymysql/connections.py", line 1025, in _read_bytes
+    data = self._rfile.read(num_bytes)
+  File "/home/barnett/anaconda3/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/twisted/internet/defer.py", line 1386, in _inlineCallbacks
+    result = g.send(result)
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/scrapy/core/downloader/middleware.py", line 37, in process_request
+    response = yield method(request=request, spider=spider)
+  File "/home/barnett/Python/LagouRedis/LagouRedis/middlewares.py", line 110, in process_request
+    self.ip_list = t.ip_list
+  File "/home/barnett/Python/LagouRedis/LagouRedis/utils/get_ip.py", line 10, in ip_list
+    return self.get_ip()
+  File "/home/barnett/Python/LagouRedis/LagouRedis/utils/get_ip.py", line 16, in get_ip
+    self.execute(query_sql)
+  File "/home/barnett/Python/LagouRedis/LagouRedis/utils/common.py", line 14, in execute
+    self.cursor.execute(sql)
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/pymysql/cursors.py", line 165, in execute
+    result = self._query(query)
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/pymysql/cursors.py", line 321, in _query
+    conn.query(q)
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/pymysql/connections.py", line 860, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/pymysql/connections.py", line 1061, in _read_query_result
+    result.read()
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/pymysql/connections.py", line 1349, in read
+    first_packet = self.connection._read_packet()
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/pymysql/connections.py", line 991, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/pymysql/connections.py", line 1033, in _read_bytes
+    "Lost connection to MySQL server during query (%s)" % (e,))
+pymysql.err.OperationalError: (2013, 'Lost connection to MySQL server during query ([Errno 104] Connection reset by peer)')

@@ -104,9 +104,17 @@ class RandomProxyMiddleware(object):
         crawler.signals.connect(s.spider_closed, signal=signals.spider_closed)
         return s
 
+    @staticmethod
+    def change_count():
+        if RandomProxyMiddleware.count <= 30:
+            RandomProxyMiddleware.count += 1
+            return False
+        else:
+            RandomProxyMiddleware.count = 0
+            return True
+
     def process_request(self, request, spider):
-        if self.count > 30:
-            self.count = 0
+        if self.change_count():
             self.ip_list = t.ip_list
         ip, port = random.choice(self.ip_list)
         print('new_ip: ', 'https://' + ip + ':' + port)

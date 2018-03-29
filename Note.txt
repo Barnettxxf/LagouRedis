@@ -20,3 +20,58 @@
 pymysql.err.InterfaceError: (0, '')
 
 3.时间显示问题 （09:28发布）
+
+4.Traceback (most recent call last):
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/scrapy/commands/crawl.py", line 58, in run
+    self.crawler_process.start()
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/scrapy/crawler.py", line 291, in start
+    reactor.run(installSignalHandlers=False)  # blocking call
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/twisted/internet/base.py", line 1243, in run
+    self.mainLoop()
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/twisted/internet/base.py", line 1252, in mainLoop
+    self.runUntilCurrent()
+--- <exception caught here> ---
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/twisted/internet/base.py", line 878, in runUntilCurrent
+    call.func(*call.args, **call.kw)
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/scrapy/utils/reactor.py", line 41, in __call__
+    return self._func(*self._a, **self._kw)
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/scrapy/core/engine.py", line 122, in _next_request
+    if not self._next_request_from_scheduler(spider):
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/scrapy/core/engine.py", line 149, in _next_request_from_scheduler
+    request = slot.scheduler.next_request()
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/scrapy_redis/scheduler.py", line 172, in next_request
+    request = self.queue.pop(block_pop_timeout)
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/scrapy_redis/queue.py", line 115, in pop
+    results, count = pipe.execute()
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/redis/client.py", line 2879, in execute
+    return execute(conn, stack, raise_on_error)
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/redis/client.py", line 2775, in _execute_transaction
+    self.immediate_execute_command('DISCARD')
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/redis/client.py", line 2715, in immediate_execute_command
+    return self.parse_response(conn, command_name, **options)
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/redis/client.py", line 2838, in parse_response
+    self, connection, command_name, **options)
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/redis/client.py", line 680, in parse_response
+    response = connection.read_response()
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/redis/connection.py", line 629, in read_response
+    raise response
+redis.exceptions.ResponseError: DISCARD without MULTI
+
+5.Traceback (most recent call last):
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/barnett/anaconda3/lib/python3.6/site-packages/scrapy/spiders/crawl.py", line 76, in _parse_response
+    cb_res = callback(response, **cb_kwargs) or ()
+  File "/tmp/LagouRedis-1521706510-va_hcd6p.egg/LagouRedis/spiders/lagou_temp.py", line 50, in parse_job
+    jobid = re.search('/(\d+).html', response.url).group(1)
+AttributeError: 'NoneType' object has no attribute 'group'
+
+6.2018-03-22 16:59:58 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.lagou.com/jobs/4305956.html>: HTTP status code is not handled or not allowed

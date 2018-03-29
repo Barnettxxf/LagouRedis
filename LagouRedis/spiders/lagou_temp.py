@@ -38,16 +38,17 @@ class LagouTempSpider(RedisCrawlSpider):
             item['update_time'] = str(datetime.datetime.now()).split('.')[0]
             yield item
 
-
     def parset_interview(self, response):
         item = InterviewItem()
         pass
 
-
     def parse_job(self, response):
         print('joburl', response.url)
         item = JobItem()
-        jobid = re.search('/(\d+).html', response.url).group(1)
+        jobid = re.search('/(\d+).html', response.url)
+        if jobid is None:
+            return
+        jobid = jobid.group(1)
         item['jobid'] = jobid
         item['jobname'] = response.css('div.position-content-l > div::attr(title)').extract_first()
         item['jobcompanyname'] = response.css('div.job-name > div.company::text').extract_first()
@@ -90,6 +91,7 @@ def handle_addr(text_list: list):
     return ''.join(filter_list)
 
 
+# 处理日期显示问题
 def handle_time(text):
     if text is None:
         return
@@ -98,4 +100,7 @@ def handle_time(text):
         day = re.search('(\d+)天', text).group(1)
         date_time = currect_datetime - datetime.timedelta(days=int(day))
         return str(date_time).split('.')[0]
-    return text
+    elif '发布' in text:
+        return str(currect_datetime).split('.')[0]
+    else:
+        return text

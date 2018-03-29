@@ -10,9 +10,9 @@ from LagouRedis.utils.get_ip import GetIp
 from twisted.internet.error import TimeoutError
 
 t = GetIp()
+from scrapy.http import HtmlResponse
 
-
-class LagouspiderDownloaderMiddleware(object):
+class LagouredisDownloaderMiddleware(object):
     @classmethod
     def from_crawler(cls, crawler):
         s = cls()
@@ -24,29 +24,14 @@ class LagouspiderDownloaderMiddleware(object):
         return None
 
     def process_response(self, request, response, spider):
-
-        interview = request.meta.get('interview', '')
-        if interview:
-            return response
-
-        try:
-            content = json.loads(response.text)
-            if content['success'] is False:
-                print('返回数据不对，重新请求')
-                print('返回内容', content)
-                return request
-        except:
-            print('返回数据不对，重新请求')
-            print('返回内容', response)
-            return request
-
         if response.status == 403:
-            print('连接失败，重新请求')
+            return request
+        if response.status == 302:
             return request
         return response
 
     def process_exception(self, request, exception, spider):
-            return request
+        pass
 
     def spider_opened(self, spider):
         spider.logger.info('Spider opened: %s' % spider.name)
@@ -104,19 +89,26 @@ class RandomProxyMiddleware(object):
         crawler.signals.connect(s.spider_closed, signal=signals.spider_closed)
         return s
 
+    @staticmethod
+    def change_count():
+        if RandomProxyMiddleware.count <= 200:
+            RandomProxyMiddleware.count += 1
+            return False
+        else:
+            RandomProxyMiddleware.count = 0
+            return True
+
     def process_request(self, request, spider):
-        if self.count > 30:
-            self.count = 0
+        if self.change_count():
             self.ip_list = t.ip_list
+            with open('ip_list.txt', 'a') as f:
+                f.write('-----------------------------------')
+                for line in self.ip_list:
+                    f.write(str(line))
+                f.write('\n')
         ip, port = random.choice(self.ip_list)
         print('new_ip: ', 'https://' + ip + ':' + port)
         request.meta['proxy'] = 'https://' + ip + ':' + port
-        self.count += 1
-        with open('ip_list.txt', 'a') as f:
-            f.write('-----------------------------------')
-            for line in self.ip_list:
-                f.write(str(line))
-            f.write('\n')
 
     def spider_opened(self, spider):
         spider.logger.info('Spider opened: %s' % spider.name)
@@ -127,52 +119,69 @@ class RandomProxyMiddleware(object):
 
 class LagouCookiesMiddleware(object):
 
-    # cookies = {'user_trace_token': '20180226001828-5c601f0f-6537-44be-a9c9-c1c381f97c3f',
-    #            '_ga': 'GA1.2.1250218167.1519575509',
-    #            'LGUID': '20180226001829-83f7b1fb-1a47-11e8-917d-525400f775ce',
-    #            'index_location_city': '%E6%B7%B1%E5%9C%B3',
-    #            'JSESSIONID': 'ABAAABAAAIAACBI0F6208F8F96C4F25F0401ABC9F24BABC',
-    #            'hideSliderBanner20180305WithTopBannerC': '1',
-    #            '_gid': 'GA1.2.2062001429.1521558973',
-    #            '_gat': '1',
-    #            'LGSID': '20180320231612-a050094e-2c51-11e8-914f-525400f775ce',
-    #            'PRE_UTM': '',
-    #            'PRE_HOST': '',
-    #            'PRE_SITE': '',
-    #            'PRE_LAND': 'https%3A%2F%2Fwww.lagou.com%2F',
-    #            'LGRID': '20180320231612-a0500a4f-2c51-11e8-914f-525400f775ce',
-    #            'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6': '1520935912,1521373019,1521377635,1521558978',
-    #            'TG-TRACK-CODE': 'index_search',
-    #            'Hm_lpvt_4233e74dff0ae5bd0a3d81c6ccf756e6': '1521559012',
-    #            'SEARCH_ID': '6cff551f6f6c41f49b8b6bfd8357e21f'}
+    cookies = [{'user_trace_token': '20180226001828-5c601f0f-6537-44be-a9c9-c1c381f97c3f', '_ga': 'GA1.2.1250218167.1519575509', 'LGUID': '20180226001829-83f7b1fb-1a47-11e8-917d-525400f775ce', 'index_location_city': '%E6%B7%B1%E5%9C%B3', 'showExpriedIndex': '1', 'showExpriedCompanyHome': '1', 'showExpriedMyPublish': '1', 'hasDeliver': '8', '_gid': 'GA1.2.1435031256.1522222631', 'JSESSIONID': 'ABAAABAAAFCAAEGB429AD4B0896694101694DC8B742D243', 'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6': '1522032656,1522222631,1522228134,1522234524', '_gat': '1', 'LGSID': '20180328230149-f1306dc2-3298-11e8-a303-525400f775ce', 'PRE_UTM': '', 'PRE_HOST': '', 'PRE_SITE': '', 'PRE_LAND': 'https%3A%2F%2Fwww.lagou.com%2F', 'X_HTTP_TOKEN': '3dc49121699a69dc7f6f5deda3dcab57', 'Hm_lpvt_4233e74dff0ae5bd0a3d81c6ccf756e6': '1522249312', 'LGRID': '20180328230151-f23b4a97-3298-11e8-a303-525400f775ce', 'LG_LOGIN_USER_ID': 'a256bdd52416c841c9180e4fc55527d6c387f1127de852b7', '_putrc': '04201950329B43E0', 'login': 'true', 'unick': '%E5%BE%90%E9%9B%84%E5%B3%B0', 'gate_login_token': '2cc21eda284f612cb9970550a2894ca499b7fe7655bb9ca0', 'TG-TRACK-CODE': 'index_navigation', 'SEARCH_ID': '975def3a31a94383af0d3ab1b22daaa4'},
+               {'user_trace_token': '20180226001828-5c601f0f-6537-44be-a9c9-c1c381f97c3f',
+                '_ga': 'GA1.2.1250218167.1519575509', 'LGUID': '20180226001829-83f7b1fb-1a47-11e8-917d-525400f775ce',
+                'index_location_city': '%E6%B7%B1%E5%9C%B3', 'showExpriedIndex': '1', 'showExpriedCompanyHome': '1',
+                'showExpriedMyPublish': '1', '_gid': 'GA1.2.1435031256.1522222631',
+                'JSESSIONID': 'ABAAABAAAFCAAEGB429AD4B0896694101694DC8B742D243',
+                'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6': '1522032656,1522222631,1522228134,1522234524', '_gat': '1',
+                'LGSID': '20180328230149-f1306dc2-3298-11e8-a303-525400f775ce', 'PRE_UTM': '', 'PRE_HOST': '',
+                'PRE_SITE': '', 'PRE_LAND': 'https%3A%2F%2Fwww.lagou.com%2F',
+                'X_HTTP_TOKEN': '3dc49121699a69dc7f6f5deda3dcab57', 'TG-TRACK-CODE': 'index_navigation',
+                'gate_login_token': '137c4f6c5968dec680f49b5d3e970bd5da18923d93c97b72580d1aa4fa082ff0',
+                'ab_test_random_num': '0', 'hasDeliver': '0',
+                'LG_LOGIN_USER_ID': 'a603ea15d79edd55ca8e0220670c88564f06ee86b4f2a030bfaa4d0c28061887',
+                '_putrc': '9E88F39614962A68123F89F2B170EADC', 'login': 'true',
+                'unick': '%E6%8B%89%E5%8B%BE%E7%94%A8%E6%88%B73159', 'SEARCH_ID': 'd46c2017686e4fffb313c9db581e69c1',
+                'Hm_lpvt_4233e74dff0ae5bd0a3d81c6ccf756e6': '1522249795',
+                'LGRID': '20180328230955-12824b00-329a-11e8-a307-525400f775ce'},
+               {'user_trace_token': '20180226001828-5c601f0f-6537-44be-a9c9-c1c381f97c3f',
+                '_ga': 'GA1.2.1250218167.1519575509', 'LGUID': '20180226001829-83f7b1fb-1a47-11e8-917d-525400f775ce',
+                'index_location_city': '%E6%B7%B1%E5%9C%B3', 'showExpriedIndex': '1', 'showExpriedCompanyHome': '1',
+                'showExpriedMyPublish': '1', '_gid': 'GA1.2.1435031256.1522222631',
+                'JSESSIONID': 'ABAAABAAAFCAAEGB429AD4B0896694101694DC8B742D243',
+                'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6': '1522032656,1522222631,1522228134,1522234524',
+                'LGSID': '20180328230149-f1306dc2-3298-11e8-a303-525400f775ce', 'PRE_UTM': '', 'PRE_HOST': '',
+                'PRE_SITE': '', 'PRE_LAND': 'https%3A%2F%2Fwww.lagou.com%2F',
+                'X_HTTP_TOKEN': '3dc49121699a69dc7f6f5deda3dcab57', 'TG-TRACK-CODE': 'index_navigation',
+                'gate_login_token': '137c4f6c5968dec680f49b5d3e970bd5da18923d93c97b72580d1aa4fa082ff0',
+                'ab_test_random_num': '0', 'hasDeliver': '0', 'login': 'false', 'unick': '""', '_putrc': '""',
+                'LG_LOGIN_USER_ID': '""', 'Hm_lpvt_4233e74dff0ae5bd0a3d81c6ccf756e6': '1522249909',
+                'LGRID': '20180328231149-565e3968-329a-11e8-a307-525400f775ce',
+                'SEARCH_ID': '2ca023b7df334aadb32097a094cea80e'},
+               {'user_trace_token': '20180226001828-5c601f0f-6537-44be-a9c9-c1c381f97c3f',
+                '_ga': 'GA1.2.1250218167.1519575509', 'LGUID': '20180226001829-83f7b1fb-1a47-11e8-917d-525400f775ce',
+                'index_location_city': '%E6%B7%B1%E5%9C%B3', 'showExpriedIndex': '1', 'showExpriedCompanyHome': '1',
+                'showExpriedMyPublish': '1', '_gid': 'GA1.2.1435031256.1522222631',
+                'JSESSIONID': 'ABAAABAAAFCAAEGB429AD4B0896694101694DC8B742D243',
+                'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6': '1522032656,1522222631,1522228134,1522234524',
+                'LGSID': '20180328230149-f1306dc2-3298-11e8-a303-525400f775ce', 'PRE_UTM': '', 'PRE_HOST': '',
+                'PRE_SITE': '', 'PRE_LAND': 'https%3A%2F%2Fwww.lagou.com%2F',
+                'X_HTTP_TOKEN': '3dc49121699a69dc7f6f5deda3dcab57',
+                'gate_login_token': '137c4f6c5968dec680f49b5d3e970bd5da18923d93c97b72580d1aa4fa082ff0',
+                'ab_test_random_num': '0', 'hasDeliver': '0', 'login': 'false', 'unick': '""', '_putrc': '""',
+                'LG_LOGIN_USER_ID': '""', '_gat': '1', 'SEARCH_ID': '70da247715664d05add308a49cdf868f',
+                'TG-TRACK-CODE': 'search_code', 'Hm_lpvt_4233e74dff0ae5bd0a3d81c6ccf756e6': '1522250217',
+                'LGRID': '20180328231656-0dc4f8ba-329b-11e8-b653-5254005c3644'},
+               {'user_trace_token': '20180226001828-5c601f0f-6537-44be-a9c9-c1c381f97c3f',
+                '_ga': 'GA1.2.1250218167.1519575509', 'LGUID': '20180226001829-83f7b1fb-1a47-11e8-917d-525400f775ce',
+                'index_location_city': '%E6%B7%B1%E5%9C%B3', 'showExpriedIndex': '1', 'showExpriedCompanyHome': '1',
+                'showExpriedMyPublish': '1', '_gid': 'GA1.2.1435031256.1522222631',
+                'JSESSIONID': 'ABAAABAAAFCAAEGB429AD4B0896694101694DC8B742D243',
+                'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6': '1522032656,1522222631,1522228134,1522234524',
+                'LGSID': '20180328230149-f1306dc2-3298-11e8-a303-525400f775ce', 'PRE_UTM': '', 'PRE_HOST': '',
+                'PRE_SITE': '', 'PRE_LAND': 'https%3A%2F%2Fwww.lagou.com%2F',
+                'X_HTTP_TOKEN': '3dc49121699a69dc7f6f5deda3dcab57',
+                'gate_login_token': '7a76cd53defdb8f5b007490594eddb2cb2ecb87577608fd26ee0ffabf3c2e19c',
+                'ab_test_random_num': '0', 'hasDeliver': '0', '_gat': '1',
+                'SEARCH_ID': '70da247715664d05add308a49cdf868f', 'TG-TRACK-CODE': 'search_code',
+                'Hm_lpvt_4233e74dff0ae5bd0a3d81c6ccf756e6': '1522250309',
+                'LGRID': '20180328231828-44905e89-329b-11e8-b653-5254005c3644',
+                'LG_LOGIN_USER_ID': 'c410d048602b2ea504ead9df3fbaa3a59dea13b8882bcdf22c5a7a4bc7aee16b',
+                '_putrc': '9E88F39614962A68123F89F2B170EADC', 'login': 'true',
+                'unick': '%E6%8B%89%E5%8B%BE%E7%94%A8%E6%88%B73159'},
 
-    cookies = [{'user_trace_token': '20180226001828-5c601f0f-6537-44be-a9c9-c1c381f97c3f',
-               '_ga': 'GA1.2.1250218167.1519575509',
-               'LGUID': '20180226001829-83f7b1fb-1a47-11e8-917d-525400f775ce',
-               'index_location_city': '%E6%B7%B1%E5%9C%B3',
-               '_gid': 'GA1.2.2062001429.1521558973',
-               'hideSliderBanner20180305WithTopBannerC': '1',
-               'JSESSIONID': 'ABAAABAAAIAACBI41D253C29C1CCFBCFC565C3ADACD2917',
-               'Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6': '1521558978,1521598449,1521612039,1521622382',
-               'TG-TRACK-CODE': 'index_navigation',
-               'X_HTTP_TOKEN': '3dc49121699a69dc7f6f5deda3dcab57',
-               'LGSID': '20180321221313-fe3263bc-2d11-11e8-b56c-5254005c3644',
-               'PRE_UTM': '',
-               'PRE_HOST': '',
-               'PRE_SITE': '',
-               'PRE_LAND': 'https%3A%2F%2Fpassport.lagou.com%2Flogin%2Flogin.html%3Fmsg%3Dvalidation%26uStatus%3D2%26clientIp%3D183.53.66.197',
-               'SEARCH_ID': '9c40e391eb7b4c379e4f104799c6b4ca',
-               '_putrc': '04201950329B43E0',
-               'login': 'true',
-               'unick': '%E5%BE%90%E9%9B%84%E5%B3%B0',
-               'showExpriedIndex': '1',
-               'showExpriedCompanyHome': '1',
-               'showExpriedMyPublish': '1',
-               'hasDeliver': '8',
-               'gate_login_token': 'd4ad590e51863daf7ee4b04feb97b60ba07f5fd778a2516a',
-               '_gat': '1',
-               'Hm_lpvt_4233e74dff0ae5bd0a3d81c6ccf756e6': '1521642759',
-               'LGRID': '20180321223239-b4e9d754-2d14-11e8-9348-525400f775ce'},
      ]
 
     def process_request(self, request, spider):

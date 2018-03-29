@@ -18,7 +18,7 @@ CONFIG = {
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'LagouRedis (+http://www.yourdomain.com)'
+# USER_AGENT = 'LagouRedis (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
@@ -49,8 +49,8 @@ DOWNLOADER_MIDDLEWARES = {
     'scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware': None,
     'scrapy.contrib.downloadermiddleware.cookies.CookiesMiddleware': None,
     'scrapy.contrib.downloadermiddleware.httpproxy.HttpProxyMiddleware': None,
-    'scrapy.contrib.downloadermiddleware.retry.RetryMiddleware': 751,
-     # 'LagouRedis.middlewares.LagouredisDownloaderMiddleware': 543,
+    'scrapy.contrib.downloadermiddleware.retry.RetryMiddleware': 760,
+     # 'LagouRedis.middlewares.LagouredisDownloaderMiddleware': 755,
     'LagouRedis.middlewares.RotateUserAgentMiddleware': 550,
     'LagouRedis.middlewares.RandomProxyMiddleware': 750,
     'LagouRedis.middlewares.LagouCookiesMiddleware': 700,
@@ -66,8 +66,9 @@ DOWNLOADER_MIDDLEWARES = {
 ITEM_PIPELINES = {
     # 'LagouRedis.pipelines.LagouredisPipeline': 300,
     # 'scrapy_redis.pipelines.RedisPipeline': 400,
-    'LagouRedis.pipelines.MysqlTwistedPipline': 543,
+    # 'LagouRedis.pipelines.MysqlTwistedPipline': 543,
     # 'LagouRedis.pipelines.MysqlPipline': 543,
+    'LagouRedis.pipelines.MysqlOnePipline': 543,
 }
 
 # -------------------------------------AutoThrottle Extension----------------------------------------------------------
@@ -86,12 +87,12 @@ DOWNLOAD_DELAY = 5
 
 # Enable and configure HTTP caching (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html#httpcache-middleware-settings
-#HTTPCACHE_ENABLED = True
+# HTTPCACHE_ENABLED = True
 #HTTPCACHE_EXPIRATION_SECS = 0
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
-# HTTPERROR_ALLOW_CODE = [403, ]
+HTTPERROR_ALLOW_CODE = [403, ]
 
 
 # -------------------------------------Redis Config----------------------------------------------------------------
@@ -99,7 +100,7 @@ SCHEDULER = 'scrapy_redis.scheduler.Scheduler'
 DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
 
 
-REDIS_URL = 'redis://101.132.73.130:6379'
+REDIS_URL = 'redis://barnett:xxf99311@101.132.73.130:6379'
 # REDIS_HOST = 'localhost'
 # REDIS_PROT = 6379
 # REDIS_ENCODING = "utf-8"                            # redis编码类型             默认：'utf-8'

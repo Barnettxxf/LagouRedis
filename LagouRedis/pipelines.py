@@ -63,5 +63,38 @@ class MysqlPipline(object):
         self.cursor.close()
         self.conn.close()
 
+
+    def close_spider(self, spider):
+        self.close()
+
+
+class MysqlOnePipline(object):
+    def __init__(self, **kwargs):
+        self.config = kwargs
+
+    @classmethod
+    def from_settings(cls, settings):
+        dbparms = settings['CONFIG']
+        dbparms['cursorclass'] = pymysql.cursors.DictCursor
+        print('Notice!Return a New MysqlOnePipline Oject')
+        return cls(**dbparms)
+
+    def process_item(self, item, spider):
+        insert_sql, params = item.get_insert_sql()
+        self.execute(insert_sql, params)
+        return item
+
+    def execute(self, sql, params):
+        self.cursor.execute(sql, params)
+        self.conn.commit()
+
+    def close(self):
+        self.cursor.close()
+        self.conn.close()
+
+    def open_spider(self, spider):
+        self.conn = pymysql.connect(**self.config)
+        self.cursor = self.conn.cursor()
+
     def close_spider(self, spider):
         self.close()

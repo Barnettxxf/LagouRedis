@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-
 BOT_NAME = 'LagouRedis'
 
 SPIDER_MODULES = ['LagouRedis.spiders']

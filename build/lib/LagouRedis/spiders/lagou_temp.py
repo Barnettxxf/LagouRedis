@@ -14,7 +14,7 @@ class LagouTempSpider(RedisCrawlSpider):
 
     rules = (
         Rule(LinkExtractor(allow=("zhaopin/.*",)), callback='parse_category', follow=True),
-        Rule(LinkExtractor(allow=("jobs/\d+.html")), callback='parse_job', follow=True),
+        Rule(LinkExtractor(allow=("jobs/\d+.html",)), callback='parse_job', follow=True),
     )
 
     def parse_category(self, response):

@@ -105,7 +105,7 @@ if __name__ == '__main__':
         else:
             pass
     if args.status:
-        status = run(daemon_status, _addr=address[args.addr])
+        status = run(daemon_status, _addr=address[args.addr - 1])
         print('status: ', status.text)
     if args.shcedule:
         run_result = run(schedule, data={'project': project_name, 'spider': spider_name}, _addr=address[args.addr - 1])
